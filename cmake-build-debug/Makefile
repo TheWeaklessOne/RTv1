@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/wstygg/Desktop/RTv1
+CMAKE_SOURCE_DIR = /Users/wstygg/Desktop/wstygg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/wstygg/Desktop/RTv1/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/wstygg/Desktop/wstygg/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wstygg/Desktop/RTv1/cmake-build-debug/CMakeFiles /Users/wstygg/Desktop/RTv1/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wstygg/Desktop/wstygg/cmake-build-debug/CMakeFiles /Users/wstygg/Desktop/wstygg/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wstygg/Desktop/RTv1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wstygg/Desktop/wstygg/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,152 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named GUImp
+# Target rules for targets named RTv1
 
 # Build rule for target.
-GUImp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 GUImp
-.PHONY : GUImp
+RTv1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 RTv1
+.PHONY : RTv1
 
 # fast build rule for target.
-GUImp/fast:
-	$(MAKE) -f CMakeFiles/GUImp.dir/build.make CMakeFiles/GUImp.dir/build
-.PHONY : GUImp/fast
+RTv1/fast:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/build
+.PHONY : RTv1/fast
+
+Sources/Shapes/sphere.o: Sources/Shapes/sphere.c.o
+
+.PHONY : Sources/Shapes/sphere.o
+
+# target to build an object file
+Sources/Shapes/sphere.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Shapes/sphere.c.o
+.PHONY : Sources/Shapes/sphere.c.o
+
+Sources/Shapes/sphere.i: Sources/Shapes/sphere.c.i
+
+.PHONY : Sources/Shapes/sphere.i
+
+# target to preprocess a source file
+Sources/Shapes/sphere.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Shapes/sphere.c.i
+.PHONY : Sources/Shapes/sphere.c.i
+
+Sources/Shapes/sphere.s: Sources/Shapes/sphere.c.s
+
+.PHONY : Sources/Shapes/sphere.s
+
+# target to generate assembly for a file
+Sources/Shapes/sphere.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Shapes/sphere.c.s
+.PHONY : Sources/Shapes/sphere.c.s
+
+Sources/Vec3f/vec3f_1.o: Sources/Vec3f/vec3f_1.c.o
+
+.PHONY : Sources/Vec3f/vec3f_1.o
+
+# target to build an object file
+Sources/Vec3f/vec3f_1.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.o
+.PHONY : Sources/Vec3f/vec3f_1.c.o
+
+Sources/Vec3f/vec3f_1.i: Sources/Vec3f/vec3f_1.c.i
+
+.PHONY : Sources/Vec3f/vec3f_1.i
+
+# target to preprocess a source file
+Sources/Vec3f/vec3f_1.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.i
+.PHONY : Sources/Vec3f/vec3f_1.c.i
+
+Sources/Vec3f/vec3f_1.s: Sources/Vec3f/vec3f_1.c.s
+
+.PHONY : Sources/Vec3f/vec3f_1.s
+
+# target to generate assembly for a file
+Sources/Vec3f/vec3f_1.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.s
+.PHONY : Sources/Vec3f/vec3f_1.c.s
+
+Sources/Vec3f/vec3f_2.o: Sources/Vec3f/vec3f_2.c.o
+
+.PHONY : Sources/Vec3f/vec3f_2.o
+
+# target to build an object file
+Sources/Vec3f/vec3f_2.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.o
+.PHONY : Sources/Vec3f/vec3f_2.c.o
+
+Sources/Vec3f/vec3f_2.i: Sources/Vec3f/vec3f_2.c.i
+
+.PHONY : Sources/Vec3f/vec3f_2.i
+
+# target to preprocess a source file
+Sources/Vec3f/vec3f_2.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.i
+.PHONY : Sources/Vec3f/vec3f_2.c.i
+
+Sources/Vec3f/vec3f_2.s: Sources/Vec3f/vec3f_2.c.s
+
+.PHONY : Sources/Vec3f/vec3f_2.s
+
+# target to generate assembly for a file
+Sources/Vec3f/vec3f_2.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.s
+.PHONY : Sources/Vec3f/vec3f_2.c.s
+
+Sources/Vec3f/vec3f_dtr.o: Sources/Vec3f/vec3f_dtr.c.o
+
+.PHONY : Sources/Vec3f/vec3f_dtr.o
+
+# target to build an object file
+Sources/Vec3f/vec3f_dtr.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_dtr.c.o
+.PHONY : Sources/Vec3f/vec3f_dtr.c.o
+
+Sources/Vec3f/vec3f_dtr.i: Sources/Vec3f/vec3f_dtr.c.i
+
+.PHONY : Sources/Vec3f/vec3f_dtr.i
+
+# target to preprocess a source file
+Sources/Vec3f/vec3f_dtr.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_dtr.c.i
+.PHONY : Sources/Vec3f/vec3f_dtr.c.i
+
+Sources/Vec3f/vec3f_dtr.s: Sources/Vec3f/vec3f_dtr.c.s
+
+.PHONY : Sources/Vec3f/vec3f_dtr.s
+
+# target to generate assembly for a file
+Sources/Vec3f/vec3f_dtr.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_dtr.c.s
+.PHONY : Sources/Vec3f/vec3f_dtr.c.s
+
+Sources/ft.o: Sources/ft.c.o
+
+.PHONY : Sources/ft.o
+
+# target to build an object file
+Sources/ft.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/ft.c.o
+.PHONY : Sources/ft.c.o
+
+Sources/ft.i: Sources/ft.c.i
+
+.PHONY : Sources/ft.i
+
+# target to preprocess a source file
+Sources/ft.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/ft.c.i
+.PHONY : Sources/ft.c.i
+
+Sources/ft.s: Sources/ft.c.s
+
+.PHONY : Sources/ft.s
+
+# target to generate assembly for a file
+Sources/ft.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/ft.c.s
+.PHONY : Sources/ft.c.s
 
 Sources/main.o: Sources/main.c.o
 
@@ -129,7 +264,7 @@ Sources/main.o: Sources/main.c.o
 
 # target to build an object file
 Sources/main.c.o:
-	$(MAKE) -f CMakeFiles/GUImp.dir/build.make CMakeFiles/GUImp.dir/Sources/main.c.o
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/main.c.o
 .PHONY : Sources/main.c.o
 
 Sources/main.i: Sources/main.c.i
@@ -138,7 +273,7 @@ Sources/main.i: Sources/main.c.i
 
 # target to preprocess a source file
 Sources/main.c.i:
-	$(MAKE) -f CMakeFiles/GUImp.dir/build.make CMakeFiles/GUImp.dir/Sources/main.c.i
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/main.c.i
 .PHONY : Sources/main.c.i
 
 Sources/main.s: Sources/main.c.s
@@ -147,62 +282,62 @@ Sources/main.s: Sources/main.c.s
 
 # target to generate assembly for a file
 Sources/main.c.s:
-	$(MAKE) -f CMakeFiles/GUImp.dir/build.make CMakeFiles/GUImp.dir/Sources/main.c.s
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/main.c.s
 .PHONY : Sources/main.c.s
 
-Sources/sdl_utill.o: Sources/sdl_utill.c.o
+Sources/rt.o: Sources/rt.c.o
 
-.PHONY : Sources/sdl_utill.o
-
-# target to build an object file
-Sources/sdl_utill.c.o:
-	$(MAKE) -f CMakeFiles/GUImp.dir/build.make CMakeFiles/GUImp.dir/Sources/sdl_utill.c.o
-.PHONY : Sources/sdl_utill.c.o
-
-Sources/sdl_utill.i: Sources/sdl_utill.c.i
-
-.PHONY : Sources/sdl_utill.i
-
-# target to preprocess a source file
-Sources/sdl_utill.c.i:
-	$(MAKE) -f CMakeFiles/GUImp.dir/build.make CMakeFiles/GUImp.dir/Sources/sdl_utill.c.i
-.PHONY : Sources/sdl_utill.c.i
-
-Sources/sdl_utill.s: Sources/sdl_utill.c.s
-
-.PHONY : Sources/sdl_utill.s
-
-# target to generate assembly for a file
-Sources/sdl_utill.c.s:
-	$(MAKE) -f CMakeFiles/GUImp.dir/build.make CMakeFiles/GUImp.dir/Sources/sdl_utill.c.s
-.PHONY : Sources/sdl_utill.c.s
-
-Utils/ft_1.o: Utils/ft_1.c.o
-
-.PHONY : Utils/ft_1.o
+.PHONY : Sources/rt.o
 
 # target to build an object file
-Utils/ft_1.c.o:
-	$(MAKE) -f CMakeFiles/GUImp.dir/build.make CMakeFiles/GUImp.dir/Utils/ft_1.c.o
-.PHONY : Utils/ft_1.c.o
+Sources/rt.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/rt.c.o
+.PHONY : Sources/rt.c.o
 
-Utils/ft_1.i: Utils/ft_1.c.i
+Sources/rt.i: Sources/rt.c.i
 
-.PHONY : Utils/ft_1.i
+.PHONY : Sources/rt.i
 
 # target to preprocess a source file
-Utils/ft_1.c.i:
-	$(MAKE) -f CMakeFiles/GUImp.dir/build.make CMakeFiles/GUImp.dir/Utils/ft_1.c.i
-.PHONY : Utils/ft_1.c.i
+Sources/rt.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/rt.c.i
+.PHONY : Sources/rt.c.i
 
-Utils/ft_1.s: Utils/ft_1.c.s
+Sources/rt.s: Sources/rt.c.s
 
-.PHONY : Utils/ft_1.s
+.PHONY : Sources/rt.s
 
 # target to generate assembly for a file
-Utils/ft_1.c.s:
-	$(MAKE) -f CMakeFiles/GUImp.dir/build.make CMakeFiles/GUImp.dir/Utils/ft_1.c.s
-.PHONY : Utils/ft_1.c.s
+Sources/rt.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/rt.c.s
+.PHONY : Sources/rt.c.s
+
+Sources/sdl.o: Sources/sdl.c.o
+
+.PHONY : Sources/sdl.o
+
+# target to build an object file
+Sources/sdl.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/sdl.c.o
+.PHONY : Sources/sdl.c.o
+
+Sources/sdl.i: Sources/sdl.c.i
+
+.PHONY : Sources/sdl.i
+
+# target to preprocess a source file
+Sources/sdl.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/sdl.c.i
+.PHONY : Sources/sdl.c.i
+
+Sources/sdl.s: Sources/sdl.c.s
+
+.PHONY : Sources/sdl.s
+
+# target to generate assembly for a file
+Sources/sdl.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/sdl.c.s
+.PHONY : Sources/sdl.c.s
 
 # Help Target
 help:
@@ -212,16 +347,31 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... GUImp"
+	@echo "... RTv1"
+	@echo "... Sources/Shapes/sphere.o"
+	@echo "... Sources/Shapes/sphere.i"
+	@echo "... Sources/Shapes/sphere.s"
+	@echo "... Sources/Vec3f/vec3f_1.o"
+	@echo "... Sources/Vec3f/vec3f_1.i"
+	@echo "... Sources/Vec3f/vec3f_1.s"
+	@echo "... Sources/Vec3f/vec3f_2.o"
+	@echo "... Sources/Vec3f/vec3f_2.i"
+	@echo "... Sources/Vec3f/vec3f_2.s"
+	@echo "... Sources/Vec3f/vec3f_dtr.o"
+	@echo "... Sources/Vec3f/vec3f_dtr.i"
+	@echo "... Sources/Vec3f/vec3f_dtr.s"
+	@echo "... Sources/ft.o"
+	@echo "... Sources/ft.i"
+	@echo "... Sources/ft.s"
 	@echo "... Sources/main.o"
 	@echo "... Sources/main.i"
 	@echo "... Sources/main.s"
-	@echo "... Sources/sdl_utill.o"
-	@echo "... Sources/sdl_utill.i"
-	@echo "... Sources/sdl_utill.s"
-	@echo "... Utils/ft_1.o"
-	@echo "... Utils/ft_1.i"
-	@echo "... Utils/ft_1.s"
+	@echo "... Sources/rt.o"
+	@echo "... Sources/rt.i"
+	@echo "... Sources/rt.s"
+	@echo "... Sources/sdl.o"
+	@echo "... Sources/sdl.i"
+	@echo "... Sources/sdl.s"
 .PHONY : help
 
 
