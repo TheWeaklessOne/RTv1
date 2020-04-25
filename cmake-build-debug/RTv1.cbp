@@ -8,120 +8,112 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/wstygg/Desktop/wstygg/cmake-build-debug"/>
+				<Option working_dir="/home/wstygg/CLionProjects/RTv1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/wstygg/Desktop/wstygg/cmake-build-debug"/>
+				<Option working_dir="/home/wstygg/CLionProjects/RTv1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/wstygg/Desktop/wstygg/cmake-build-debug"/>
+				<Option working_dir="/home/wstygg/CLionProjects/RTv1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="RTv1">
-				<Option output="/Users/wstygg/Desktop/wstygg/cmake-build-debug/RTv1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/wstygg/Desktop/wstygg/cmake-build-debug"/>
+				<Option output="/home/wstygg/CLionProjects/RTv1/cmake-build-debug/RTv1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wstygg/CLionProjects/RTv1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/wstygg/Desktop/wstygg/Includes"/>
-					<Add directory="/Users/wstygg/Library/Frameworks/SDL2.framework/Headers"/>
-					<Add directory="/Users/wstygg/Library/Frameworks/SDL2_ttf.framework/Headers"/>
-					<Add directory="/Users/wstygg/Library/Frameworks/SDL2_image.framework/Headers"/>
+					<Add directory="/home/wstygg/CLionProjects/RTv1/Includes"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 RTv1"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 RTv1"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="RTv1/fast">
-				<Option output="/Users/wstygg/Desktop/wstygg/cmake-build-debug/RTv1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/wstygg/Desktop/wstygg/cmake-build-debug"/>
+				<Option output="/home/wstygg/CLionProjects/RTv1/cmake-build-debug/RTv1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wstygg/CLionProjects/RTv1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/wstygg/Desktop/wstygg/Includes"/>
-					<Add directory="/Users/wstygg/Library/Frameworks/SDL2.framework/Headers"/>
-					<Add directory="/Users/wstygg/Library/Frameworks/SDL2_ttf.framework/Headers"/>
-					<Add directory="/Users/wstygg/Library/Frameworks/SDL2_image.framework/Headers"/>
+					<Add directory="/home/wstygg/CLionProjects/RTv1/Includes"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 RTv1/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/wstygg/Desktop/wstygg/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 RTv1/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wstygg/CLionProjects/RTv1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/wstygg/Desktop/wstygg/Includes/rt.h">
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Includes/rt.h">
 			<Option target="RTv1"/>
 		</Unit>
-		<Unit filename="/Users/wstygg/Desktop/wstygg/Includes/shapes.h">
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Includes/shapes.h">
 			<Option target="RTv1"/>
 		</Unit>
-		<Unit filename="/Users/wstygg/Desktop/wstygg/Includes/vec3f.h">
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Includes/vec3f.h">
 			<Option target="RTv1"/>
 		</Unit>
-		<Unit filename="/Users/wstygg/Desktop/wstygg/Sources/Shapes/sphere.c">
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Shapes/sphere.c">
 			<Option target="RTv1"/>
 		</Unit>
-		<Unit filename="/Users/wstygg/Desktop/wstygg/Sources/Vec3f/vec3f_1.c">
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Vec3f/vec3f_1.c">
 			<Option target="RTv1"/>
 		</Unit>
-		<Unit filename="/Users/wstygg/Desktop/wstygg/Sources/Vec3f/vec3f_2.c">
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Vec3f/vec3f_2.c">
 			<Option target="RTv1"/>
 		</Unit>
-		<Unit filename="/Users/wstygg/Desktop/wstygg/Sources/Vec3f/vec3f_dtr.c">
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Vec3f/vec3f_dtr.c">
 			<Option target="RTv1"/>
 		</Unit>
-		<Unit filename="/Users/wstygg/Desktop/wstygg/Sources/ft.c">
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/ft.c">
 			<Option target="RTv1"/>
 		</Unit>
-		<Unit filename="/Users/wstygg/Desktop/wstygg/Sources/main.c">
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/main.c">
 			<Option target="RTv1"/>
 		</Unit>
-		<Unit filename="/Users/wstygg/Desktop/wstygg/Sources/rt.c">
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/rt.c">
 			<Option target="RTv1"/>
 		</Unit>
-		<Unit filename="/Users/wstygg/Desktop/wstygg/Sources/sdl.c">
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/sdl.c">
 			<Option target="RTv1"/>
 		</Unit>
-		<Unit filename="/Users/wstygg/Desktop/wstygg/CMakeLists.txt">
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

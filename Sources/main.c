@@ -62,6 +62,7 @@ int				main()
 	while (sdl.running)
 	{
 		SDL_RenderPresent(sdl.ren);
+                SDL_Delay(200);
 		while (SDL_PollEvent(&e))
 			manage_event(e, &sdl);
 		manage_keys(&sdl);
