@@ -258,6 +258,87 @@ Sources/ft.c.s:
 	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/ft.c.s
 .PHONY : Sources/ft.c.s
 
+Sources/ft_2.o: Sources/ft_2.c.o
+
+.PHONY : Sources/ft_2.o
+
+# target to build an object file
+Sources/ft_2.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/ft_2.c.o
+.PHONY : Sources/ft_2.c.o
+
+Sources/ft_2.i: Sources/ft_2.c.i
+
+.PHONY : Sources/ft_2.i
+
+# target to preprocess a source file
+Sources/ft_2.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/ft_2.c.i
+.PHONY : Sources/ft_2.c.i
+
+Sources/ft_2.s: Sources/ft_2.c.s
+
+.PHONY : Sources/ft_2.s
+
+# target to generate assembly for a file
+Sources/ft_2.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/ft_2.c.s
+.PHONY : Sources/ft_2.c.s
+
+Sources/list.o: Sources/list.c.o
+
+.PHONY : Sources/list.o
+
+# target to build an object file
+Sources/list.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/list.c.o
+.PHONY : Sources/list.c.o
+
+Sources/list.i: Sources/list.c.i
+
+.PHONY : Sources/list.i
+
+# target to preprocess a source file
+Sources/list.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/list.c.i
+.PHONY : Sources/list.c.i
+
+Sources/list.s: Sources/list.c.s
+
+.PHONY : Sources/list.s
+
+# target to generate assembly for a file
+Sources/list.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/list.c.s
+.PHONY : Sources/list.c.s
+
+Sources/list_2.o: Sources/list_2.c.o
+
+.PHONY : Sources/list_2.o
+
+# target to build an object file
+Sources/list_2.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/list_2.c.o
+.PHONY : Sources/list_2.c.o
+
+Sources/list_2.i: Sources/list_2.c.i
+
+.PHONY : Sources/list_2.i
+
+# target to preprocess a source file
+Sources/list_2.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/list_2.c.i
+.PHONY : Sources/list_2.c.i
+
+Sources/list_2.s: Sources/list_2.c.s
+
+.PHONY : Sources/list_2.s
+
+# target to generate assembly for a file
+Sources/list_2.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/list_2.c.s
+.PHONY : Sources/list_2.c.s
+
 Sources/main.o: Sources/main.c.o
 
 .PHONY : Sources/main.o
@@ -390,6 +471,15 @@ help:
 	@echo "... Sources/ft.o"
 	@echo "... Sources/ft.i"
 	@echo "... Sources/ft.s"
+	@echo "... Sources/ft_2.o"
+	@echo "... Sources/ft_2.i"
+	@echo "... Sources/ft_2.s"
+	@echo "... Sources/list.o"
+	@echo "... Sources/list.i"
+	@echo "... Sources/list.s"
+	@echo "... Sources/list_2.o"
+	@echo "... Sources/list_2.i"
+	@echo "... Sources/list_2.s"
 	@echo "... Sources/main.o"
 	@echo "... Sources/main.i"
 	@echo "... Sources/main.s"

@@ -22,10 +22,13 @@ INC_DIR		=	Includes/
 OBJ_DIR		=	.objs/
 
 SRC_BASE    =   ft.c					\
+                ft_2.c					\
 				main.c					\
 				rt.c					\
 				sdl.c					\
 				sdl_init.c              \
+				list.c                  \
+				list_2.c                \
 				Shapes/sphere.c			\
 				Vec3f/vec3f_1.c			\
 				Vec3f/vec3f_2.c			\
@@ -36,7 +39,7 @@ OBJS		=	$(addprefix $(OBJ_DIR), $(SRC_BASE:.c=.o))
 NB			=	$(words $(SRC_BASE))
 INDEX		=	0
 
-all :
+all:
 	@make -j $(NAME)
 
 $(NAME):		$(OBJ_DIR) $(OBJS)
@@ -71,7 +74,13 @@ fclean:			clean
 
 re:				fclean all
 
+rt:
+	@./RTv1
+
+run:            all rt fclean
+
 install:
 	@./install_frameworks.sh
+
 
 -include $(OBJS:.o=.d)

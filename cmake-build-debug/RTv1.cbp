@@ -80,10 +80,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Includes/list.h">
+			<Option target="RTv1"/>
+		</Unit>
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Includes/rt.h">
 			<Option target="RTv1"/>
 		</Unit>
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Includes/shapes.h">
+			<Option target="RTv1"/>
+		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Includes/structures.h">
 			<Option target="RTv1"/>
 		</Unit>
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Includes/vec3f.h">
@@ -102,6 +108,15 @@
 			<Option target="RTv1"/>
 		</Unit>
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/ft.c">
+			<Option target="RTv1"/>
+		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/ft_2.c">
+			<Option target="RTv1"/>
+		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/list.c">
+			<Option target="RTv1"/>
+		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/list_2.c">
 			<Option target="RTv1"/>
 		</Unit>
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/main.c">

@@ -12,7 +12,7 @@
 
 #include "rt.h"
 
-t_object		sphere_create(t_vec3f center, float radius, Uint32 color)
+t_object		sphere_create(t_vec3f center, float radius, t_vec3f color)
 {
 	t_object ret;
 	t_sphere *sphere;

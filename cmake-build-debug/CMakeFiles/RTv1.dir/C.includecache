@@ -6,6 +6,38 @@
 
 #IncludeRegexTransform: 
 
+../Includes/conf.h
+fcntl.h
+-
+stdio.h
+-
+limits.h
+-
+unistd.h
+-
+stdarg.h
+-
+stdlib.h
+-
+string.h
+-
+signal.h
+-
+sys/stat.h
+-
+sys/types.h
+-
+structures.h
+../Includes/structures.h
+list.h
+../Includes/list.h
+
+../Includes/list.h
+unistd.h
+-
+stdlib.h
+-
+
 ../Includes/rt.h
 stdlib.h
 -
@@ -21,8 +53,14 @@ SDL.h
 -
 SDL_image.h
 -
+conf.h
+../Includes/conf.h
+list.h
+../Includes/list.h
 shapes.h
 ../Includes/shapes.h
+structures.h
+../Includes/structures.h
 
 ../Includes/shapes.h
 rt.h
@@ -30,31 +68,19 @@ rt.h
 vec3f.h
 ../Includes/vec3f.h
 
+../Includes/structures.h
+vec3f.h
+../Includes/vec3f.h
+shapes.h
+../Includes/shapes.h
+list.h
+../Includes/list.h
+
 ../Includes/vec3f.h
 math.h
 -
 
-/home/wstygg/CLionProjects/RTv1/Sources/Shapes/sphere.c
-rt.h
-/home/wstygg/CLionProjects/RTv1/Sources/Shapes/rt.h
-
-/home/wstygg/CLionProjects/RTv1/Sources/ft.c
-rt.h
-/home/wstygg/CLionProjects/RTv1/Sources/rt.h
-
-/home/wstygg/CLionProjects/RTv1/Sources/main.c
-rt.h
-/home/wstygg/CLionProjects/RTv1/Sources/rt.h
-
 /home/wstygg/CLionProjects/RTv1/Sources/rt.c
-rt.h
-/home/wstygg/CLionProjects/RTv1/Sources/rt.h
-
-/home/wstygg/CLionProjects/RTv1/Sources/sdl.c
-rt.h
-/home/wstygg/CLionProjects/RTv1/Sources/rt.h
-
-/home/wstygg/CLionProjects/RTv1/Sources/sdl_init.c
 rt.h
 /home/wstygg/CLionProjects/RTv1/Sources/rt.h
 

@@ -57,22 +57,9 @@ include CMakeFiles/RTv1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/RTv1.dir/flags.make
 
-CMakeFiles/RTv1.dir/Sources/main.c.o: CMakeFiles/RTv1.dir/flags.make
-CMakeFiles/RTv1.dir/Sources/main.c.o: ../Sources/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/RTv1.dir/Sources/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTv1.dir/Sources/main.c.o   -c /home/wstygg/CLionProjects/RTv1/Sources/main.c
-
-CMakeFiles/RTv1.dir/Sources/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RTv1.dir/Sources/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wstygg/CLionProjects/RTv1/Sources/main.c > CMakeFiles/RTv1.dir/Sources/main.c.i
-
-CMakeFiles/RTv1.dir/Sources/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RTv1.dir/Sources/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wstygg/CLionProjects/RTv1/Sources/main.c -o CMakeFiles/RTv1.dir/Sources/main.c.s
-
 CMakeFiles/RTv1.dir/Sources/ft.c.o: CMakeFiles/RTv1.dir/flags.make
 CMakeFiles/RTv1.dir/Sources/ft.c.o: ../Sources/ft.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/RTv1.dir/Sources/ft.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/RTv1.dir/Sources/ft.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTv1.dir/Sources/ft.c.o   -c /home/wstygg/CLionProjects/RTv1/Sources/ft.c
 
 CMakeFiles/RTv1.dir/Sources/ft.c.i: cmake_force
@@ -83,9 +70,48 @@ CMakeFiles/RTv1.dir/Sources/ft.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RTv1.dir/Sources/ft.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wstygg/CLionProjects/RTv1/Sources/ft.c -o CMakeFiles/RTv1.dir/Sources/ft.c.s
 
+CMakeFiles/RTv1.dir/Sources/list.c.o: CMakeFiles/RTv1.dir/flags.make
+CMakeFiles/RTv1.dir/Sources/list.c.o: ../Sources/list.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/RTv1.dir/Sources/list.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTv1.dir/Sources/list.c.o   -c /home/wstygg/CLionProjects/RTv1/Sources/list.c
+
+CMakeFiles/RTv1.dir/Sources/list.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RTv1.dir/Sources/list.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wstygg/CLionProjects/RTv1/Sources/list.c > CMakeFiles/RTv1.dir/Sources/list.c.i
+
+CMakeFiles/RTv1.dir/Sources/list.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RTv1.dir/Sources/list.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wstygg/CLionProjects/RTv1/Sources/list.c -o CMakeFiles/RTv1.dir/Sources/list.c.s
+
+CMakeFiles/RTv1.dir/Sources/list_2.c.o: CMakeFiles/RTv1.dir/flags.make
+CMakeFiles/RTv1.dir/Sources/list_2.c.o: ../Sources/list_2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/RTv1.dir/Sources/list_2.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTv1.dir/Sources/list_2.c.o   -c /home/wstygg/CLionProjects/RTv1/Sources/list_2.c
+
+CMakeFiles/RTv1.dir/Sources/list_2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RTv1.dir/Sources/list_2.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wstygg/CLionProjects/RTv1/Sources/list_2.c > CMakeFiles/RTv1.dir/Sources/list_2.c.i
+
+CMakeFiles/RTv1.dir/Sources/list_2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RTv1.dir/Sources/list_2.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wstygg/CLionProjects/RTv1/Sources/list_2.c -o CMakeFiles/RTv1.dir/Sources/list_2.c.s
+
+CMakeFiles/RTv1.dir/Sources/main.c.o: CMakeFiles/RTv1.dir/flags.make
+CMakeFiles/RTv1.dir/Sources/main.c.o: ../Sources/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/RTv1.dir/Sources/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTv1.dir/Sources/main.c.o   -c /home/wstygg/CLionProjects/RTv1/Sources/main.c
+
+CMakeFiles/RTv1.dir/Sources/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RTv1.dir/Sources/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wstygg/CLionProjects/RTv1/Sources/main.c > CMakeFiles/RTv1.dir/Sources/main.c.i
+
+CMakeFiles/RTv1.dir/Sources/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RTv1.dir/Sources/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wstygg/CLionProjects/RTv1/Sources/main.c -o CMakeFiles/RTv1.dir/Sources/main.c.s
+
 CMakeFiles/RTv1.dir/Sources/sdl.c.o: CMakeFiles/RTv1.dir/flags.make
 CMakeFiles/RTv1.dir/Sources/sdl.c.o: ../Sources/sdl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/RTv1.dir/Sources/sdl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/RTv1.dir/Sources/sdl.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTv1.dir/Sources/sdl.c.o   -c /home/wstygg/CLionProjects/RTv1/Sources/sdl.c
 
 CMakeFiles/RTv1.dir/Sources/sdl.c.i: cmake_force
@@ -98,7 +124,7 @@ CMakeFiles/RTv1.dir/Sources/sdl.c.s: cmake_force
 
 CMakeFiles/RTv1.dir/Sources/Shapes/sphere.c.o: CMakeFiles/RTv1.dir/flags.make
 CMakeFiles/RTv1.dir/Sources/Shapes/sphere.c.o: ../Sources/Shapes/sphere.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/RTv1.dir/Sources/Shapes/sphere.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/RTv1.dir/Sources/Shapes/sphere.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTv1.dir/Sources/Shapes/sphere.c.o   -c /home/wstygg/CLionProjects/RTv1/Sources/Shapes/sphere.c
 
 CMakeFiles/RTv1.dir/Sources/Shapes/sphere.c.i: cmake_force
@@ -111,7 +137,7 @@ CMakeFiles/RTv1.dir/Sources/Shapes/sphere.c.s: cmake_force
 
 CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.o: CMakeFiles/RTv1.dir/flags.make
 CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.o: ../Sources/Vec3f/vec3f_1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.o   -c /home/wstygg/CLionProjects/RTv1/Sources/Vec3f/vec3f_1.c
 
 CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.i: cmake_force
@@ -124,7 +150,7 @@ CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.s: cmake_force
 
 CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.o: CMakeFiles/RTv1.dir/flags.make
 CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.o: ../Sources/Vec3f/vec3f_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.o   -c /home/wstygg/CLionProjects/RTv1/Sources/Vec3f/vec3f_2.c
 
 CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.i: cmake_force
@@ -137,7 +163,7 @@ CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.s: cmake_force
 
 CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_dtr.c.o: CMakeFiles/RTv1.dir/flags.make
 CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_dtr.c.o: ../Sources/Vec3f/vec3f_dtr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_dtr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_dtr.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_dtr.c.o   -c /home/wstygg/CLionProjects/RTv1/Sources/Vec3f/vec3f_dtr.c
 
 CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_dtr.c.i: cmake_force
@@ -150,7 +176,7 @@ CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_dtr.c.s: cmake_force
 
 CMakeFiles/RTv1.dir/Sources/rt.c.o: CMakeFiles/RTv1.dir/flags.make
 CMakeFiles/RTv1.dir/Sources/rt.c.o: ../Sources/rt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/RTv1.dir/Sources/rt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/RTv1.dir/Sources/rt.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTv1.dir/Sources/rt.c.o   -c /home/wstygg/CLionProjects/RTv1/Sources/rt.c
 
 CMakeFiles/RTv1.dir/Sources/rt.c.i: cmake_force
@@ -163,7 +189,7 @@ CMakeFiles/RTv1.dir/Sources/rt.c.s: cmake_force
 
 CMakeFiles/RTv1.dir/Sources/sdl_init.c.o: CMakeFiles/RTv1.dir/flags.make
 CMakeFiles/RTv1.dir/Sources/sdl_init.c.o: ../Sources/sdl_init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/RTv1.dir/Sources/sdl_init.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/RTv1.dir/Sources/sdl_init.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTv1.dir/Sources/sdl_init.c.o   -c /home/wstygg/CLionProjects/RTv1/Sources/sdl_init.c
 
 CMakeFiles/RTv1.dir/Sources/sdl_init.c.i: cmake_force
@@ -174,23 +200,41 @@ CMakeFiles/RTv1.dir/Sources/sdl_init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RTv1.dir/Sources/sdl_init.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wstygg/CLionProjects/RTv1/Sources/sdl_init.c -o CMakeFiles/RTv1.dir/Sources/sdl_init.c.s
 
+CMakeFiles/RTv1.dir/Sources/ft_2.c.o: CMakeFiles/RTv1.dir/flags.make
+CMakeFiles/RTv1.dir/Sources/ft_2.c.o: ../Sources/ft_2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/RTv1.dir/Sources/ft_2.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTv1.dir/Sources/ft_2.c.o   -c /home/wstygg/CLionProjects/RTv1/Sources/ft_2.c
+
+CMakeFiles/RTv1.dir/Sources/ft_2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RTv1.dir/Sources/ft_2.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wstygg/CLionProjects/RTv1/Sources/ft_2.c > CMakeFiles/RTv1.dir/Sources/ft_2.c.i
+
+CMakeFiles/RTv1.dir/Sources/ft_2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RTv1.dir/Sources/ft_2.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wstygg/CLionProjects/RTv1/Sources/ft_2.c -o CMakeFiles/RTv1.dir/Sources/ft_2.c.s
+
 # Object files for target RTv1
 RTv1_OBJECTS = \
-"CMakeFiles/RTv1.dir/Sources/main.c.o" \
 "CMakeFiles/RTv1.dir/Sources/ft.c.o" \
+"CMakeFiles/RTv1.dir/Sources/list.c.o" \
+"CMakeFiles/RTv1.dir/Sources/list_2.c.o" \
+"CMakeFiles/RTv1.dir/Sources/main.c.o" \
 "CMakeFiles/RTv1.dir/Sources/sdl.c.o" \
 "CMakeFiles/RTv1.dir/Sources/Shapes/sphere.c.o" \
 "CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.o" \
 "CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.o" \
 "CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_dtr.c.o" \
 "CMakeFiles/RTv1.dir/Sources/rt.c.o" \
-"CMakeFiles/RTv1.dir/Sources/sdl_init.c.o"
+"CMakeFiles/RTv1.dir/Sources/sdl_init.c.o" \
+"CMakeFiles/RTv1.dir/Sources/ft_2.c.o"
 
 # External object files for target RTv1
 RTv1_EXTERNAL_OBJECTS =
 
-RTv1: CMakeFiles/RTv1.dir/Sources/main.c.o
 RTv1: CMakeFiles/RTv1.dir/Sources/ft.c.o
+RTv1: CMakeFiles/RTv1.dir/Sources/list.c.o
+RTv1: CMakeFiles/RTv1.dir/Sources/list_2.c.o
+RTv1: CMakeFiles/RTv1.dir/Sources/main.c.o
 RTv1: CMakeFiles/RTv1.dir/Sources/sdl.c.o
 RTv1: CMakeFiles/RTv1.dir/Sources/Shapes/sphere.c.o
 RTv1: CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.o
@@ -198,9 +242,10 @@ RTv1: CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.o
 RTv1: CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_dtr.c.o
 RTv1: CMakeFiles/RTv1.dir/Sources/rt.c.o
 RTv1: CMakeFiles/RTv1.dir/Sources/sdl_init.c.o
+RTv1: CMakeFiles/RTv1.dir/Sources/ft_2.c.o
 RTv1: CMakeFiles/RTv1.dir/build.make
 RTv1: CMakeFiles/RTv1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable RTv1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking C executable RTv1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RTv1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

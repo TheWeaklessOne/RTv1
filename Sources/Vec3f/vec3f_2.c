@@ -50,7 +50,7 @@ t_vec3f		vec3f_rot(t_vec3f a, t_vec3f b)
 	return (a);
 }
 
-t_vec3f		vec3f_sub(t_vec3f a, t_vec3f b)
+t_vec3f		vec3f_sub(t_vec3f a, const t_vec3f b)
 {
 	a.x -= b.x;
 	a.y -= b.y;

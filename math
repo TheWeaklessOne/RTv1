@@ -1,0 +1,36 @@
+// Dot product of two 3D vectors.
+var DotProduct = function(v1, v2) {
+  return v1[0]*v2[0] + v1[1]*v2[1] + v1[2]*v2[2];
+}
+
+
+// Length of a 3D vector.
+var Length = function(vec) {
+  return Math.sqrt(DotProduct(vec, vec));
+}
+
+
+// Computes k * vec.
+var Multiply = function(k, vec) {
+  return [k*vec[0], k*vec[1], k*vec[2]];
+}
+
+
+// Computes v1 + v2.
+var Add = function(v1, v2) {
+  return [v1[0] + v2[0], v1[1] + v2[1], v1[2] + v2[2]];
+}
+
+
+// Computes v1 - v2.
+var Subtract = function(v1, v2) {
+  return [v1[0] - v2[0], v1[1] - v2[1], v1[2] - v2[2]];
+}
+
+
+// Clamps a color to the canonical color range.
+var Clamp = function(vec) {
+  return [Math.min(255, Math.max(0, vec[0])),
+      Math.min(255, Math.max(0, vec[1])),
+      Math.min(255, Math.max(0, vec[2]))];
+}

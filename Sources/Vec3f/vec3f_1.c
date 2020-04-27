@@ -35,7 +35,7 @@ t_vec3f		vec3f_norm(const t_vec3f vec)
 	return (vec3f_scale(vec, 1 / vec3f_length(vec)));
 }
 
-t_vec3f		vec3f_add(t_vec3f a, t_vec3f b)
+t_vec3f		vec3f_add(t_vec3f a, const t_vec3f b)
 {
 	a.x += b.x;
 	a.y += b.y;
