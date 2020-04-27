@@ -1,3 +1,5 @@
+#!/bin/bash
+
 MEWORKS_DIR=~/Library/Frameworks/
 SDL2=SDL2.framework
 SDL2_IMAGE=SDL2_image.framework

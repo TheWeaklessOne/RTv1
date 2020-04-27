@@ -17,13 +17,13 @@
 # include <unistd.h>
 # include <math.h>
 
-#if defined(unix) || defined(__unix__) || defined(__unix)
-# include <SDL2/SDL.h>
-# include <SDL2/SDL_image.h>
-#else
-# include <SDL.h>
-# include <SDL_image.h>
-#endif
+# if defined(unix) || defined(__unix__) || defined(__unix)
+#  include <SDL2/SDL.h>
+#  include <SDL2/SDL_image.h>
+# else
+#  include <SDL.h>
+#  include <SDL_image.h>
+# endif
 
 # include "shapes.h"
 
@@ -49,7 +49,6 @@ typedef struct			s_sdl
 	t_screen			screen;
 	int					keys[SDL_NUM_SCANCODES];
 }						t_sdl;
-
 
 typedef struct			s_rt
 {

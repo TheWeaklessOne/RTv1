@@ -36,7 +36,7 @@ typedef struct			s_sphere
 	float				radius;
 }						t_sphere;
 
-float					sphere_intersect(t_vec3f orig, t_vec3f dir, void *sphere);
+float					sphere_intersect(t_vec3f orig, t_vec3f dir, void *sph);
 
 t_object				sphere_create(t_vec3f center, float radius,
 			Uint32 color);

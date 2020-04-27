@@ -34,7 +34,27 @@ vec3f.h
 math.h
 -
 
+/home/wstygg/CLionProjects/RTv1/Sources/Shapes/sphere.c
+rt.h
+/home/wstygg/CLionProjects/RTv1/Sources/Shapes/rt.h
+
+/home/wstygg/CLionProjects/RTv1/Sources/ft.c
+rt.h
+/home/wstygg/CLionProjects/RTv1/Sources/rt.h
+
 /home/wstygg/CLionProjects/RTv1/Sources/main.c
+rt.h
+/home/wstygg/CLionProjects/RTv1/Sources/rt.h
+
+/home/wstygg/CLionProjects/RTv1/Sources/rt.c
+rt.h
+/home/wstygg/CLionProjects/RTv1/Sources/rt.h
+
+/home/wstygg/CLionProjects/RTv1/Sources/sdl.c
+rt.h
+/home/wstygg/CLionProjects/RTv1/Sources/rt.h
+
+/home/wstygg/CLionProjects/RTv1/Sources/sdl_init.c
 rt.h
 /home/wstygg/CLionProjects/RTv1/Sources/rt.h
 

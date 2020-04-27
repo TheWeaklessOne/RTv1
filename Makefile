@@ -1,12 +1,21 @@
 NAME		=   RTv1
 
+uname_S := $(shell uname -s)
+
 CC			=	gcc
-FLAGS		=	-Wall -Wextra -Werror -g3 -I ~/Library/Frameworks/SDL2.framework/Headers -I ~/Library/Frameworks/SDL2_ttf.framework/Headers -I ~/Library/Frameworks/SDL2_image.framework/Headers -F ~/Library/Frameworks
+
+uname_S := $(shell uname -s)
+
+ifeq ($(uname_S), Linux)
+    FLAGS   =   -Wall -Wextra -Werror -g3 -lm -lSDL2 -lSDL2_image
+else
+    FLAGS   =	-Wall -Wextra -Werror -g3 -I ~/Library/Frameworks/SDL2.framework/Headers -I ~/Library/Frameworks/SDL2_ttf.framework/Headers -I ~/Library/Frameworks/SDL2_image.framework/Headers -F ~/Library/Frameworks
+endif
+
 
 
 DELTA		=	$$(echo "$$(tput cols)-47"|bc)
 
-LIBS		=
 
 SRC_DIR		=	Sources/
 INC_DIR		=	Includes/
@@ -16,6 +25,7 @@ SRC_BASE    =   ft.c					\
 				main.c					\
 				rt.c					\
 				sdl.c					\
+				sdl_init.c              \
 				Shapes/sphere.c			\
 				Vec3f/vec3f_1.c			\
 				Vec3f/vec3f_2.c			\
@@ -33,7 +43,7 @@ $(NAME):		$(OBJ_DIR) $(OBJS)
 	@$(CC) $(OBJS) -o $(NAME)			\
 		-I $(INC_DIR)					\
 		$(LIBS)                 		\
-		$(FLAGS) -framework SDL2 -framework SDL2_image -framework SDL2_ttf
+		$(FLAGS)
 	@strip -x $@
 	@printf "\r\033[48;5;15;38;5;25m✅   MAKE $(NAME)\033[0m\033[K\n"
 
@@ -60,5 +70,8 @@ fclean:			clean
 	@printf "\r\033[38;5;196m❌ fclean $(NAME)\033[0m\033[K\n"
 
 re:				fclean all
+
+install:
+	@./install_frameworks.sh
 
 -include $(OBJS:.o=.d)
