@@ -5,6 +5,6 @@ set(CMAKE_C_STANDARD 99)
 
 include_directories(Includes)
 
-add_executable(RTv1 Includes/rt.h Sources/main.c Sources/ft.c Sources/sdl.c Includes/shapes.h Sources/Shapes/sphere.c Sources/Vec3f/vec3f_1.c Includes/vec3f.h Sources/Vec3f/vec3f_2.c Sources/Vec3f/vec3f_dtr.c Sources/rt.c)
+add_executable(RTv1 Includes/rt.h Sources/main.c Sources/ft.c Sources/sdl.c Includes/shapes.h Sources/Shapes/sphere.c Sources/Vec3f/vec3f_1.c Includes/vec3f.h Sources/Vec3f/vec3f_2.c Sources/Vec3f/vec3f_dtr.c Sources/rt.c Sources/sdl_init.c)
 
 target_link_libraries(RTv1 m SDL2 SDL2_image)

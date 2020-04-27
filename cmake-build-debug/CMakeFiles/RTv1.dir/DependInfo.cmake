@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/wstygg/CLionProjects/RTv1/Sources/main.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/main.c.o"
   "/home/wstygg/CLionProjects/RTv1/Sources/rt.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/rt.c.o"
   "/home/wstygg/CLionProjects/RTv1/Sources/sdl.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/sdl.c.o"
+  "/home/wstygg/CLionProjects/RTv1/Sources/sdl_init.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/sdl_init.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

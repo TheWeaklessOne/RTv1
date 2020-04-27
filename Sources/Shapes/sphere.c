@@ -27,28 +27,23 @@ t_object		sphere_create(t_vec3f center, float radius, Uint32 color)
 	return (ret);
 }
 
-//непонятная фигня с сайта
-int				sphere_intersect(t_vec3f orig, t_vec3f dir,
-		float *t0, void *sphere)
+float			sphere_intersect(t_vec3f orig, t_vec3f dir, void *sphere_p)
 {
-	t_vec3f		l;
-	float		tca;
-	float		d2;
-	float		thc;
-	float		t1;
+	float		k[3];
+	float		ret[2];
+	float		discriminant;
+	t_vec3f		oc;
+	t_sphere	sphere;
 
-	l = vec3f_sub(((t_sphere*)sphere)->center, orig);
-	tca = vec3f_scalar(l, dir);
-	d2 = vec3f_scalar(l, l) - tca * tca;
-	if (d2 > ((t_sphere*)sphere)->radius * ((t_sphere*)sphere)->radius)
-		return (0);
-	thc = sqrtf(((t_sphere*)sphere)->radius *
-			((t_sphere*)sphere)->radius - d2);
-	*t0 = tca - thc;
-	t1 = tca + thc;
-	if (*t0 < 0)
-		*t0 = t1;
-	if (*t0 < 0)
-		return (0);
-	return (1);
+	sphere = *((t_sphere*)sphere_p);
+	oc = vec3f_sub(orig, sphere.center);
+	k[0] = vec3f_scalar(dir, dir);
+	k[1] = 2 * vec3f_scalar(oc, dir);
+	k[2] = vec3f_scalar(oc, oc) - sphere.radius * sphere.radius;
+	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
+	if (discriminant < 0)
+		return (FLT_MAX);
+	ret[0] = -k[1] + sqrtf(discriminant) / (2 * k[0]);
+	ret[1] = -k[1] + sqrtf(discriminant) / (2 * k[0]);
+	return ((ret[0] < ret[1]) ? ret[0] : ret[1]);
 }

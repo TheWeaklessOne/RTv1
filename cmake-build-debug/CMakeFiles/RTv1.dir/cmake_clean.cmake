@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/RTv1.dir/Sources/main.c.o"
   "CMakeFiles/RTv1.dir/Sources/rt.c.o"
   "CMakeFiles/RTv1.dir/Sources/sdl.c.o"
+  "CMakeFiles/RTv1.dir/Sources/sdl_init.c.o"
   "RTv1"
   "RTv1.pdb"
 )

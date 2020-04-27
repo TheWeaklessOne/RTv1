@@ -113,6 +113,9 @@
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/sdl.c">
 			<Option target="RTv1"/>
 		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/sdl_init.c">
+			<Option target="RTv1"/>
+		</Unit>
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

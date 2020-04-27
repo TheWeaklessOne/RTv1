@@ -35,3 +35,8 @@ CMakeFiles/RTv1.dir/Sources/sdl.c.o
  ../Includes/shapes.h
  ../Includes/vec3f.h
  /home/wstygg/CLionProjects/RTv1/Sources/sdl.c
+CMakeFiles/RTv1.dir/Sources/sdl_init.c.o
+ ../Includes/rt.h
+ ../Includes/shapes.h
+ ../Includes/vec3f.h
+ /home/wstygg/CLionProjects/RTv1/Sources/sdl_init.c

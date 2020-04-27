@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/wstygg/clion/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/111/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/wstygg/clion/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/111/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/wstygg/CLionProjects/RTv1/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/wstygg/clion/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/111/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/wstygg/clion/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/111/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -339,6 +339,33 @@ Sources/sdl.c.s:
 	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/sdl.c.s
 .PHONY : Sources/sdl.c.s
 
+Sources/sdl_init.o: Sources/sdl_init.c.o
+
+.PHONY : Sources/sdl_init.o
+
+# target to build an object file
+Sources/sdl_init.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/sdl_init.c.o
+.PHONY : Sources/sdl_init.c.o
+
+Sources/sdl_init.i: Sources/sdl_init.c.i
+
+.PHONY : Sources/sdl_init.i
+
+# target to preprocess a source file
+Sources/sdl_init.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/sdl_init.c.i
+.PHONY : Sources/sdl_init.c.i
+
+Sources/sdl_init.s: Sources/sdl_init.c.s
+
+.PHONY : Sources/sdl_init.s
+
+# target to generate assembly for a file
+Sources/sdl_init.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/sdl_init.c.s
+.PHONY : Sources/sdl_init.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -372,6 +399,9 @@ help:
 	@echo "... Sources/sdl.o"
 	@echo "... Sources/sdl.i"
 	@echo "... Sources/sdl.s"
+	@echo "... Sources/sdl_init.o"
+	@echo "... Sources/sdl_init.i"
+	@echo "... Sources/sdl_init.s"
 .PHONY : help
 
 

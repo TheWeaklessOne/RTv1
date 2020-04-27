@@ -18,7 +18,8 @@
 
 enum					e_objects
 {
-	SPHERE = 0
+	SPHERE = 0,
+	OBJECTS_N
 };
 
 typedef struct			s_object
@@ -26,8 +27,7 @@ typedef struct			s_object
 	int					type;
 	Uint32				color;
 	void				*object;
-	int					(*intersect)(t_vec3f vec, t_vec3f vec2,
-			float *flt, void *vid);
+	float				(*intersect)(t_vec3f orig, t_vec3f dir, void *obj);
 }						t_object;
 
 typedef struct			s_sphere
@@ -36,8 +36,7 @@ typedef struct			s_sphere
 	float				radius;
 }						t_sphere;
 
-int						sphere_intersect(t_vec3f orig, t_vec3f dir,
-			float *t0, void *sphere);
+float					sphere_intersect(t_vec3f orig, t_vec3f dir, void *sphere);
 
 t_object				sphere_create(t_vec3f center, float radius,
 			Uint32 color);

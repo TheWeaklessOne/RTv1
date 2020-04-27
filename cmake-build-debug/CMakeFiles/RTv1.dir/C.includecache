@@ -6,3 +6,35 @@
 
 #IncludeRegexTransform: 
 
+../Includes/rt.h
+stdlib.h
+-
+unistd.h
+-
+math.h
+-
+SDL2/SDL.h
+-
+SDL2/SDL_image.h
+-
+SDL.h
+-
+SDL_image.h
+-
+shapes.h
+../Includes/shapes.h
+
+../Includes/shapes.h
+rt.h
+../Includes/rt.h
+vec3f.h
+../Includes/vec3f.h
+
+../Includes/vec3f.h
+math.h
+-
+
+/home/wstygg/CLionProjects/RTv1/Sources/main.c
+rt.h
+/home/wstygg/CLionProjects/RTv1/Sources/rt.h
+

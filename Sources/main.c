@@ -12,59 +12,76 @@
 
 #include "rt.h"
 
-Uint32			get_color(t_vec3f orig, t_vec3f dir, t_rt *rt)
+static t_vec3f		canvas_to_viewport(const int x, const int y)
 {
-	Uint32		color;
-	int			i;
+	t_vec3f			ret;
 
+	ret.x = (float)x * WIDTH / HEIGHT / WIDTH;
+	ret.y = (float)y * 1 / HEIGHT;
+	ret.z = 1;
+	return (ret);
+}
+
+static Uint32		get_colour(t_vec3f dir, float z_min, float z_max, t_rt rt)
+{
+	register int	i;
+	float			t_min;
+	t_object		*to_draw;
+	float			inter;
+
+	to_draw = NULL;
+	t_min = FLT_MAX;
 	i = -1;
-	float dst = FLT_MAX; //на сколько понимаю, это дальность полета луча, и ее можно сделать и поменьше
-	color = BACKGROUND_C;
-	//проходит по всем обьектам, если луч тыкается в какой-то из них, то закрашивает в цвет. Если за все время луч тыкнется в несколько фигур, то будет цвет последнего (а должно быть, чтобы он реагировал в зависимости от координаты  Z
-	while (++i < rt->objects_n)
+	while (++i < rt.objects_n)
 	{
-		if (!(rt->objects[i].intersect(orig, dir, &dst, rt->objects[i].object))) //основная фигня, где обращение идет по функции, и поэтому нам плевать, какой конкретно тип будет в объекте, вызовется правильная функция
-			continue ;
-		color = rt->objects[i].color;
-	}
-	return (color);
-}
-
-void			raytrace(Uint32 *pixels, t_rt *rt)
-{
-	t_vec3f		camera;
-	const int fov = M_PI/2; //так было на сайте, понятия не имею, почему так
-
-	camera = (t_vec3f){.x = 0, .y = 5, .z = 0}; //временная рандомная структура с камерой.
-	for (int i = 0; i < SCREEN_HEIGHT; i++)
-		for (int j = 0; j < SCREEN_WIDTH; j++)
+		inter = rt.objects[i].intersect(rt.camera, dir, rt.objects[i].object);
+		if (inter < t_min && z_min < inter && inter < z_max)
 		{
-			//откуда все это - тоже не понимаю
-			float x =  (2*(i + 0.5)/(float)SCREEN_WIDTH  - 1)*tanf(fov/2.)*SCREEN_WIDTH/(float)SCREEN_HEIGHT;
-			float y = -(2*(j + 0.5)/(float)SCREEN_HEIGHT - 1)*tanf(fov/2.);
-			t_vec3f dir = vec3f_norm((t_vec3f){x, y, -1});
-			pixels[j + i * SCREEN_WIDTH] = get_color(camera, dir, rt); //здесь получает цвет для каждого пикселя
+			t_min = inter;
+			to_draw = &rt.objects[i];
 		}
+	}
+	if (to_draw)
+		return (to_draw->color);
+	return (BACKGROUND_C);
 }
 
-int				main()
+void				raytrace(t_rt rt, t_sdl sdl)
 {
-	t_sdl		sdl;
-	t_rt		rt;
-	SDL_Event	e;
+	register int	w;
+	register int	h;
 
-	sdl_init(&sdl); //для сдл, не обращай внимания
-	rt_init(&rt); //тут должна проходить валидация карты и возвращаться заполненная структура со всеми фигурами, но пока тупа вручную
-	raytrace(sdl.screen.pixels, &rt); //тут все и должно происходить
-	SDL_UnlockTexture(sdl.screen.texture); //для отображения
-	SDL_RenderCopy(sdl.ren, sdl.screen.texture, NULL, NULL); //для отображения
-	//основной цикл, который обрабатывает нажатия на кнопки. Пока только эскейп и крестик
+	h = -HEIGHT_H -1;
+	while (++h < HEIGHT_H && (w = -WIDTH_H - 1))
+		while (++w < WIDTH_H)
+			sdl.screen.pixels[WIDTH_H + w + (HEIGHT_H + h) * WIDTH] =
+					get_colour
+					(
+							canvas_to_viewport(w, h),
+							rt.z_min,
+							rt.z_max,
+							rt
+					);
+}
+
+int					main()
+{
+	t_sdl			sdl;
+	t_rt			rt;
+	SDL_Event		e;
+
+	sdl_init(&sdl);
+	rt_init(&rt);
+	raytrace(rt, sdl);
+	SDL_UnlockTexture(sdl.screen.texture);
+	SDL_RenderCopy(sdl.ren, sdl.screen.texture, NULL, NULL);
 	while (sdl.running)
 	{
 		SDL_RenderPresent(sdl.ren);
-                SDL_Delay(200);
 		while (SDL_PollEvent(&e))
 			manage_event(e, &sdl);
 		manage_keys(&sdl);
 	}
+	sdl_quit(&sdl);
+	exit(0);
 }
