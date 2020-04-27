@@ -76,14 +76,15 @@ var Clamp = function(vec) {
 
 
 // ======================================================================
-//  A raytracer with diffuse illumination.
+//  A raytracer with diffuse and specular illumination.
 // ======================================================================
 
 // A Sphere.
-var Sphere = function(center, radius, color) {
+var Sphere = function(center, radius, color, specular) {
   this.center = center;
   this.radius = radius;
   this.color = color;
+  this.specular = specular;
 }
 
 // A Light.
@@ -103,10 +104,10 @@ var viewport_size = 1;
 var projection_plane_z = 1;
 var camera_position = [0, 0, 0];
 var background_color = [255, 255, 255];
-var spheres = [new Sphere([0, -1, 3], 1, [255, 0, 0]),
-           new Sphere([2, 0, 4], 1, [0, 0, 255]),
-           new Sphere([-2, 0, 4], 1, [0, 255, 0]),
-           new Sphere([0, -5001, 0], 5000, [255, 255, 0])];
+var spheres = [new Sphere([0, -1, 3], 1, [255, 0, 0], 500),
+           new Sphere([2, 0, 4], 1, [0, 0, 255], 500),
+           new Sphere([-2, 0, 4], 1, [0, 255, 0], 10),
+           new Sphere([0, -5001, 0], 5000, [255, 255, 0], 1000)];
 
 var lights = [
   new Light(Light.AMBIENT, 0.2),
@@ -143,33 +144,36 @@ var IntersectRaySphere = function(origin, direction, sphere) {
 }
 
 
-var ComputeLighting = function(point, normal) {
+var ComputeLighting = function(point, normal, view, specular) {
   var intensity = 0;
   var length_n = Length(normal);  // Should be 1.0, but just in case...
+  var length_v = Length(view);
 
-  for (var i = 0; i < lights.length; i++)
-  {
+  for (var i = 0; i < lights.length; i++) {
     var light = lights[i];
-    if (light.ltype == Light.AMBIENT)
-    {
+    if (light.ltype == Light.AMBIENT) {
       intensity += light.intensity;
-    }
-    else
-    {
+    } else {
       var vec_l;
-      if (light.ltype == Light.POINT)
-      {
-        vec_l = Subtract(light.position, point);
-      }
-      else
-      {  // Light.DIRECTIONAL
-        vec_l = light.position;
+      if (light.ltype == Light.POINT) {
+    vec_l = Subtract(light.position, point);
+      } else {  // Light.DIRECTIONAL
+    vec_l = light.position;
       }
 
+      // Diffuse reflection.
       var n_dot_l = DotProduct(normal, vec_l);
-      if (n_dot_l > 0)
-      {
-        intensity += light.intensity * n_dot_l / (length_n * Length(vec_l));
+      if (n_dot_l > 0) {
+    intensity += light.intensity * n_dot_l / (length_n * Length(vec_l));
+      }
+
+      // Specular reflection.
+      if (specular != -1) {
+    var vec_r = Subtract( Multiply(2.0*DotProduct(normal, vec_l), normal), vec_l);
+    var r_dot_v = DotProduct(vec_r, view);
+    if (r_dot_v > 0) {
+      intensity += light.intensity * Math.pow(r_dot_v / (Length(vec_r) * length_v), specular);
+    }
       }
     }
   }
@@ -180,7 +184,7 @@ var ComputeLighting = function(point, normal) {
 
 // Traces a ray against the set of spheres in the scene.
 var TraceRay = function(origin, direction, min_t, max_t) {
-  var closest_t = Infinity;vec3f_scale
+  var closest_t = Infinity;
   var closest_sphere = null;
 
   for (var i = 0; i < spheres.length; i++) {
@@ -203,7 +207,9 @@ var TraceRay = function(origin, direction, min_t, max_t) {
   var normal = Subtract(point, closest_sphere.center);
   normal = Multiply(1.0 / Length(normal), normal);
 
-  return Multiply(ComputeLighting(point, normal), closest_sphere.color);
+  var view = Multiply(-1, direction);
+  var lighting = ComputeLighting(point, normal, view, closest_sphere.specular);
+  return Multiply(lighting, closest_sphere.color);
 }
 
 

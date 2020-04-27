@@ -17,15 +17,29 @@ void			manage_event(SDL_Event e, t_sdl *sdl)
 	if (e.type == SDL_QUIT)
 		sdl->running = 0;
 	else if (e.type == SDL_KEYDOWN)
+	{
+		if (e.key.keysym.sym == SDLK_ESCAPE)
+			sdl->running = 0;
 		sdl->keys[e.key.keysym.scancode] = 1;
+	}
 	else if (e.type == SDL_KEYUP)
 		sdl->keys[e.key.keysym.scancode] = 0;
 }
 
-void			manage_keys(t_sdl *sdl)
+void			manage_keys(t_rt *rt, t_sdl *sdl)
 {
-	if (sdl->keys[SDL_SCANCODE_ESCAPE])
-		sdl->running = 0;
+	if (sdl->keys[SDL_SCANCODE_LEFT])
+		rt->camera.x -= 0.1f;
+	if (sdl->keys[SDL_SCANCODE_RIGHT])
+		rt->camera.x += 0.1f;
+	if (sdl->keys[SDL_SCANCODE_UP])
+		rt->camera.y += 0.1f;
+	if (sdl->keys[SDL_SCANCODE_DOWN])
+		rt->camera.y -= 0.1f;
+	if (sdl->keys[SDL_SCANCODE_W])
+		rt->camera.z += 0.1f;
+	if (sdl->keys[SDL_SCANCODE_S])
+		rt->camera.z -= 0.1f;
 }
 
 void			sdl_quit(t_sdl *sdl)

@@ -2,7 +2,7 @@ NAME		=   RTv1
 
 uname_S := $(shell uname -s)
 
-CC			=	gcc
+CC			=   gcc
 
 uname_S := $(shell uname -s)
 

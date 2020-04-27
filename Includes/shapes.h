@@ -25,6 +25,7 @@ enum					e_objects
 typedef struct			s_object
 {
 	int					type;
+	float				specular;
 	t_vec3f				color;
 	void				*object;
 	float				(*intersect)(t_vec3f orig, t_vec3f dir, void *obj);
@@ -39,6 +40,6 @@ typedef struct			s_sphere
 float					sphere_intersect(t_vec3f orig, t_vec3f dir, void *sph);
 
 t_object				sphere_create(t_vec3f center, float radius,
-			t_vec3f color);
+			t_vec3f color, float specular);
 
 #endif

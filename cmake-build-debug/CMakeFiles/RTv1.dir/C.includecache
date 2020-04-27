@@ -45,6 +45,8 @@ unistd.h
 -
 math.h
 -
+float.h
+-
 SDL2/SDL.h
 -
 SDL2/SDL_image.h
@@ -80,7 +82,7 @@ list.h
 math.h
 -
 
-/home/wstygg/CLionProjects/RTv1/Sources/rt.c
+/home/wstygg/CLionProjects/RTv1/Sources/main.c
 rt.h
 /home/wstygg/CLionProjects/RTv1/Sources/rt.h
 

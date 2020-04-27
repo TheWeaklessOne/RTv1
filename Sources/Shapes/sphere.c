@@ -12,7 +12,7 @@
 
 #include "rt.h"
 
-t_object		sphere_create(t_vec3f center, float radius, t_vec3f color)
+t_object		sphere_create(t_vec3f center, float radius, t_vec3f color, float specular)
 {
 	t_object ret;
 	t_sphere *sphere;
@@ -23,6 +23,7 @@ t_object		sphere_create(t_vec3f center, float radius, t_vec3f color)
 	ret.type = SPHERE;
 	ret.color = color;
 	ret.object = sphere;
+	ret.specular = specular;
 	ret.intersect = &sphere_intersect;
 	return (ret);
 }
@@ -43,7 +44,7 @@ float			sphere_intersect(t_vec3f orig, t_vec3f dir, void *sphere_p)
 	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
 	if (discriminant < 0)
 		return (FLT_MAX);
-	ret[0] = -k[1] + sqrtf(discriminant) / (2 * k[0]);
-	ret[1] = -k[1] + sqrtf(discriminant) / (2 * k[0]);
+	ret[0] = (-k[1] + sqrtf(discriminant)) / (2 * k[0]);
+	ret[1] = (-k[1] - sqrtf(discriminant)) / (2 * k[0]);
 	return ((ret[0] < ret[1]) ? ret[0] : ret[1]);
 }
