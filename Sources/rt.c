@@ -34,8 +34,8 @@ void			rt_init(t_rt *rt)
 	rt->lights = list_add_back(rt->lights, create_light(AMBIENT, 0.2, VEC3F_NULL));
 	rt->lights = list_add_back(rt->lights, create_light(POINT, 0.6, (t_vec3f){2, 1, 0}));
 	rt->lights = list_add_back(rt->lights, create_light(AMBIENT, 0.2, (t_vec3f){1, 4, 4}));
-	rt->objects[0] = sphere_create((t_vec3f){0, -1, 3}, 1, (t_vec3f){108, 224, 117}, 500);
-	rt->objects[1] = sphere_create((t_vec3f){2, 0, 4}, 1, (t_vec3f){86, 221, 245}, 500);
-	rt->objects[2] = sphere_create((t_vec3f){-2, 0, 4}, 1, (t_vec3f){227, 48, 155}, 10);
-	rt->objects[3] = sphere_create((t_vec3f){0, -5001, 0}, 5000, (t_vec3f){207, 203, 123}, 1000);
+	rt->objects[0] = sphere_create((t_vec3f){0, -1, 3}, 1, (t_vec3f){255, 0, 0}, 500);
+	rt->objects[1] = sphere_create((t_vec3f){2, 0, 4}, 1, (t_vec3f){0, 0, 255}, 500);
+	rt->objects[2] = sphere_create((t_vec3f){-2, 0, 4}, 1, (t_vec3f){0, 255, 0}, 10);
+	rt->objects[3] = sphere_create((t_vec3f){0, -5001, 0}, 5000, (t_vec3f){255, 255, 0}, 1000);
 }

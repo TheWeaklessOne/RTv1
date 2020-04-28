@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "vec3f.h"
+#include "rt.h"
 
 double		vec3f_dot(const t_vec3f a, const t_vec3f b)
 {
@@ -19,7 +20,7 @@ double		vec3f_dot(const t_vec3f a, const t_vec3f b)
 
 double		vec3f_length(const t_vec3f vec)
 {
-	return (sqrtf(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z));
+	return (SDL_sqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z));
 }
 
 t_vec3f 	vec3f_scale(t_vec3f vec, const double scale)

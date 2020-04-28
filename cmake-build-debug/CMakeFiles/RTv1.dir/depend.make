@@ -9,9 +9,19 @@ CMakeFiles/RTv1.dir/Sources/Shapes/sphere.c.o: ../Includes/structures.h
 CMakeFiles/RTv1.dir/Sources/Shapes/sphere.c.o: ../Includes/vec3f.h
 CMakeFiles/RTv1.dir/Sources/Shapes/sphere.c.o: ../Sources/Shapes/sphere.c
 
+CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.o: ../Includes/conf.h
+CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.o: ../Includes/list.h
+CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.o: ../Includes/rt.h
+CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.o: ../Includes/shapes.h
+CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.o: ../Includes/structures.h
 CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.o: ../Includes/vec3f.h
 CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.o: ../Sources/Vec3f/vec3f_1.c
 
+CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.o: ../Includes/conf.h
+CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.o: ../Includes/list.h
+CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.o: ../Includes/rt.h
+CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.o: ../Includes/shapes.h
+CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.o: ../Includes/structures.h
 CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.o: ../Includes/vec3f.h
 CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_2.c.o: ../Sources/Vec3f/vec3f_2.c
 

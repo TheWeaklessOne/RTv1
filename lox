@@ -149,31 +149,26 @@ var ComputeLighting = function(point, normal, view, specular) {
   var length_n = Length(normal);  // Should be 1.0, but just in case...
   var length_v = Length(view);
 
-  for (var i = 0; i < lights.length; i++) {
+  for (var i = 0; i < lights.length; i++)
+  {
     var light = lights[i];
-    if (light.ltype == Light.AMBIENT) {
+    if (light.ltype == Light.AMBIENT)
       intensity += light.intensity;
-    } else {
-      var vec_l;
-      if (light.ltype == Light.POINT) {
-    vec_l = Subtract(light.position, point);
-      } else {  // Light.DIRECTIONAL
-    vec_l = light.position;
-      }
-
-      // Diffuse reflection.
+    else
+    {
+      if (light.ltype == Light.POINT)
+        vec_l = Subtract(light.position, point);
+      else
+        vec_l = light.position;
       var n_dot_l = DotProduct(normal, vec_l);
-      if (n_dot_l > 0) {
-    intensity += light.intensity * n_dot_l / (length_n * Length(vec_l));
-      }
-
-      // Specular reflection.
-      if (specular != -1) {
-    var vec_r = Subtract( Multiply(2.0*DotProduct(normal, vec_l), normal), vec_l);
-    var r_dot_v = DotProduct(vec_r, view);
-    if (r_dot_v > 0) {
-      intensity += light.intensity * Math.pow(r_dot_v / (Length(vec_r) * length_v), specular);
-    }
+      if (n_dot_l > 0)
+        intensity += light.intensity * n_dot_l / (length_n * Length(vec_l));
+      if (specular != -1)
+      {
+        var vec_r = Subtract( Multiply(2.0*DotProduct(normal, vec_l), normal), vec_l);
+        var r_dot_v = DotProduct(vec_r, view);
+        if (r_dot_v > 0)
+            intensity += light.intensity * Math.pow(r_dot_v / (Length(vec_r) * length_v), specular);
       }
     }
   }

@@ -43,8 +43,6 @@ stdlib.h
 -
 unistd.h
 -
-math.h
--
 float.h
 -
 SDL2/SDL.h
@@ -82,7 +80,7 @@ list.h
 math.h
 -
 
-/home/wstygg/CLionProjects/RTv1/Sources/sdl.c
+/home/wstygg/CLionProjects/RTv1/Sources/main.c
 rt.h
 /home/wstygg/CLionProjects/RTv1/Sources/rt.h
 

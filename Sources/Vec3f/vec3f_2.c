@@ -11,14 +11,14 @@
 /* ************************************************************************** */
 
 #include "vec3f.h"
-
+#include "rt.h"
 t_vec3f		vec3f_rot_x(const t_vec3f vec, double nb)
 {
 	t_vec3f	ret;
 
 	ret.x = vec.x;
-	ret.y = vec.y * cosf(nb) - vec.z * sinf(nb);
-	ret.z = vec.y * sinf(nb) + vec.z * cosf(nb);
+	ret.y = vec.y * SDL_cos(nb) - vec.z * SDL_sin(nb);
+	ret.z = vec.y * SDL_sin(nb) + vec.z * SDL_cos(nb);
 	return (ret);
 }
 
@@ -26,9 +26,9 @@ t_vec3f		vec3f_rot_y(const t_vec3f vec, double nb)
 {
 	t_vec3f	ret;
 
-	ret.x = vec.x * cosf(nb) + vec.z * sinf(nb);
+	ret.x = vec.x * SDL_cos(nb) + vec.z * SDL_sin(nb);
 	ret.y = vec.y;
-	ret.z = vec.z * cosf(nb) - vec.x * sinf(nb);
+	ret.z = vec.z * SDL_cos(nb) - vec.x * SDL_sin(nb);
 	return (ret);
 }
 
@@ -36,8 +36,8 @@ t_vec3f		vec3f_rot_z(const t_vec3f vec, double nb)
 {
 	t_vec3f	ret;
 
-	ret.x = vec.x * cosf(nb) - vec.y * sinf(nb);
-	ret.y = vec.x * sinf(nb) + vec.y * cosf(nb);
+	ret.x = vec.x * SDL_cos(nb) - vec.y * SDL_sin(nb);
+	ret.y = vec.x * SDL_sin(nb) + vec.y * SDL_cos(nb);
 	ret.z = vec.z;
 	return (ret);
 }

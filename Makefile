@@ -7,7 +7,7 @@ CC			=   gcc
 uname_S := $(shell uname -s)
 
 ifeq ($(uname_S), Linux)
-    FLAGS   =   -Wall -Wextra -Werror -g3 -lm -lSDL2 -lSDL2_image
+    FLAGS   =   -Wall -Wextra -Werror -g3 -lSDL2 -lSDL2_image
 else
     FLAGS   =	-Wall -Wextra -Werror -g3 -I ~/Library/Frameworks/SDL2.framework/Headers -I ~/Library/Frameworks/SDL2_ttf.framework/Headers -I ~/Library/Frameworks/SDL2_image.framework/Headers -F ~/Library/Frameworks
 endif

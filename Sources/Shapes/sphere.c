@@ -15,28 +15,23 @@
 t_object		sphere_create(t_vec3f center, double radius, t_vec3f color, double specular)
 {
 	t_object ret;
-	t_sphere *sphere;
 
-	sphere = ft_malloc(sizeof(t_sphere));
-	sphere->center = center;
-	sphere->radius = radius;
 	ret.type = SPHERE;
 	ret.color = color;
-	ret.object = sphere;
+	ret.radius = radius;
+	ret.center = center;
 	ret.specular = specular;
 	ret.intersect = &sphere_intersect;
 	return (ret);
 }
 
-double			sphere_intersect(t_vec3f orig, t_vec3f dir, void *sphere_p)
+double			sphere_intersect(t_vec3f orig, t_vec3f dir, t_object sphere)
 {
 	double		k[3];
 	double		ret[2];
 	double		discriminant;
 	t_vec3f		oc;
-	t_sphere	sphere;
 
-	sphere = *((t_sphere*)sphere_p);
 	oc = vec3f_sub(orig, sphere.center);
 	k[0] = vec3f_dot(dir, dir);
 	k[1] = 2 * vec3f_dot(oc, dir);

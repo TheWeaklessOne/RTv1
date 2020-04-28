@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <math.h>
 # include <float.h>
 
 # if defined(unix) || defined(__unix__) || defined(__unix)
@@ -35,6 +34,7 @@
 # define HEIGHT			600
 # define WIDTH_H		(WIDTH / 2)
 # define HEIGHT_H		(HEIGHT / 2)
+# define WIDTH_HEIGHT	(WIDTH * HEIGHT)
 
 # define DEFAULT_Z_MIN	1.0
 # define DEFAULT_Z_MAX	500.0
