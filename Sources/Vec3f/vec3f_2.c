@@ -12,7 +12,7 @@
 
 #include "vec3f.h"
 
-t_vec3f		vec3f_rot_x(const t_vec3f vec, float nb)
+t_vec3f		vec3f_rot_x(const t_vec3f vec, double nb)
 {
 	t_vec3f	ret;
 
@@ -22,7 +22,7 @@ t_vec3f		vec3f_rot_x(const t_vec3f vec, float nb)
 	return (ret);
 }
 
-t_vec3f		vec3f_rot_y(const t_vec3f vec, float nb)
+t_vec3f		vec3f_rot_y(const t_vec3f vec, double nb)
 {
 	t_vec3f	ret;
 
@@ -32,7 +32,7 @@ t_vec3f		vec3f_rot_y(const t_vec3f vec, float nb)
 	return (ret);
 }
 
-t_vec3f		vec3f_rot_z(const t_vec3f vec, float nb)
+t_vec3f		vec3f_rot_z(const t_vec3f vec, double nb)
 {
 	t_vec3f	ret;
 

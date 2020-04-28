@@ -25,34 +25,6 @@ void					*ft_malloc(const size_t size)
 	return ((void*)ret);
 }
 
-int						ft_atoi(const char *str)
-{
-	size_t				i;
-	unsigned long long	result;
-	int					sign;
-
-	result = 0;
-	i = 0;
-	sign = 0;
-	if (str[i] < '0' || str[i] > '9')
-	{
-		if (str[i] == '-')
-			sign = 1;
-		else if (str[i] != '+')
-			return (-1);
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		if (result > INT_MAX)
-			return (-2);
-		result = (result * 10) + (str[i++] - '0');
-	}
-	if (str[i])
-		return (-1);
-	return (sign == 1 ? -result : result);
-}
-
 int						str_is_empty(const char *str)
 {
 	register size_t		i;

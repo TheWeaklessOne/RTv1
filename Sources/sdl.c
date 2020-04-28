@@ -20,7 +20,8 @@ void			manage_event(SDL_Event e, t_sdl *sdl)
 	{
 		if (e.key.keysym.sym == SDLK_ESCAPE)
 			sdl->running = 0;
-		sdl->keys[e.key.keysym.scancode] = 1;
+		if (!sdl->keys[e.key.keysym.scancode])
+			sdl->keys[e.key.keysym.scancode] = 1;
 	}
 	else if (e.type == SDL_KEYUP)
 		sdl->keys[e.key.keysym.scancode] = 0;
@@ -29,17 +30,17 @@ void			manage_event(SDL_Event e, t_sdl *sdl)
 void			manage_keys(t_rt *rt, t_sdl *sdl)
 {
 	if (sdl->keys[SDL_SCANCODE_LEFT] || sdl->keys[SDL_SCANCODE_A])
-		rt->camera.x -= 0.1f;
+		rt->camera.x -= 0.25;
 	if (sdl->keys[SDL_SCANCODE_RIGHT] || sdl->keys[SDL_SCANCODE_D])
-		rt->camera.x += 0.1f;
+		rt->camera.x += 0.25;
 	if (sdl->keys[SDL_SCANCODE_UP] || sdl->keys[SDL_SCANCODE_Q])
-		rt->camera.y += 0.1f;
+		rt->camera.y += 0.25;
 	if (sdl->keys[SDL_SCANCODE_DOWN] || sdl->keys[SDL_SCANCODE_E])
-		rt->camera.y -= 0.1f;
+		rt->camera.y -= 0.25;
 	if (sdl->keys[SDL_SCANCODE_W])
-		rt->camera.z += 0.1f;
+		rt->camera.z += 0.25;
 	if (sdl->keys[SDL_SCANCODE_S])
-		rt->camera.z -= 0.1f;
+		rt->camera.z -= 0.25;
 }
 
 void			sdl_quit(t_sdl *sdl)

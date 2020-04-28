@@ -67,7 +67,6 @@ void				*ft_malloc(size_t size);
 int					ft_split_size(char **split);
 void				ft_free_split(char **split);
 char				**ft_strsplit(char *str);
-int					ft_atoi(const char *str);
 char				*ft_strjoin(const char *str, const char *str2,
 						int to_free);
 

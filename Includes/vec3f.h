@@ -17,23 +17,23 @@
 
 typedef struct	s_vec3f
 {
-	float		x;
-	float		y;
-	float		z;
+	double		x;
+	double		y;
+	double		z;
 }				t_vec3f;
 
-float			vec3f_dtr(float nb);
-float			vec3f_length(t_vec3f vec);
-float			vec3f_length2(t_vec3f vec);
-float			vec3f_scalar(t_vec3f a, t_vec3f b);
+double			vec3f_dtr(double nb);
+double			vec3f_length(t_vec3f vec);
+double			vec3f_length2(t_vec3f vec);
+double			vec3f_dot(t_vec3f a, t_vec3f b);
 
 t_vec3f			vec3f_norm(t_vec3f vec);
 t_vec3f			vec3f_add(t_vec3f a, t_vec3f b);
 t_vec3f			vec3f_sub(t_vec3f a, t_vec3f b);
 t_vec3f			vec3f_rot(t_vec3f a, t_vec3f b);
-t_vec3f			vec3f_rot_x(t_vec3f vec, float nb);
-t_vec3f			vec3f_rot_y(t_vec3f vec, float nb);
-t_vec3f			vec3f_rot_z(t_vec3f vec, float nb);
-t_vec3f			vec3f_scale(t_vec3f vec, float scale);
+t_vec3f			vec3f_rot_x(t_vec3f vec, double nb);
+t_vec3f			vec3f_rot_y(t_vec3f vec, double nb);
+t_vec3f			vec3f_rot_z(t_vec3f vec, double nb);
+t_vec3f			vec3f_scale(t_vec3f vec, double scale);
 
 #endif

@@ -5,7 +5,6 @@
 # include "shapes.h"
 # include "list.h"
 
-
 # define BUFF_SIZE		10
 # define END_CODES_N	255
 
@@ -77,7 +76,7 @@ enum					e_light_types
 typedef struct			s_light
 {
 	int					type;
-	float				intensity;
+	double				intensity;
 	t_vec3f				pos;
 }						t_light;
 
@@ -100,8 +99,8 @@ typedef struct			s_sdl
 typedef struct			s_rt
 {
 	t_list				*lights;
-	float				z_min;
-	float				z_max;
+	double				z_min;
+	double				z_max;
 	t_vec3f				camera;
 	t_object			*objects;
 	int					objects_n;

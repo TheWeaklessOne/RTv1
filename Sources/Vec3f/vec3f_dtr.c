@@ -12,12 +12,12 @@
 
 #include "vec3f.h"
 
-float		vec3f_dtr(float nb)
+double		vec3f_dtr(double nb)
 {
 	return (nb * (float)(M_PI / 180));
 }
 
-float		vec3f_length2(const t_vec3f vec)
+double		vec3f_length2(const t_vec3f vec)
 {
 	return (vec.x * vec.x + vec.y * vec.y + vec.z * vec.z);
 }

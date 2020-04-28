@@ -16,20 +16,20 @@ static t_vec3f		canvas_to_viewport(const int x, const int y)
 {
 	t_vec3f			ret;
 
-	ret.x = (float)x * WIDTH / HEIGHT / WIDTH;
-	ret.y = -(float)y * 1 / HEIGHT;
+	ret.x = (double)x * WIDTH / HEIGHT / WIDTH;
+	ret.y = -(double)y * 1 / HEIGHT;
 	ret.z = 1;
 	return (ret);
 }
 
-static float		compute_light(t_vec3f point, t_vec3f normal, const t_rt rt)
+static double		compute_light(t_vec3f point, t_vec3f normal, const t_rt rt)
 {
-	float			intensity;
+	double			intensity;
 	t_list			*lights;
 	t_light			*light;
 	t_vec3f			vec_l;
-	float			scalar_l;
-	const float		nor_len = vec3f_length(normal);
+	double			scalar_l;
+	const double	nor_len = vec3f_length(normal);
 
 	intensity = 0;
 	lights = rt.lights;
@@ -44,7 +44,7 @@ static float		compute_light(t_vec3f point, t_vec3f normal, const t_rt rt)
 				vec_l = vec3f_sub(light->pos, point);
 			else
 				vec_l = light->pos;
-			scalar_l = vec3f_scalar(normal, vec_l);
+			scalar_l = vec3f_dot(normal, vec_l);
 			if (scalar_l > 0)
 				intensity += light->intensity * scalar_l / (nor_len * vec3f_length(vec_l));
 		}
@@ -53,7 +53,7 @@ static float		compute_light(t_vec3f point, t_vec3f normal, const t_rt rt)
 	return (intensity);
 }
 
-static t_vec3f		add_light(const t_vec3f dir, const float t_min,
+static t_vec3f		add_light(const t_vec3f dir, const double t_min,
 							   const t_object obj, const t_rt rt)
 {
 	t_vec3f			point;
@@ -67,20 +67,17 @@ static t_vec3f		add_light(const t_vec3f dir, const float t_min,
 
 static Uint32		vec3f_to_uint32(t_vec3f rgb)
 {
-	Uint32			ret;
-
-	ret = (int)rgb.x;
-	ret = (ret << 8) + (int)rgb.y;
-	ret = (ret << 8) + (int)rgb.z;
-	return (ret);
+	return (((unsigned)rgb.x & 0xFF) << 16) +
+		   (((unsigned)rgb.y & 0xFF) << 8 ) +
+		   (((unsigned)rgb.z & 0xFF));
 }
 
 static t_vec3f		get_colour(const t_vec3f dir, const t_rt rt)
 {
 	register int	i;
-	float			t_min;
+	double			t_min;
 	t_object		*to_draw;
-	float			inter;
+	double			inter;
 
 	to_draw = NULL;
 	t_min = FLT_MAX;

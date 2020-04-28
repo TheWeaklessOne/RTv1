@@ -36,8 +36,8 @@
 # define WIDTH_H		(WIDTH / 2)
 # define HEIGHT_H		(HEIGHT / 2)
 
-# define DEFAULT_Z_MIN	1.0f
-# define DEFAULT_Z_MAX	FLT_MAX
+# define DEFAULT_Z_MIN	1.0
+# define DEFAULT_Z_MAX	500.0
 
 # define VEC3F_NULL		(t_vec3f){.x = 0, .y = 0, .z = 0}
 # define BACKGROUND_C	(t_vec3f){.x = 65, .y = 65, .z = 65}

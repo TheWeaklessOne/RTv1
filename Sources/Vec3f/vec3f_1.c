@@ -12,17 +12,17 @@
 
 #include "vec3f.h"
 
-float		vec3f_scalar(const t_vec3f a, const t_vec3f b)
+double		vec3f_dot(const t_vec3f a, const t_vec3f b)
 {
 	return (a.x * b.x + a.y * b.y + a.z * b.z);
 }
 
-float		vec3f_length(const t_vec3f vec)
+double		vec3f_length(const t_vec3f vec)
 {
 	return (sqrtf(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z));
 }
 
-t_vec3f		vec3f_scale(t_vec3f vec, const float scale)
+t_vec3f 	vec3f_scale(t_vec3f vec, const double scale)
 {
 	vec.x *= scale;
 	vec.y *= scale;
