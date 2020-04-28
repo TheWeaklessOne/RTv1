@@ -18,21 +18,18 @@ static t_vec3f		canvas_to_viewport(const int x, const int y)
 
 	ret.x = (float)x * WIDTH / HEIGHT / WIDTH;
 	ret.y = -(float)y * 1 / HEIGHT;
-	ret.z = 1.0f;
+	ret.z = 1;
 	return (ret);
 }
 
-static float		compute_light(t_vec3f point, t_vec3f normal, const t_vec3f view, const float specular, const t_rt rt)
+static float		compute_light(t_vec3f point, t_vec3f normal, const t_rt rt)
 {
 	float			intensity;
 	t_list			*lights;
 	t_light			*light;
 	t_vec3f			vec_l;
-	float			n_dot_l;
-	const float		length_n = vec3f_length(normal);
-	const float		length_v = vec3f_length(view);
-	t_vec3f			vec_r;
-	float			r_dot_v;
+	float			scalar_l;
+	const float		nor_len = vec3f_length(normal);
 
 	intensity = 0;
 	lights = rt.lights;
@@ -47,16 +44,9 @@ static float		compute_light(t_vec3f point, t_vec3f normal, const t_vec3f view, c
 				vec_l = vec3f_sub(light->pos, point);
 			else
 				vec_l = light->pos;
-			n_dot_l = vec3f_scalar(normal, vec_l);
-			if (n_dot_l > 0)
-				intensity += light->intensity * n_dot_l / (length_n * vec3f_length(vec_l));
-			if (specular != -1.0f)
-			{
-				vec_r = vec3f_sub(vec3f_scale(normal, 2.0f * vec3f_scalar(normal, vec_l)), vec_l);
-				r_dot_v = vec3f_scalar(vec_r, view);
-				if (r_dot_v > 0)
-					intensity += light->intensity * powf(r_dot_v / (vec3f_length(vec_r) * length_v), specular);
-			}
+			scalar_l = vec3f_scalar(normal, vec_l);
+			if (scalar_l > 0)
+				intensity += light->intensity * scalar_l / (nor_len * vec3f_length(vec_l));
 		}
 		lights = lights->next;
 	}
@@ -68,23 +58,21 @@ static t_vec3f		add_light(const t_vec3f dir, const float t_min,
 {
 	t_vec3f			point;
 	t_vec3f			normal;
-	t_vec3f			view;
-	float			light;
 
 	point = vec3f_add(rt.camera, vec3f_scale(dir, t_min));
 	normal = vec3f_sub(point, ((t_sphere*)obj.object)->center);
 	normal = vec3f_norm(normal);
-
-	view = vec3f_scale(dir, -1);
-	light = compute_light(point, normal, view, obj.specular, rt);
-	return (vec3f_scale(obj.color, light));
+	return (vec3f_scale(obj.color, compute_light(point, normal, rt)));
 }
 
 static Uint32		vec3f_to_uint32(t_vec3f rgb)
 {
-	return (((unsigned)rgb.x & 0xFF) << 16) +
-			(((unsigned)rgb.y & 0xFF) << 8 ) +
-			(((unsigned)rgb.z & 0xFF));
+	Uint32			ret;
+
+	ret = (int)rgb.x;
+	ret = (ret << 8) + (int)rgb.y;
+	ret = (ret << 8) + (int)rgb.z;
+	return (ret);
 }
 
 static t_vec3f		get_colour(const t_vec3f dir, const t_rt rt)
@@ -103,7 +91,7 @@ static t_vec3f		get_colour(const t_vec3f dir, const t_rt rt)
 		if (inter < t_min && rt.z_min < inter && inter < rt.z_max)
 		{
 			t_min = inter;
-			to_draw = rt.objects + i;
+			to_draw = &rt.objects[i];
 		}
 	}
 	if (to_draw)

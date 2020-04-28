@@ -42,6 +42,8 @@
 # define VEC3F_NULL		(t_vec3f){.x = 0, .y = 0, .z = 0}
 # define BACKGROUND_C	(t_vec3f){.x = 65, .y = 65, .z = 65}
 
+typedef struct s_sdl    t_sdl;
+
 void					sdl_init(t_sdl *sdl);
 void					manage_event(SDL_Event e, t_sdl *sdl);
 void					manage_keys(t_rt *rt, t_sdl *sdl);

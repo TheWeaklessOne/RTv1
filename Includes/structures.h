@@ -90,11 +90,11 @@ typedef struct			s_screen
 
 typedef struct			s_sdl
 {
-	SDL_Window			*win;
-	SDL_Renderer		*ren;
-	int					running;
-	t_screen			screen;
-	int					keys[SDL_NUM_SCANCODES];
+    SDL_Window			*win;
+    SDL_Renderer		*ren;
+    int					running;
+    t_screen			screen;
+    int					keys[SDL_NUM_SCANCODES];
 }						t_sdl;
 
 typedef struct			s_rt
