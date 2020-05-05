@@ -25,11 +25,14 @@ SRC_BASE    =   ft.c					\
                 ft_2.c					\
 				main.c					\
 				rt.c					\
+				trace_ray.c             \
+				get_object.c            \
 				sdl.c					\
 				sdl_init.c              \
 				list.c                  \
 				list_2.c                \
 				Shapes/sphere.c			\
+				Shapes/plane.c          \
 				Vec3f/vec3f_1.c			\
 				Vec3f/vec3f_2.c			\
 				Vec3f/vec3f_dtr.c		\
