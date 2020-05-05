@@ -68,42 +68,57 @@ typedef struct			s_get_next_line
 
 enum					e_light_types
 {
-	AMBIENT = 0,
-	POINT,
+	POINT = 0,
+	AMBIENT,
 	DIRECTIONAL
 };
 
 typedef struct			s_light
 {
+	t_vec3f				pos;
 	int					type;
 	double				intensity;
-	t_vec3f				pos;
 }						t_light;
 
 typedef struct			s_screen
 {
-	SDL_Texture			*texture;
-	Uint32				*pixels;
 	int					pitch;
+	Uint32				*pixels;
+	SDL_Texture			*texture;
 }						t_screen;
 
 typedef struct			s_sdl
 {
     SDL_Window			*win;
     SDL_Renderer		*ren;
-    int					running;
     t_screen			screen;
+	int					running;
     int					keys[SDL_NUM_SCANCODES];
 }						t_sdl;
 
 typedef struct			s_rt
 {
-	t_list				*lights;
 	double				z_min;
 	double				z_max;
 	t_vec3f				camera;
-	t_object			*objects;
-	int					objects_n;
+	t_list				*lights;
+	t_list				*objects;
+	t_vec3f				rotation;
 }						t_rt;
+
+typedef struct			s_tvec
+{
+	t_vec3f				point;
+	t_vec3f				normal;
+	t_vec3f				view;
+}						t_tvec;
+
+typedef struct			s_data
+{
+	const t_vec3f		orig;
+	const t_vec3f		dir;
+	const double		z_min;
+	const double		z_max;
+}						t_data;
 
 #endif

@@ -46,8 +46,8 @@ var EPSILON = 0.001;
 
 
 // Dot product of two 3D vectors.
-var DotProduct = function(v1, v2) {
-  return v1[0]*v2[0] + v1[1]*v2[1] + v1[2]*v2[2];
+var DotProduct = function(point, v2) {
+  return point[0]*v2[0] + point[1]*v2[1] + point[2]*v2[2];
 }
 
 
@@ -63,15 +63,15 @@ var Multiply = function(k, vec) {
 }
 
 
-// Computes v1 + v2.
-var Add = function(v1, v2) {
-  return [v1[0] + v2[0], v1[1] + v2[1], v1[2] + v2[2]];
+// Computes point + v2.
+var Add = function(point, v2) {
+  return [point[0] + v2[0], point[1] + v2[1], point[2] + v2[2]];
 }
 
 
-// Computes v1 - v2.
-var Subtract = function(v1, v2) {
-  return [v1[0] - v2[0], v1[1] - v2[1], v1[2] - v2[2]];
+// Computes point - v2.
+var Subtract = function(point, v2) {
+  return [point[0] - v2[0], point[1] - v2[1], point[2] - v2[2]];
 }
 
 

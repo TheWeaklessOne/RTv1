@@ -12,6 +12,7 @@
 
 #include "vec3f.h"
 #include "rt.h"
+
 t_vec3f		vec3f_rot_x(const t_vec3f vec, double nb)
 {
 	t_vec3f	ret;
@@ -42,8 +43,10 @@ t_vec3f		vec3f_rot_z(const t_vec3f vec, double nb)
 	return (ret);
 }
 
-t_vec3f		vec3f_rot(t_vec3f a, t_vec3f b)
+t_vec3f		vec3f_rot(t_vec3f a, const t_vec3f b)
 {
+	if (!b.x && !b.y && !b.z)
+		return (a);
 	a = vec3f_rot_x(a, vec3f_dtr(b.x));
 	a = vec3f_rot_y(a, vec3f_dtr(b.y));
 	a = vec3f_rot_z(a, vec3f_dtr(b.z));

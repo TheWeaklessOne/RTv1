@@ -34,7 +34,7 @@ typedef struct			s_object
 
 void					sphere_intersect(t_vec3f orig, t_vec3f dir, t_object sphere, double answ[2]);
 
-t_object				sphere_create(t_vec3f center, double radius,
+t_object				*sphere_create(t_vec3f center, double radius,
 			t_vec3f color, double specular);
 
 #endif

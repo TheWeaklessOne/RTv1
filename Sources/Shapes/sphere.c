@@ -12,16 +12,17 @@
 
 #include "rt.h"
 
-t_object		sphere_create(t_vec3f center, double radius, t_vec3f color, double specular)
+t_object		*sphere_create(t_vec3f center, double radius, t_vec3f color, double specular)
 {
-	t_object ret;
+	t_object	*ret;
 
-	ret.type = SPHERE;
-	ret.color = color;
-	ret.radius = radius;
-	ret.center = center;
-	ret.specular = specular;
-	ret.intersect = &sphere_intersect;
+	ret = ft_malloc(sizeof(t_object));
+	ret->type = SPHERE;
+	ret->color = color;
+	ret->radius = radius;
+	ret->center = center;
+	ret->specular = specular;
+	ret->intersect = &sphere_intersect;
 	return (ret);
 }
 

@@ -22,34 +22,49 @@ static t_vec3f		canvas_to_viewport(const int x, const int y)
 	return (ret);
 }
 
-t_object			*get_object(t_vec3f orig, t_vec3f dir, double z_min, double z_max, double *closest_p, t_rt rt)
+t_object			*get_object(const t_data data, double *closest_p, t_rt rt)
 {
-	double			answ[2];
-	double			closest_t;
+	t_object		*ret;
 	t_object		*object;
-	int				i;
+	double			answ[2];
+	t_list			*objects;
+	double			closest_t;
 
-	i = -1;
-	object = NULL;
+	ret = NULL;
 	closest_t = DBL_MAX;
-	while (++i < rt.objects_n)
+	objects = rt.objects;
+	while (objects)
 	{
-		rt.objects[i].intersect(orig, dir, rt.objects[i], answ);
-		if (answ[0] < closest_t && z_min < answ[0] && answ[0] < z_max) {
+		object = objects->content;
+		object->intersect(data.orig, data.dir, *object, answ);
+		if (answ[0] < closest_t && data.z_min < answ[0] && answ[0] < data.z_max)
+		{
 			closest_t = answ[0];
-			object = rt.objects + i;
+			ret = object;
 		}
-		if (answ[1] < closest_t && z_min < answ[1] && answ[1] < z_max) {
+		if (answ[1] < closest_t && data.z_min < answ[1] && answ[1] < data.z_max)
+		{
 			closest_t = answ[1];
-			object = rt.objects + i;
+			ret = object;
 		}
+		objects = objects->next;
 	}
 	if (closest_p)
 		*closest_p = closest_t;
-	return (object);
+	return (ret);
 }
 
-static double		compute_light(t_vec3f point, t_vec3f normal, t_vec3f view, double specular, const t_rt rt)
+static double		calc_spelular(const t_tvec tvec, const double intensity, const double length_v, const double specular)
+{
+	const t_vec3f	vec_r = vec3f_sub(vec3f_scale(tvec.normal, 2 * vec3f_dot(tvec.normal, tvec.point)), tvec.point);
+	const double	r_dot_v = vec3f_dot(vec_r, tvec.view);
+
+	if (r_dot_v > 0)
+		 return (intensity * SDL_pow(r_dot_v / (vec3f_length(vec_r) * length_v), specular));
+	return (0);
+}
+
+static double		compute_light(const t_tvec tvec, double specular, const t_rt rt)
 {
 	double			intensity;
 	t_list			*lights;
@@ -58,8 +73,8 @@ static double		compute_light(t_vec3f point, t_vec3f normal, t_vec3f view, double
 	t_vec3f			vec_r;
 	double			n_dot_l;
 	double			r_dot_v;
-	const double	length_n = vec3f_length(normal);
-	const double	length_v = vec3f_length(view);
+	const double	length_n = vec3f_length(tvec.normal);
+	const double	length_v = vec3f_length(tvec.view);
 	double			t_max;
 
 	intensity = 0;
@@ -73,7 +88,7 @@ static double		compute_light(t_vec3f point, t_vec3f normal, t_vec3f view, double
 		{
 			if (light->type == POINT)
 			{
-				vec_l = vec3f_sub(light->pos, point);
+				vec_l = vec3f_sub(light->pos, tvec.point);
 				t_max = 1.0;
 			}
 			else
@@ -81,18 +96,18 @@ static double		compute_light(t_vec3f point, t_vec3f normal, t_vec3f view, double
 				vec_l = light->pos;
 				t_max = DBL_MAX;
 			}
-			if (get_object(point, vec_l, 0.001, t_max, NULL, rt))
+			if (get_object((t_data){tvec.point, vec_l, 0.001, t_max}, NULL, rt))
 			{
 				lights = lights->next;
 				continue ;
 			}
-			n_dot_l = vec3f_dot(normal, vec_l);
+			n_dot_l = vec3f_dot(tvec.normal, vec_l);
 			if (n_dot_l > 0)
 				intensity += light->intensity * n_dot_l / (length_n * vec3f_length(vec_l));
 			if (specular)
 			{
-				vec_r = vec3f_sub(vec3f_scale(normal, 2 * vec3f_dot(normal, vec_l)), vec_l);
-				r_dot_v = vec3f_dot(vec_r, view);
+				vec_r = vec3f_sub(vec3f_scale(tvec.normal, 2 * vec3f_dot(tvec.normal, vec_l)), vec_l);
+				r_dot_v = vec3f_dot(vec_r, tvec.view);
 				if (r_dot_v > 0)
 					intensity += light->intensity * SDL_pow(r_dot_v / (vec3f_length(vec_r) * length_v), specular);
 			}
@@ -102,7 +117,8 @@ static double		compute_light(t_vec3f point, t_vec3f normal, t_vec3f view, double
 	return (intensity);
 }
 
-unsigned int		clamp(double nb)
+
+static unsigned		clamp(double nb)
 {
 	if (nb > 255)
 		return (255);
@@ -111,21 +127,19 @@ unsigned int		clamp(double nb)
 	return ((unsigned int)nb);
 }
 
-static t_vec3f		get_colour(const t_vec3f dir, const t_rt rt)
+static t_vec3f		get_colour(const t_data data, const t_rt rt)
 {
 	t_object		*object;
 	double			closest_t;
+	t_tvec			tvec;
 
-	object = get_object(rt.camera, dir, rt.z_min, rt.z_max, &closest_t, rt);
+	object = get_object(data, &closest_t, rt);
 	if (!object)
 		return (BACKGROUND_C);
-	t_vec3f point = vec3f_add(rt.camera, vec3f_scale(dir, closest_t));
-	t_vec3f normal = vec3f_sub(point, object->center);
-	normal = vec3f_norm(normal);
-
-	t_vec3f view = vec3f_scale(dir, -1);
-	double light = compute_light(point, normal, view, object->specular, rt);
-	return (vec3f_scale(object->color, light));
+	tvec.point = vec3f_add(rt.camera, vec3f_scale(data.dir, closest_t));
+	tvec.normal = vec3f_norm(vec3f_sub(tvec.point, object->center));
+	tvec.view = vec3f_scale(data.dir, -1);
+	return (vec3f_scale(object->color, compute_light(tvec, object->specular, rt)));
 }
 
 void				pixel_put(int w, int h, t_vec3f rgb, Uint32 *pixels)
@@ -147,8 +161,8 @@ void				raytrace(t_rt rt, t_sdl sdl)
 	while (++h < HEIGHT_H && (w = -WIDTH_H - 1))
 		while (++w < WIDTH_H)
 		{
-			direction = canvas_to_viewport(w, h);
-			colour = get_colour(direction, rt);
+			direction = vec3f_rot(canvas_to_viewport(w, h), rt.rotation);
+			colour = get_colour((t_data){rt.camera, direction, rt.z_min, rt.z_max}, rt);
 			pixel_put(w, h, colour, sdl.screen.pixels);
 		}
 }
@@ -159,8 +173,8 @@ int					main()
 	t_rt			rt;
 	SDL_Event		e;
 
-	sdl_init(&sdl);
 	rt_init(&rt);
+	sdl_init(&sdl);
 	while (sdl.running)
 	{
 		create_screen(&sdl.screen, &sdl);

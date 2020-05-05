@@ -39,10 +39,10 @@
 # define DEFAULT_Z_MIN	1.0
 # define DEFAULT_Z_MAX	500.0
 
+# define EPSILON		0.001
+
 # define VEC3F_NULL		(t_vec3f){.x = 0, .y = 0, .z = 0}
 # define BACKGROUND_C	(t_vec3f){.x = 65, .y = 65, .z = 65}
-
-typedef struct s_sdl    t_sdl;
 
 void					sdl_init(t_sdl *sdl);
 void					manage_event(SDL_Event e, t_sdl *sdl);
