@@ -29,10 +29,10 @@ typedef struct			s_object
 	double				radius;
 	t_vec3f				center;
 	double				specular;
-	double				(*intersect)(t_vec3f orig, t_vec3f dir, struct s_object obj);
+	void				(*intersect)(t_vec3f orig, t_vec3f dir, struct s_object obj, double answ[2]);
 }						t_object;
 
-double					sphere_intersect(t_vec3f orig, t_vec3f dir, t_object sphere);
+void					sphere_intersect(t_vec3f orig, t_vec3f dir, t_object sphere, double answ[2]);
 
 t_object				sphere_create(t_vec3f center, double radius,
 			t_vec3f color, double specular);

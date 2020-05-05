@@ -30,8 +30,8 @@
 # include "shapes.h"
 # include "structures.h"
 
-# define WIDTH			600
-# define HEIGHT			600
+# define WIDTH			1280
+# define HEIGHT			540
 # define WIDTH_H		(WIDTH / 2)
 # define HEIGHT_H		(HEIGHT / 2)
 # define WIDTH_HEIGHT	(WIDTH * HEIGHT)

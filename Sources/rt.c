@@ -28,14 +28,14 @@ void			rt_init(t_rt *rt)
 	rt->lights = NULL;
 	rt->z_min = DEFAULT_Z_MIN;
 	rt->z_max = DEFAULT_Z_MAX;
-	rt->camera = (t_vec3f){0, 0, 0};
+	rt->camera = VEC3F_NULL;
 	rt->objects_n = 4;
 	rt->objects = ft_malloc(sizeof(t_object) * rt->objects_n);
 	rt->lights = list_add_back(rt->lights, create_light(AMBIENT, 0.2, VEC3F_NULL));
 	rt->lights = list_add_back(rt->lights, create_light(POINT, 0.6, (t_vec3f){2, 1, 0}));
-	rt->lights = list_add_back(rt->lights, create_light(AMBIENT, 0.2, (t_vec3f){1, 4, 4}));
-	rt->objects[0] = sphere_create((t_vec3f){0, -1, 3}, 1, (t_vec3f){255, 0, 0}, 500);
-	rt->objects[1] = sphere_create((t_vec3f){2, 0, 4}, 1, (t_vec3f){0, 0, 255}, 500);
-	rt->objects[2] = sphere_create((t_vec3f){-2, 0, 4}, 1, (t_vec3f){0, 255, 0}, 10);
-	rt->objects[3] = sphere_create((t_vec3f){0, -5001, 0}, 5000, (t_vec3f){255, 255, 0}, 1000);
+	rt->lights = list_add_back(rt->lights, create_light(DIRECTIONAL, 0.2, (t_vec3f){1, 4, 4}));
+	rt->objects[0] = sphere_create((t_vec3f){0, -1, 3}, 1, (t_vec3f){148, 65, 196}, 500);
+	rt->objects[1] = sphere_create((t_vec3f){2, 0, 4}, 1, (t_vec3f){105, 156, 250}, 500);
+	rt->objects[2] = sphere_create((t_vec3f){-2, 0, 4}, 1, (t_vec3f){89, 237, 59}, 10);
+	rt->objects[3] = sphere_create((t_vec3f){0, -5001, 0}, 5000, (t_vec3f){240, 135, 79}, 1000);
 }

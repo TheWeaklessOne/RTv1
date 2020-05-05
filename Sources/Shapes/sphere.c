@@ -25,10 +25,9 @@ t_object		sphere_create(t_vec3f center, double radius, t_vec3f color, double spe
 	return (ret);
 }
 
-double			sphere_intersect(t_vec3f orig, t_vec3f dir, t_object sphere)
+void			sphere_intersect(t_vec3f orig, t_vec3f dir, t_object sphere, double answ[2])
 {
 	double		k[3];
-	double		ret[2];
 	double		discriminant;
 	t_vec3f		oc;
 
@@ -38,8 +37,11 @@ double			sphere_intersect(t_vec3f orig, t_vec3f dir, t_object sphere)
 	k[2] = vec3f_dot(oc, oc) - sphere.radius * sphere.radius;
 	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
 	if (discriminant < 0)
-		return (FLT_MAX);
-	ret[0] = (-k[1] + SDL_sqrt(discriminant)) / (2 * k[0]);
-	ret[1] = (-k[1] - SDL_sqrt(discriminant)) / (2 * k[0]);
-	return ((ret[0] < ret[1]) ? ret[0] : ret[1]);
+	{
+		answ[0] = DBL_MAX;
+		answ[1] = DBL_MAX;
+		return ;
+	}
+	answ[0] = (-k[1] + SDL_sqrt(discriminant)) / (2 * k[0]);
+	answ[1] = (-k[1] - SDL_sqrt(discriminant)) / (2 * k[0]);
 }

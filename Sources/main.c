@@ -22,6 +22,33 @@ static t_vec3f		canvas_to_viewport(const int x, const int y)
 	return (ret);
 }
 
+t_object			*get_object(t_vec3f orig, t_vec3f dir, double z_min, double z_max, double *closest_p, t_rt rt)
+{
+	double			answ[2];
+	double			closest_t;
+	t_object		*object;
+	int				i;
+
+	i = -1;
+	object = NULL;
+	closest_t = DBL_MAX;
+	while (++i < rt.objects_n)
+	{
+		rt.objects[i].intersect(orig, dir, rt.objects[i], answ);
+		if (answ[0] < closest_t && z_min < answ[0] && answ[0] < z_max) {
+			closest_t = answ[0];
+			object = rt.objects + i;
+		}
+		if (answ[1] < closest_t && z_min < answ[1] && answ[1] < z_max) {
+			closest_t = answ[1];
+			object = rt.objects + i;
+		}
+	}
+	if (closest_p)
+		*closest_p = closest_t;
+	return (object);
+}
+
 static double		compute_light(t_vec3f point, t_vec3f normal, t_vec3f view, double specular, const t_rt rt)
 {
 	double			intensity;
@@ -33,6 +60,7 @@ static double		compute_light(t_vec3f point, t_vec3f normal, t_vec3f view, double
 	double			r_dot_v;
 	const double	length_n = vec3f_length(normal);
 	const double	length_v = vec3f_length(view);
+	double			t_max;
 
 	intensity = 0;
 	lights = rt.lights;
@@ -44,9 +72,20 @@ static double		compute_light(t_vec3f point, t_vec3f normal, t_vec3f view, double
 		else
 		{
 			if (light->type == POINT)
+			{
 				vec_l = vec3f_sub(light->pos, point);
+				t_max = 1.0;
+			}
 			else
+			{
 				vec_l = light->pos;
+				t_max = DBL_MAX;
+			}
+			if (get_object(point, vec_l, 0.001, t_max, NULL, rt))
+			{
+				lights = lights->next;
+				continue ;
+			}
 			n_dot_l = vec3f_dot(normal, vec_l);
 			if (n_dot_l > 0)
 				intensity += light->intensity * n_dot_l / (length_n * vec3f_length(vec_l));
@@ -63,24 +102,6 @@ static double		compute_light(t_vec3f point, t_vec3f normal, t_vec3f view, double
 	return (intensity);
 }
 
-static t_vec3f		add_light(const t_vec3f dir, const double t_min,
-								const t_object obj, const t_rt rt)
-{
-	t_vec3f			point;
-	t_vec3f			normal;
-	t_vec3f			view;
-	double			light;
-
-	point = vec3f_add(rt.camera, vec3f_scale(dir, t_min));
-	normal = vec3f_sub(point, obj.center);
-	normal = vec3f_norm(normal);
-
-	view = vec3f_scale(dir, -1);
-	light = compute_light(point, normal, view, obj.specular, rt);
-	return (vec3f_scale(obj.color, light));
-}
-
-
 unsigned int		clamp(double nb)
 {
 	if (nb > 255)
@@ -92,26 +113,19 @@ unsigned int		clamp(double nb)
 
 static t_vec3f		get_colour(const t_vec3f dir, const t_rt rt)
 {
-	register int	i;
-	double			t_min;
-	t_object		*to_draw;
-	double			inter;
+	t_object		*object;
+	double			closest_t;
 
-	to_draw = NULL;
-	t_min = FLT_MAX;
-	i = -1;
-	while (++i < rt.objects_n)
-	{
-		inter = rt.objects[i].intersect(rt.camera, dir, rt.objects[i]);
-		if (inter < t_min && rt.z_min < inter && inter < rt.z_max)
-		{
-			t_min = inter;
-			to_draw = &rt.objects[i];
-		}
-	}
-	if (to_draw)
-		return (add_light(dir, t_min, *to_draw, rt));
-	return (BACKGROUND_C);
+	object = get_object(rt.camera, dir, rt.z_min, rt.z_max, &closest_t, rt);
+	if (!object)
+		return (BACKGROUND_C);
+	t_vec3f point = vec3f_add(rt.camera, vec3f_scale(dir, closest_t));
+	t_vec3f normal = vec3f_sub(point, object->center);
+	normal = vec3f_norm(normal);
+
+	t_vec3f view = vec3f_scale(dir, -1);
+	double light = compute_light(point, normal, view, object->specular, rt);
+	return (vec3f_scale(object->color, light));
 }
 
 void				pixel_put(int w, int h, t_vec3f rgb, Uint32 *pixels)

@@ -33,9 +33,17 @@ var UpdateCanvas = function() {
 }
 
 
+var ClearAll = function() {
+  canvas.width = canvas.width;
+}
+
 // ======================================================================
 //  Linear algebra and helpers.
 // ======================================================================
+
+// Conceptually, an "infinitesimaly small" real number.
+var EPSILON = 0.001;
+
 
 // Dot product of two 3D vectors.
 var DotProduct = function(v1, v2) {
@@ -76,7 +84,7 @@ var Clamp = function(vec) {
 
 
 // ======================================================================
-//  A raytracer with diffuse and specular illumination.
+//  A raytracer with diffuse and specular illumination, and shadows.
 // ======================================================================
 
 // A Sphere.
@@ -149,26 +157,39 @@ var ComputeLighting = function(point, normal, view, specular) {
   var length_n = Length(normal);  // Should be 1.0, but just in case...
   var length_v = Length(view);
 
-  for (var i = 0; i < lights.length; i++)
-  {
+  for (var i = 0; i < lights.length; i++) {
     var light = lights[i];
-    if (light.ltype == Light.AMBIENT)
+    if (light.ltype == Light.AMBIENT) {
       intensity += light.intensity;
-    else
-    {
-      if (light.ltype == Light.POINT)
-        vec_l = Subtract(light.position, point);
-      else
-        vec_l = light.position;
+    } else {
+      var vec_l, t_max;
+      if (light.ltype == Light.POINT) {
+    vec_l = Subtract(light.position, point);
+    t_max = 1.0;
+      } else {  // Light.DIRECTIONAL
+    vec_l = light.position;
+    t_max = Infinity;
+      }
+
+      // Shadow check.
+      var blocker = ClosestIntersection(point, vec_l, EPSILON, t_max);
+      if (blocker) {
+    continue;
+      }
+
+      // Diffuse reflection.
       var n_dot_l = DotProduct(normal, vec_l);
-      if (n_dot_l > 0)
-        intensity += light.intensity * n_dot_l / (length_n * Length(vec_l));
-      if (specular != -1)
-      {
-        var vec_r = Subtract( Multiply(2.0*DotProduct(normal, vec_l), normal), vec_l);
-        var r_dot_v = DotProduct(vec_r, view);
-        if (r_dot_v > 0)
-            intensity += light.intensity * Math.pow(r_dot_v / (Length(vec_r) * length_v), specular);
+      if (n_dot_l > 0) {
+    intensity += light.intensity * n_dot_l / (length_n * Length(vec_l));
+      }
+
+      // Specular reflection.
+      if (specular != -1) {
+    var vec_r = Subtract(Multiply(2.0*DotProduct(normal, vec_l), normal), vec_l);
+    var r_dot_v = DotProduct(vec_r, view);
+    if (r_dot_v > 0) {
+      intensity += light.intensity * Math.pow(r_dot_v / (Length(vec_r) * length_v), specular);
+    }
       }
     }
   }
@@ -177,8 +198,8 @@ var ComputeLighting = function(point, normal, view, specular) {
 }
 
 
-// Traces a ray against the set of spheres in the scene.
-var TraceRay = function(origin, direction, min_t, max_t) {
+// Find the closest intersection between a ray and the spheres in the scene.
+var ClosestIntersection = function(origin, direction, min_t, max_t) {
   var closest_t = Infinity;
   var closest_sphere = null;
 
@@ -194,9 +215,22 @@ var TraceRay = function(origin, direction, min_t, max_t) {
     }
   }
 
-  if (closest_sphere == null) {
+  if (closest_sphere) {
+    return [closest_sphere, closest_t];
+  }
+  return null;
+}
+
+
+// Traces a ray against the set of spheres in the scene.
+var TraceRay = function(origin, direction, min_t, max_t) {
+  var intersection = ClosestIntersection(origin, direction, min_t, max_t);
+  if (!intersection) {
     return background_color;
   }
+
+  var closest_sphere = intersection[0];
+  var closest_t = intersection[1];
 
   var point = Add(origin, Multiply(closest_t, direction));
   var normal = Subtract(point, closest_sphere.center);
@@ -208,17 +242,30 @@ var TraceRay = function(origin, direction, min_t, max_t) {
 }
 
 
-//
-// Main loop.
-//
-for (var x = -canvas.width/2; x < canvas.width/2; x++) {
-  for (var y = -canvas.height/2; y < canvas.height/2; y++) {
-    var direction = CanvasToViewport([x, y])
-    var color = TraceRay(camera_position, direction, 1, Infinity);
-    PutPixel(x, y, Clamp(color));
-  }
+var SetShadowEpsilon = function(epsilon) {
+  EPSILON = epsilon;
+  Render();
 }
 
-UpdateCanvas();
+
+var Render = function() {
+  ClearAll();
+
+  // This lets the browser clear the canvas before blocking to render the scene.
+  setTimeout(function(){
+    // Main loop.
+    for (var x = -canvas.width/2; x < canvas.width/2; x++) {
+      for (var y = -canvas.height/2; y < canvas.height/2; y++) {
+        var direction = CanvasToViewport([x, y])
+        var color = TraceRay(camera_position, direction, 1, Infinity);
+        PutPixel(x, y, Clamp(color));
+      }
+    }
+
+    UpdateCanvas();
+  }, 0);
+}
+
+Render();
 
 
