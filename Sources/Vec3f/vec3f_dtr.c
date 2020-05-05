@@ -14,7 +14,7 @@
 
 double		vec3f_dtr(double nb)
 {
-	return (nb * (float)(M_PI / 180));
+	return (nb * (M_PI / 180));
 }
 
 double		vec3f_length2(const t_vec3f vec)

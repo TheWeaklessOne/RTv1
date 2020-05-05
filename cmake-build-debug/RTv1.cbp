@@ -95,6 +95,9 @@
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Includes/vec3f.h">
 			<Option target="RTv1"/>
 		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Shapes/plane.c">
+			<Option target="RTv1"/>
+		</Unit>
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Shapes/sphere.c">
 			<Option target="RTv1"/>
 		</Unit>
@@ -113,6 +116,9 @@
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/ft_2.c">
 			<Option target="RTv1"/>
 		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/get_object.c">
+			<Option target="RTv1"/>
+		</Unit>
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/list.c">
 			<Option target="RTv1"/>
 		</Unit>
@@ -129,6 +135,9 @@
 			<Option target="RTv1"/>
 		</Unit>
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/sdl_init.c">
+			<Option target="RTv1"/>
+		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/trace_ray.c">
 			<Option target="RTv1"/>
 		</Unit>
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/CMakeLists.txt">

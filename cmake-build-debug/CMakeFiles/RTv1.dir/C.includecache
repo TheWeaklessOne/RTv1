@@ -80,9 +80,7 @@ list.h
 math.h
 -
 
-/home/wstygg/CLionProjects/RTv1/Sources/Vec3f/vec3f_2.c
-vec3f.h
-/home/wstygg/CLionProjects/RTv1/Sources/Vec3f/vec3f.h
+/home/wstygg/CLionProjects/RTv1/Sources/rt.c
 rt.h
-/home/wstygg/CLionProjects/RTv1/Sources/Vec3f/rt.h
+/home/wstygg/CLionProjects/RTv1/Sources/rt.h
 

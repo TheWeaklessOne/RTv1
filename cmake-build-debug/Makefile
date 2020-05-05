@@ -123,6 +123,33 @@ RTv1/fast:
 	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/build
 .PHONY : RTv1/fast
 
+Sources/Shapes/plane.o: Sources/Shapes/plane.c.o
+
+.PHONY : Sources/Shapes/plane.o
+
+# target to build an object file
+Sources/Shapes/plane.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Shapes/plane.c.o
+.PHONY : Sources/Shapes/plane.c.o
+
+Sources/Shapes/plane.i: Sources/Shapes/plane.c.i
+
+.PHONY : Sources/Shapes/plane.i
+
+# target to preprocess a source file
+Sources/Shapes/plane.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Shapes/plane.c.i
+.PHONY : Sources/Shapes/plane.c.i
+
+Sources/Shapes/plane.s: Sources/Shapes/plane.c.s
+
+.PHONY : Sources/Shapes/plane.s
+
+# target to generate assembly for a file
+Sources/Shapes/plane.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Shapes/plane.c.s
+.PHONY : Sources/Shapes/plane.c.s
+
 Sources/Shapes/sphere.o: Sources/Shapes/sphere.c.o
 
 .PHONY : Sources/Shapes/sphere.o
@@ -284,6 +311,33 @@ Sources/ft_2.s: Sources/ft_2.c.s
 Sources/ft_2.c.s:
 	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/ft_2.c.s
 .PHONY : Sources/ft_2.c.s
+
+Sources/get_object.o: Sources/get_object.c.o
+
+.PHONY : Sources/get_object.o
+
+# target to build an object file
+Sources/get_object.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/get_object.c.o
+.PHONY : Sources/get_object.c.o
+
+Sources/get_object.i: Sources/get_object.c.i
+
+.PHONY : Sources/get_object.i
+
+# target to preprocess a source file
+Sources/get_object.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/get_object.c.i
+.PHONY : Sources/get_object.c.i
+
+Sources/get_object.s: Sources/get_object.c.s
+
+.PHONY : Sources/get_object.s
+
+# target to generate assembly for a file
+Sources/get_object.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/get_object.c.s
+.PHONY : Sources/get_object.c.s
 
 Sources/list.o: Sources/list.c.o
 
@@ -447,6 +501,33 @@ Sources/sdl_init.c.s:
 	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/sdl_init.c.s
 .PHONY : Sources/sdl_init.c.s
 
+Sources/trace_ray.o: Sources/trace_ray.c.o
+
+.PHONY : Sources/trace_ray.o
+
+# target to build an object file
+Sources/trace_ray.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/trace_ray.c.o
+.PHONY : Sources/trace_ray.c.o
+
+Sources/trace_ray.i: Sources/trace_ray.c.i
+
+.PHONY : Sources/trace_ray.i
+
+# target to preprocess a source file
+Sources/trace_ray.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/trace_ray.c.i
+.PHONY : Sources/trace_ray.c.i
+
+Sources/trace_ray.s: Sources/trace_ray.c.s
+
+.PHONY : Sources/trace_ray.s
+
+# target to generate assembly for a file
+Sources/trace_ray.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/trace_ray.c.s
+.PHONY : Sources/trace_ray.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -456,6 +537,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... RTv1"
+	@echo "... Sources/Shapes/plane.o"
+	@echo "... Sources/Shapes/plane.i"
+	@echo "... Sources/Shapes/plane.s"
 	@echo "... Sources/Shapes/sphere.o"
 	@echo "... Sources/Shapes/sphere.i"
 	@echo "... Sources/Shapes/sphere.s"
@@ -474,6 +558,9 @@ help:
 	@echo "... Sources/ft_2.o"
 	@echo "... Sources/ft_2.i"
 	@echo "... Sources/ft_2.s"
+	@echo "... Sources/get_object.o"
+	@echo "... Sources/get_object.i"
+	@echo "... Sources/get_object.s"
 	@echo "... Sources/list.o"
 	@echo "... Sources/list.i"
 	@echo "... Sources/list.s"
@@ -492,6 +579,9 @@ help:
 	@echo "... Sources/sdl_init.o"
 	@echo "... Sources/sdl_init.i"
 	@echo "... Sources/sdl_init.s"
+	@echo "... Sources/trace_ray.o"
+	@echo "... Sources/trace_ray.i"
+	@echo "... Sources/trace_ray.s"
 .PHONY : help
 
 
