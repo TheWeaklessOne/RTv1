@@ -12,6 +12,22 @@
 
 #include "conf.h"
 
+static void				check_lights_intensity(t_list *lights_head)
+{
+	t_list				*lights;
+	double				total;
+
+	total = 0;
+	lights = lights_head;
+	while (lights)
+	{
+		total += ((t_light*)lights->content)->intensity;
+		lights = lights->next;
+	}
+	if (total > 1.0)
+		ft_crash("Light(s) error: total intensity is more than 1.0!\n");
+}
+
 static int				open_conf(const char *path)
 {
 	unsigned long long	len;
@@ -45,10 +61,11 @@ static char				**read_from_conf(const int fd)
 		ret = add_to_text(ret, str);
 	if (!ret)
 		ft_crash("File is empty!\n");
+	close(fd);
 	return (ret);
 }
 
-void					get_info(const int fd, t_list **lights_p,
+static void				get_info(const int fd, t_list **lights_p,
 									t_list **objects_p)
 {
 	char				**conf;
@@ -77,6 +94,7 @@ void					conf_read(const char *path, t_list **lights_p,
 
 	conf_fd = open_conf(path);
 	get_info(conf_fd, lights_p, objects_p);
-	if (!*lights_p && !*objects_p)
+	if (!*objects_p)
 		ft_crash("No objects in %s!\n", path);
+	check_lights_intensity(*lights_p);
 }

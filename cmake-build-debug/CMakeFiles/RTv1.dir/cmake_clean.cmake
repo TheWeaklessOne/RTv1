@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/RTv1.dir/Sources/Conf_reader/check_file.c.o"
+  "CMakeFiles/RTv1.dir/Sources/Conf_reader/check_object_by_type.c.o"
   "CMakeFiles/RTv1.dir/Sources/Conf_reader/check_uniq.c.o"
   "CMakeFiles/RTv1.dir/Sources/Conf_reader/conf.c.o"
   "CMakeFiles/RTv1.dir/Sources/Conf_reader/conf_help.c.o"

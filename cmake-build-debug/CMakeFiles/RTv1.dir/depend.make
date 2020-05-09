@@ -8,6 +8,13 @@ CMakeFiles/RTv1.dir/Sources/Conf_reader/check_file.c.o: ../Includes/shapes.h
 CMakeFiles/RTv1.dir/Sources/Conf_reader/check_file.c.o: ../Includes/vec3f.h
 CMakeFiles/RTv1.dir/Sources/Conf_reader/check_file.c.o: ../Sources/Conf_reader/check_file.c
 
+CMakeFiles/RTv1.dir/Sources/Conf_reader/check_object_by_type.c.o: ../Includes/conf.h
+CMakeFiles/RTv1.dir/Sources/Conf_reader/check_object_by_type.c.o: ../Includes/list.h
+CMakeFiles/RTv1.dir/Sources/Conf_reader/check_object_by_type.c.o: ../Includes/rt.h
+CMakeFiles/RTv1.dir/Sources/Conf_reader/check_object_by_type.c.o: ../Includes/shapes.h
+CMakeFiles/RTv1.dir/Sources/Conf_reader/check_object_by_type.c.o: ../Includes/vec3f.h
+CMakeFiles/RTv1.dir/Sources/Conf_reader/check_object_by_type.c.o: ../Sources/Conf_reader/check_object_by_type.c
+
 CMakeFiles/RTv1.dir/Sources/Conf_reader/check_uniq.c.o: ../Includes/conf.h
 CMakeFiles/RTv1.dir/Sources/Conf_reader/check_uniq.c.o: ../Includes/list.h
 CMakeFiles/RTv1.dir/Sources/Conf_reader/check_uniq.c.o: ../Includes/rt.h

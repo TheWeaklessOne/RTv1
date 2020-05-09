@@ -12,7 +12,21 @@
 
 #include "conf.h"
 
-static void		fill_light(char **conf, int *i, t_light *light,
+static t_light	*check_light_by_type(t_light *light, const int line)
+{
+	if (light->intensity == UNDEFINED)
+		ft_crash("Light at [%d] line error: you did not"
+				 " defined light intensity!\n", line);
+	if (light->type != AMBIENT)
+	{
+		if (vec3f_equal(light->pos, UNDEFINED_V))
+			ft_crash("Light at [%d] line error: you did not"
+					 " defined light position!\n", line);
+	}
+	return (light);
+}
+
+static void		fill_light(char **conf, const int *i, t_light *light,
 							 int uniq[PARAMS_N])
 {
 	char		*str;
@@ -56,6 +70,7 @@ static int			check_light_type(const char *conf, const int i)
 t_light				*create_light(char **conf, int *i)
 {
 	int				k;
+	int				line;
 	t_light			*light;
 	int				params_uniq[PARAMS_N];
 
@@ -63,9 +78,14 @@ t_light				*create_light(char **conf, int *i)
 	while (++k < PARAMS_N)
 		params_uniq[k] = 0;
 	light = ft_malloc(sizeof(t_light));
+	*light = (t_light)
+	{
+		.pos = UNDEFINED_V, .intensity = UNDEFINED
+	};
 	light->type = check_light_type(conf[*i], *i);
+	line = *i;
 	while (tab_count(conf[++(*i)]) != 0)
 		fill_light(conf, i, light, params_uniq);
 	(*i)--;
-	return (light);
+	return (check_light_by_type(light, line + 1));
 }

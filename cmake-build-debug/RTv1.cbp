@@ -98,6 +98,9 @@
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/check_file.c">
 			<Option target="RTv1"/>
 		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/check_object_by_type.c">
+			<Option target="RTv1"/>
+		</Unit>
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/check_uniq.c">
 			<Option target="RTv1"/>
 		</Unit>

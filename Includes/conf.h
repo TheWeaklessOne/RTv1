@@ -24,7 +24,9 @@
 # define TAB_SIZE		4
 
 # define BUFF_SIZE		10
-# define END_CODES_N	255
+
+# define UNDEFINED		-1337
+# define UNDEFINED_V	(t_vec3f){-2.28, -1.337, -42}
 
 enum					e_restart
 {
@@ -80,15 +82,8 @@ int					str_is_empty(const char *str);
 void				*ft_malloc(size_t size);
 int					ft_split_size(char **split);
 void				ft_free_split(char **split);
-int					ft_strcmp(const char *s1, const char *s2);
 char				**ft_split(char *str, char *charset);
 char				*ft_strchr(const char *s, int c);
-
-//void				conf_help(void);
-//void				task_delete(t_task **task_p);
-//void				print_tasks(t_list *task_list);
-//void				task_list_delete(t_list *task_list);
-//void				conf_reload(const char *path, t_list *old_tasks,
-//								t_list **lights_p, t_list **objects_p);
+t_object			*check_object_by_type(int type, t_object info, int line);
 
 #endif

@@ -20,10 +20,13 @@ typedef struct	s_vec3f
 	double		z;
 }				t_vec3f;
 
+
 double			vec3f_dtr(double nb);
 double			vec3f_length(t_vec3f vec);
 double			vec3f_length2(t_vec3f vec);
 double			vec3f_dot(t_vec3f a, t_vec3f b);
+
+int				vec3f_equal(t_vec3f v1, t_vec3f v2);
 
 t_vec3f			vec3f_norm(t_vec3f vec);
 t_vec3f			vec3f_add(t_vec3f a, t_vec3f b);

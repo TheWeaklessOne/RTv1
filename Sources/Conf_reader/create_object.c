@@ -52,18 +52,23 @@ t_object			*create_object(char **conf, int *i)
 {
 	int				k;
 	int				type;
+	int				line;
 	t_object 		info;
 	int				params_uniq[PARAMS_N];
 
 	k = -1;
 	while (++k < PARAMS_N)
 		params_uniq[k] = 0;
+	info = (t_object)
+	{
+		.color = (t_vec3f){42, 42, 42}, .radius = UNDEFINED,
+		.center = UNDEFINED_V, .specular = 0,
+		.direction = UNDEFINED_V
+	};
 	type = check_object_type(conf[*i], *i);
+	line = *i;
 	while (tab_count(conf[++(*i)]) != 0)
 		fill_info(conf, i, &info, params_uniq);
 	(*i)--;
-	if (type == PLANE)
-		return (plane_create(info));
-	else //if (type == SPHERE)
-		return (sphere_create(info));
+	return (check_object_by_type(type, info, line + 1));
 }

@@ -62,19 +62,20 @@ int					main(int argc, char *argv[])
 	t_rt			rt;
 	SDL_Event		e;
 
-	rt_init(&rt);
-	sdl_init(&sdl);
-	while (sdl.running)
-	{
-		create_screen(&sdl.screen, &sdl);
-		raytrace(rt, sdl);
-		SDL_UnlockTexture(sdl.screen.texture);
-		SDL_RenderCopy(sdl.ren, sdl.screen.texture, NULL, NULL);
-		SDL_RenderPresent(sdl.ren);
-		while (SDL_PollEvent(&e))
-			manage_event(e, &sdl);
-		manage_keys(&rt, &sdl);
-	}
-	sdl_quit(&sdl);
+	rt_init(argc, argv, &rt);
+	conf_reload(argv[1], &rt.lights, &rt.objects);
+//	sdl_init(&sdl);
+//	while (sdl.running)
+//	{
+//		create_screen(&sdl.screen, &sdl);
+//		raytrace(rt, sdl);
+//		SDL_UnlockTexture(sdl.screen.texture);
+//		SDL_RenderCopy(sdl.ren, sdl.screen.texture, NULL, NULL);
+//		SDL_RenderPresent(sdl.ren);
+//		while (SDL_PollEvent(&e))
+//			manage_event(e, &sdl, argv[1], &rt);
+//		manage_keys(&rt, &sdl);
+//	}
+//	sdl_quit(&sdl);
 	exit(0);
 }

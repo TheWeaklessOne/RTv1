@@ -150,6 +150,33 @@ Sources/Conf_reader/check_file.c.s:
 	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/check_file.c.s
 .PHONY : Sources/Conf_reader/check_file.c.s
 
+Sources/Conf_reader/check_object_by_type.o: Sources/Conf_reader/check_object_by_type.c.o
+
+.PHONY : Sources/Conf_reader/check_object_by_type.o
+
+# target to build an object file
+Sources/Conf_reader/check_object_by_type.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/check_object_by_type.c.o
+.PHONY : Sources/Conf_reader/check_object_by_type.c.o
+
+Sources/Conf_reader/check_object_by_type.i: Sources/Conf_reader/check_object_by_type.c.i
+
+.PHONY : Sources/Conf_reader/check_object_by_type.i
+
+# target to preprocess a source file
+Sources/Conf_reader/check_object_by_type.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/check_object_by_type.c.i
+.PHONY : Sources/Conf_reader/check_object_by_type.c.i
+
+Sources/Conf_reader/check_object_by_type.s: Sources/Conf_reader/check_object_by_type.c.s
+
+.PHONY : Sources/Conf_reader/check_object_by_type.s
+
+# target to generate assembly for a file
+Sources/Conf_reader/check_object_by_type.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/check_object_by_type.c.s
+.PHONY : Sources/Conf_reader/check_object_by_type.c.s
+
 Sources/Conf_reader/check_uniq.o: Sources/Conf_reader/check_uniq.c.o
 
 .PHONY : Sources/Conf_reader/check_uniq.o
@@ -864,6 +891,9 @@ help:
 	@echo "... Sources/Conf_reader/check_file.o"
 	@echo "... Sources/Conf_reader/check_file.i"
 	@echo "... Sources/Conf_reader/check_file.s"
+	@echo "... Sources/Conf_reader/check_object_by_type.o"
+	@echo "... Sources/Conf_reader/check_object_by_type.i"
+	@echo "... Sources/Conf_reader/check_object_by_type.s"
 	@echo "... Sources/Conf_reader/check_uniq.o"
 	@echo "... Sources/Conf_reader/check_uniq.i"
 	@echo "... Sources/Conf_reader/check_uniq.s"

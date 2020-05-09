@@ -29,7 +29,7 @@ static int		fn_while(t_get_next_line *gnl)
 	gnl->interval = gnl->lp_cmp == 0 ? gnl->count : gnl->lp_cmp - gnl->buffer;
 	if (gnl->interval == 0 && gnl->line_count != 0)
 		return (0);
-	gnl->lp_prev = (char *)malloc(gnl->interval + gnl->line_count + 1);
+	gnl->lp_prev = (char *)ft_malloc(gnl->interval + gnl->line_count + 1);
 	if (gnl->lp_prev == 0)
 	{
 		gnl->count = -1;
@@ -56,7 +56,7 @@ static int		fn_exit(t_get_next_line *gnl, const int fd, char **line,
 	if (gnl->lp_cmp != 0 && (size_t)gnl->count > gnl->interval)
 	{
 		gnl->tmp = gnl->count - gnl->interval;
-		gnl->lp_cmp = malloc(gnl->tmp + sizeof(size_t));
+		gnl->lp_cmp = ft_malloc(gnl->tmp + sizeof(size_t));
 		if (gnl->lp_cmp == 0)
 			return (fn_free(gnl, fd, lp));
 		if (lp[fd] != 0)

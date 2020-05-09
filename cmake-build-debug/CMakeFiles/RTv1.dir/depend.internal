@@ -8,6 +8,13 @@ CMakeFiles/RTv1.dir/Sources/Conf_reader/check_file.c.o
  ../Includes/shapes.h
  ../Includes/vec3f.h
  /home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/check_file.c
+CMakeFiles/RTv1.dir/Sources/Conf_reader/check_object_by_type.c.o
+ ../Includes/conf.h
+ ../Includes/list.h
+ ../Includes/rt.h
+ ../Includes/shapes.h
+ ../Includes/vec3f.h
+ /home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/check_object_by_type.c
 CMakeFiles/RTv1.dir/Sources/Conf_reader/check_uniq.c.o
  ../Includes/conf.h
  ../Includes/list.h

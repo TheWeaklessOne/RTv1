@@ -106,20 +106,23 @@ typedef struct			s_data
 }						t_data;
 
 void					sdl_init(t_sdl *sdl);
-void					manage_event(const SDL_Event e, t_sdl *sdl);
+void					manage_event(SDL_Event e, t_sdl *sdl, char *path, t_rt *rt);
 void					manage_keys(t_rt *rt, t_sdl *sdl);
 void					sdl_quit(t_sdl *sdl);
 
-void					rt_init(t_rt *rt);
+void					rt_init(int argc, char **argv, t_rt *rt);
 
 void					create_screen(t_screen *screen, t_sdl *sdl);
 
-t_vec3f					trace_ray(const t_data data, const t_rt rt);
-t_object				*get_object(const t_data data, double *closest_p, const t_rt rt);
+t_vec3f					trace_ray(t_data data, t_rt rt);
+t_object				*get_object(t_data data, double *closest_p, t_rt rt);
 
+int						ft_strcmp(const char *s1, const char *s2);
 void					*ft_malloc(size_t size);
 int						is_double(const char *str);
 
+void					conf_help(void);
 void					conf_read(const char *path, t_list **lights_p, t_list **objects_p);
+void					conf_reload(const char *path, t_list **lights_p, t_list **objects_p);
 
 #endif

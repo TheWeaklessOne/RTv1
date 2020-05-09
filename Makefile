@@ -46,7 +46,8 @@ SRC_BASE	=	ft.c				\
 			Conf_reader/ft_strsplit.c	\
 			Conf_reader/get_nl.c		\
 			Conf_reader/str.c		\
-			Conf_reader/create_object.c
+			Conf_reader/create_object.c			\
+			Conf_reader/check_object_by_type.c	\
 
 SRCS		=	$(addprefix $(SRC_DIR), $(SRC_BASE))
 OBJS		=	$(addprefix $(OBJ_DIR), $(SRC_BASE:.c=.o))

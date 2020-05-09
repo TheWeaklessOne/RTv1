@@ -12,7 +12,7 @@
 
 #include "rt.h"
 
-void			manage_event(SDL_Event e, t_sdl *sdl)
+void			manage_event(SDL_Event e, t_sdl *sdl, char *path, t_rt *rt)
 {
 	if (e.type == SDL_QUIT)
 		sdl->running = 0;
@@ -20,6 +20,8 @@ void			manage_event(SDL_Event e, t_sdl *sdl)
 	{
 		if (e.key.keysym.sym == SDLK_ESCAPE)
 			sdl->running = 0;
+		else if (e.key.keysym.sym == SDLK_r)
+			conf_reload(path, &rt->lights, &rt->objects);
 		if (!sdl->keys[e.key.keysym.scancode])
 			sdl->keys[e.key.keysym.scancode] = 1;
 	}

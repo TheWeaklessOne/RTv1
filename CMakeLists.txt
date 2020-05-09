@@ -37,6 +37,6 @@ add_executable(RTv1
     Sources/rt.c
     Sources/sdl.c
     Sources/sdl_init.c
-    Sources/trace_ray.c)
+    Sources/trace_ray.c Sources/Conf_reader/check_object_by_type.c)
 
 target_link_libraries(RTv1 SDL2 SDL2_image)

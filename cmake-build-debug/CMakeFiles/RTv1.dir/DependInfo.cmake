@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/check_file.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Conf_reader/check_file.c.o"
+  "/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/check_object_by_type.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Conf_reader/check_object_by_type.c.o"
   "/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/check_uniq.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Conf_reader/check_uniq.c.o"
   "/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/conf.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Conf_reader/conf.c.o"
   "/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/conf_help.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Conf_reader/conf_help.c.o"
