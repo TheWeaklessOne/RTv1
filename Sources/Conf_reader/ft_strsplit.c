@@ -12,63 +12,85 @@
 
 #include "conf.h"
 
-static int			ft_nb_words(const char *str, const char *symbols)
+static char		*fn_free(char **array, size_t index)
 {
-	register int	i;
-	register int	sym;
-	register int	count;
-
-	i = 0;
-	sym = 0;
-	count = 0;
-	if (!str)
-		return (0);
-	while (str[i])
+	while (index > 0)
 	{
-		while (!ft_strchr(symbols, str[i]) && (sym = 1))
-			i++;
-		if (ft_strchr(symbols, str[i]))
-		{
-			count += (sym == 1) ? 1 : 0;
-			sym = 0;
-			i++;
-		}
+		free(array[index]);
+		index--;
 	}
-	return (count);
+	free(array);
+	return (0);
 }
 
-static int			ft_ln_w(const char *str, const char *symbols)
+static char		*fn_add_str(char **array, size_t index, char const *s,
+							char *pattern)
 {
-	register int	i;
+	size_t	i;
+	size_t	size;
+	char	*tmp;
 
+	size = 0;
+	while (s[size] != 0 && !ft_strchr(pattern, s[size]))
+		size++;
+	tmp = malloc(size + 1);
+	if (tmp == 0)
+		return (fn_free(array, index));
+	array[index] = tmp;
 	i = 0;
-	while (!ft_strchr(symbols, str[i]))
+	while (i < size)
+	{
+		tmp[i] = s[i];
 		i++;
-	return (i);
+	}
+	tmp[i] = 0;
+	return ((char *)s + size);
 }
 
-char				**ft_split(char *str, char *symbols)
+static size_t	fn_size(char const *s, char *pattern)
 {
-	register int	i;
-	register int	j;
-	register int	k;
-	char			**res;
+	size_t	size;
 
-	i = 0;
-	j = 0;
-	res = ft_malloc(sizeof(char*) * (ft_nb_words(str, symbols) + 1));
-	while (str[i])
+	size = 0;
+	while (s[0] != 0)
 	{
-		while (str[i] && ft_strchr(symbols, str[i]))
-			i++;
-		if (str[i])
+		if (!ft_strchr(pattern, s[0]))
 		{
-			k = 0;
-			res[j] = ft_malloc(sizeof(char) * ft_ln_w(str + i, symbols) + 1);
-			while (str[i] && !(ft_strchr(symbols, str[i])))
-				res[j][k++] = str[i++];
-			j++;
+			while (s[0] != 0 && !ft_strchr(pattern, s[0]))
+				s++;
+			size++;
 		}
+		else
+			s++;
 	}
-	return (res);
+	return (size);
+}
+
+char			**ft_split(char *s, char *pattern)
+{
+	char	**array;
+	size_t	i;
+
+	if (s == 0 || pattern == 0)
+		return (0);
+	if ((i = fn_size(s, pattern)) + 1 == 0)
+		return (0);
+	if ((array = malloc((i + 1) * sizeof(char *))) == 0)
+		return (0);
+	array[i] = 0;
+	if (i == 0)
+		return (array);
+	i = 0;
+	while (s[0] != 0)
+	{
+		if (!ft_strchr(pattern, s[0]))
+		{
+			if ((s = fn_add_str(array, i, s, pattern)) == 0)
+				return (0);
+			i++;
+		}
+		else
+			s++;
+	}
+	return (array);
 }
