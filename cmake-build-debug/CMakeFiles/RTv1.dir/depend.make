@@ -92,6 +92,18 @@ CMakeFiles/RTv1.dir/Sources/Conf_reader/str.c.o: ../Includes/shapes.h
 CMakeFiles/RTv1.dir/Sources/Conf_reader/str.c.o: ../Includes/vec3f.h
 CMakeFiles/RTv1.dir/Sources/Conf_reader/str.c.o: ../Sources/Conf_reader/str.c
 
+CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.o: ../Includes/list.h
+CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.o: ../Includes/rt.h
+CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.o: ../Includes/shapes.h
+CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.o: ../Includes/vec3f.h
+CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.o: ../Sources/Shapes/cone.c
+
+CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.o: ../Includes/list.h
+CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.o: ../Includes/rt.h
+CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.o: ../Includes/shapes.h
+CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.o: ../Includes/vec3f.h
+CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.o: ../Sources/Shapes/cylinder.c
+
 CMakeFiles/RTv1.dir/Sources/Shapes/plane.c.o: ../Includes/list.h
 CMakeFiles/RTv1.dir/Sources/Shapes/plane.c.o: ../Includes/rt.h
 CMakeFiles/RTv1.dir/Sources/Shapes/plane.c.o: ../Includes/shapes.h
@@ -130,6 +142,12 @@ CMakeFiles/RTv1.dir/Sources/ft_2.c.o: ../Includes/rt.h
 CMakeFiles/RTv1.dir/Sources/ft_2.c.o: ../Includes/shapes.h
 CMakeFiles/RTv1.dir/Sources/ft_2.c.o: ../Includes/vec3f.h
 CMakeFiles/RTv1.dir/Sources/ft_2.c.o: ../Sources/ft_2.c
+
+CMakeFiles/RTv1.dir/Sources/ft_3.c.o: ../Includes/list.h
+CMakeFiles/RTv1.dir/Sources/ft_3.c.o: ../Includes/rt.h
+CMakeFiles/RTv1.dir/Sources/ft_3.c.o: ../Includes/shapes.h
+CMakeFiles/RTv1.dir/Sources/ft_3.c.o: ../Includes/vec3f.h
+CMakeFiles/RTv1.dir/Sources/ft_3.c.o: ../Sources/ft_3.c
 
 CMakeFiles/RTv1.dir/Sources/get_object.c.o: ../Includes/list.h
 CMakeFiles/RTv1.dir/Sources/get_object.c.o: ../Includes/rt.h

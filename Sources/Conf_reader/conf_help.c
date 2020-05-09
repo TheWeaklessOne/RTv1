@@ -22,10 +22,10 @@ void		conf_help(void)
 			", by default is 42, 42, 42.\n\tspecular - object specular, by "
 			"default is 0.\n\tnormal - object normal, have to be defined for"
 			" cone, plane and cylinder.\nAlso *.conf file can contain lighting"
-			". Possible lighting types: point_light, ambient_light, directional"
+			". Possible lighting types: point_light, directional"
 			"_light.\nPossible fields for every lighting:\n\tintensity - "
-			"lighting intensity, have to be defined for every lighting. Total"
-			" lighting intensity can't be more than 1.0.\n\t"
-			"position - lighting position, have to be defined for ambient_light"
+			"lighting intensity, have to be defined for every lighting."
+			" Lighting intensity can't be more than 1.0.\n\t"
+			"position - lighting position, have to be defined for point_light"
 			" and directional_light.\n");
 }

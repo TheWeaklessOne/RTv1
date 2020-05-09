@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../Includes/conf.h
-rt.h
-../Includes/rt.h
-
 ../Includes/list.h
 unistd.h
 -
@@ -58,11 +54,7 @@ vec3f.h
 
 ../Includes/vec3f.h
 
-/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/ft_strsplit.c
-conf.h
-/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/conf.h
-
-/home/wstygg/CLionProjects/RTv1/Sources/main.c
+/home/wstygg/CLionProjects/RTv1/Sources/Shapes/cone.c
 rt.h
-/home/wstygg/CLionProjects/RTv1/Sources/rt.h
+/home/wstygg/CLionProjects/RTv1/Sources/Shapes/rt.h
 

@@ -13,10 +13,10 @@
 #include "rt.h"
 
 static t_vec3f	sphere_normal(const t_vec3f point, const t_vec3f dir,
-								const t_object sphere)
+								const t_object sphere, t_rt rt)
 {
 	(void)dir;
-	return (vec3f_norm(vec3f_sub(point, sphere.center)));
+	return (vec3f_sub(point, sphere.center));
 }
 
 static double	sphere_intersect(const t_vec3f orig, const t_vec3f dir,
@@ -53,8 +53,8 @@ t_object		*sphere_create(const t_object info)
 	ret->radius = info.radius;
 	ret->center = info.center;
 	ret->specular = info.specular;
-	ret->direction = info.direction;
-	ret->normal = &sphere_normal;
+	ret->normal = vec3f_norm(info.normal);
+	ret->get_normal = &sphere_normal;
 	ret->intersect = &sphere_intersect;
 	return (ret);
 }

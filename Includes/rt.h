@@ -88,6 +88,7 @@ typedef struct			s_rt
 	t_list				*lights;
 	t_list				*objects;
 	t_vec3f				rotation;
+	double				closest_t;
 }						t_rt;
 
 typedef struct			s_tvec
@@ -119,6 +120,12 @@ t_object				*get_object(t_data data, double *closest_p, t_rt rt);
 
 int						ft_strcmp(const char *s1, const char *s2);
 void					*ft_malloc(size_t size);
+void					*ft_memcpy(void *dst, const void *src, size_t n);
+char					*ft_strstr(const char *str, const char *to_find);
+int						ft_strncmp(const char *s1, const char *s2, size_t n);
+void					*ft_memchr(const void *s, int c, size_t n);
+size_t					ft_strlen(const char *str);
+
 int						is_double(const char *str);
 
 void					conf_help(void);

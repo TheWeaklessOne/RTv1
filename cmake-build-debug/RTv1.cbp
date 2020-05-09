@@ -134,6 +134,12 @@
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/str.c">
 			<Option target="RTv1"/>
 		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Shapes/cone.c">
+			<Option target="RTv1"/>
+		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Shapes/cylinder.c">
+			<Option target="RTv1"/>
+		</Unit>
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Shapes/plane.c">
 			<Option target="RTv1"/>
 		</Unit>
@@ -153,6 +159,9 @@
 			<Option target="RTv1"/>
 		</Unit>
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/ft_2.c">
+			<Option target="RTv1"/>
+		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/ft_3.c">
 			<Option target="RTv1"/>
 		</Unit>
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/get_object.c">

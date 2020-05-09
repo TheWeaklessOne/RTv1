@@ -125,6 +125,9 @@ double				create_intensity(char *conf, int i)
 	if (!is_double(split[1]) || (nb = SDL_atof(split[1])) < 0.0)
 		ft_crash("Error at [%d] line:\n%s\n\"intensity\" content have to be"
 				 " positive non-zero integer or floating number\n", i + 1, conf);
+	if (nb > 1.0)
+		ft_crash("Error at [%d] line:\n%s\n\"intensity\" content can't be"
+				 " more than 1.0\n", i + 1, conf);
 	ft_free_split(split);
 	return (nb);
 }

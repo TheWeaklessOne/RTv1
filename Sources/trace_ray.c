@@ -54,6 +54,7 @@ static double		get_intensity(const t_tvec tvec, const t_light light,
 	intensity += calc_specular(specular, light.intensity, tvec, vec_l);
 	return (intensity);
 }
+
 static double		compute_light(const t_tvec tvec, const double specular,
 									const t_rt rt)
 {
@@ -76,7 +77,7 @@ static double		compute_light(const t_tvec tvec, const double specular,
 }
 
 
-t_vec3f				trace_ray(const t_data data, const t_rt rt)
+t_vec3f				trace_ray(const t_data data, t_rt rt)
 {
 	t_object		*object;
 	double			closest_t;
@@ -85,8 +86,9 @@ t_vec3f				trace_ray(const t_data data, const t_rt rt)
 	object = get_object(data, &closest_t, rt);
 	if (!object)
 		return (BACKGROUND_C);
+	rt.closest_t = closest_t;
 	tvec.point = vec3f_add(rt.camera, vec3f_scale(data.dir, closest_t));
-	tvec.normal = object->normal(tvec.point, data.dir, *object);
+	tvec.normal = vec3f_norm(object->get_normal(tvec.point, data.dir, *object, rt));
 	tvec.view = vec3f_scale(data.dir, -1);
 	return (vec3f_scale(object->color, compute_light(tvec, object->specular, rt)));
 }

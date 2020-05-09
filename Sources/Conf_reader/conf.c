@@ -12,28 +12,12 @@
 
 #include "conf.h"
 
-static void				check_lights_intensity(t_list *lights_head)
-{
-	t_list				*lights;
-	double				total;
-
-	total = 0;
-	lights = lights_head;
-	while (lights)
-	{
-		total += ((t_light*)lights->content)->intensity;
-		lights = lights->next;
-	}
-	if (total > 1.0)
-		ft_crash("Light(s) error: total intensity is more than 1.0!\n");
-}
-
 static int				open_conf(const char *path)
 {
 	unsigned long long	len;
 	int					ret;
 
-	len = path ? strlen(path) : 0;
+	len = path ? ft_strlen(path) : 0;
 	if (!path)
 		ft_crash("Bad path provided!\n");
 	if (len < 6 || !(path[len - 1] == 'f' && path[len - 2] == 'n' &&
@@ -77,7 +61,7 @@ static void				get_info(const int fd, t_list **lights_p,
 	{
 		if (str_is_empty(conf[i]))
 			continue ;
-		if (strstr(conf[i], "light"))
+		if (ft_strstr(conf[i], "light"))
 			*lights_p = list_add_back(*lights_p, create_light(conf, &i));
 		else
 			*objects_p = list_add_back(*objects_p, create_object(conf, &i));
@@ -96,5 +80,4 @@ void					conf_read(const char *path, t_list **lights_p,
 	get_info(conf_fd, lights_p, objects_p);
 	if (!*objects_p)
 		ft_crash("No objects in %s!\n", path);
-	check_lights_intensity(*lights_p);
 }

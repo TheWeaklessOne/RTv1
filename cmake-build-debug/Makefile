@@ -474,6 +474,60 @@ Sources/Conf_reader/str.c.s:
 	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/str.c.s
 .PHONY : Sources/Conf_reader/str.c.s
 
+Sources/Shapes/cone.o: Sources/Shapes/cone.c.o
+
+.PHONY : Sources/Shapes/cone.o
+
+# target to build an object file
+Sources/Shapes/cone.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.o
+.PHONY : Sources/Shapes/cone.c.o
+
+Sources/Shapes/cone.i: Sources/Shapes/cone.c.i
+
+.PHONY : Sources/Shapes/cone.i
+
+# target to preprocess a source file
+Sources/Shapes/cone.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.i
+.PHONY : Sources/Shapes/cone.c.i
+
+Sources/Shapes/cone.s: Sources/Shapes/cone.c.s
+
+.PHONY : Sources/Shapes/cone.s
+
+# target to generate assembly for a file
+Sources/Shapes/cone.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.s
+.PHONY : Sources/Shapes/cone.c.s
+
+Sources/Shapes/cylinder.o: Sources/Shapes/cylinder.c.o
+
+.PHONY : Sources/Shapes/cylinder.o
+
+# target to build an object file
+Sources/Shapes/cylinder.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.o
+.PHONY : Sources/Shapes/cylinder.c.o
+
+Sources/Shapes/cylinder.i: Sources/Shapes/cylinder.c.i
+
+.PHONY : Sources/Shapes/cylinder.i
+
+# target to preprocess a source file
+Sources/Shapes/cylinder.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.i
+.PHONY : Sources/Shapes/cylinder.c.i
+
+Sources/Shapes/cylinder.s: Sources/Shapes/cylinder.c.s
+
+.PHONY : Sources/Shapes/cylinder.s
+
+# target to generate assembly for a file
+Sources/Shapes/cylinder.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.s
+.PHONY : Sources/Shapes/cylinder.c.s
+
 Sources/Shapes/plane.o: Sources/Shapes/plane.c.o
 
 .PHONY : Sources/Shapes/plane.o
@@ -662,6 +716,33 @@ Sources/ft_2.s: Sources/ft_2.c.s
 Sources/ft_2.c.s:
 	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/ft_2.c.s
 .PHONY : Sources/ft_2.c.s
+
+Sources/ft_3.o: Sources/ft_3.c.o
+
+.PHONY : Sources/ft_3.o
+
+# target to build an object file
+Sources/ft_3.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/ft_3.c.o
+.PHONY : Sources/ft_3.c.o
+
+Sources/ft_3.i: Sources/ft_3.c.i
+
+.PHONY : Sources/ft_3.i
+
+# target to preprocess a source file
+Sources/ft_3.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/ft_3.c.i
+.PHONY : Sources/ft_3.c.i
+
+Sources/ft_3.s: Sources/ft_3.c.s
+
+.PHONY : Sources/ft_3.s
+
+# target to generate assembly for a file
+Sources/ft_3.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/ft_3.c.s
+.PHONY : Sources/ft_3.c.s
 
 Sources/get_object.o: Sources/get_object.c.o
 
@@ -927,6 +1008,12 @@ help:
 	@echo "... Sources/Conf_reader/str.o"
 	@echo "... Sources/Conf_reader/str.i"
 	@echo "... Sources/Conf_reader/str.s"
+	@echo "... Sources/Shapes/cone.o"
+	@echo "... Sources/Shapes/cone.i"
+	@echo "... Sources/Shapes/cone.s"
+	@echo "... Sources/Shapes/cylinder.o"
+	@echo "... Sources/Shapes/cylinder.i"
+	@echo "... Sources/Shapes/cylinder.s"
 	@echo "... Sources/Shapes/plane.o"
 	@echo "... Sources/Shapes/plane.i"
 	@echo "... Sources/Shapes/plane.s"
@@ -948,6 +1035,9 @@ help:
 	@echo "... Sources/ft_2.o"
 	@echo "... Sources/ft_2.i"
 	@echo "... Sources/ft_2.s"
+	@echo "... Sources/ft_3.o"
+	@echo "... Sources/ft_3.i"
+	@echo "... Sources/ft_3.s"
 	@echo "... Sources/get_object.o"
 	@echo "... Sources/get_object.i"
 	@echo "... Sources/get_object.s"

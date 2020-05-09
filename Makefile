@@ -22,6 +22,7 @@ OBJ_DIR		=	.objs/
 
 SRC_BASE	=	ft.c				\
 			ft_2.c				\
+			ft_3.c				\
 			main.c				\
 			rt.c				\
 			trace_ray.c             	\
@@ -30,8 +31,10 @@ SRC_BASE	=	ft.c				\
 			sdl_init.c              	\
 			list.c                  	\
 			list_2.c                	\
-			Shapes/sphere.c			\
+			Shapes/cone.c			\
 			Shapes/plane.c			\
+			Shapes/sphere.c			\
+			Shapes/cylinder.c			\
 			Vec3f/vec3f_1.c			\
 			Vec3f/vec3f_2.c			\
 			Vec3f/vec3f_dtr.c		\

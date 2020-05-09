@@ -421,6 +421,45 @@ CMakeFiles/RTv1.dir/Sources/Conf_reader/check_object_by_type.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RTv1.dir/Sources/Conf_reader/check_object_by_type.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/check_object_by_type.c -o CMakeFiles/RTv1.dir/Sources/Conf_reader/check_object_by_type.c.s
 
+CMakeFiles/RTv1.dir/Sources/ft_3.c.o: CMakeFiles/RTv1.dir/flags.make
+CMakeFiles/RTv1.dir/Sources/ft_3.c.o: ../Sources/ft_3.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/RTv1.dir/Sources/ft_3.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTv1.dir/Sources/ft_3.c.o   -c /home/wstygg/CLionProjects/RTv1/Sources/ft_3.c
+
+CMakeFiles/RTv1.dir/Sources/ft_3.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RTv1.dir/Sources/ft_3.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wstygg/CLionProjects/RTv1/Sources/ft_3.c > CMakeFiles/RTv1.dir/Sources/ft_3.c.i
+
+CMakeFiles/RTv1.dir/Sources/ft_3.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RTv1.dir/Sources/ft_3.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wstygg/CLionProjects/RTv1/Sources/ft_3.c -o CMakeFiles/RTv1.dir/Sources/ft_3.c.s
+
+CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.o: CMakeFiles/RTv1.dir/flags.make
+CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.o: ../Sources/Shapes/cylinder.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.o   -c /home/wstygg/CLionProjects/RTv1/Sources/Shapes/cylinder.c
+
+CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wstygg/CLionProjects/RTv1/Sources/Shapes/cylinder.c > CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.i
+
+CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wstygg/CLionProjects/RTv1/Sources/Shapes/cylinder.c -o CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.s
+
+CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.o: CMakeFiles/RTv1.dir/flags.make
+CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.o: ../Sources/Shapes/cone.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.o   -c /home/wstygg/CLionProjects/RTv1/Sources/Shapes/cone.c
+
+CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wstygg/CLionProjects/RTv1/Sources/Shapes/cone.c > CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.i
+
+CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wstygg/CLionProjects/RTv1/Sources/Shapes/cone.c -o CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.s
+
 # Object files for target RTv1
 RTv1_OBJECTS = \
 "CMakeFiles/RTv1.dir/Sources/Conf_reader/check_file.c.o" \
@@ -450,7 +489,10 @@ RTv1_OBJECTS = \
 "CMakeFiles/RTv1.dir/Sources/sdl.c.o" \
 "CMakeFiles/RTv1.dir/Sources/sdl_init.c.o" \
 "CMakeFiles/RTv1.dir/Sources/trace_ray.c.o" \
-"CMakeFiles/RTv1.dir/Sources/Conf_reader/check_object_by_type.c.o"
+"CMakeFiles/RTv1.dir/Sources/Conf_reader/check_object_by_type.c.o" \
+"CMakeFiles/RTv1.dir/Sources/ft_3.c.o" \
+"CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.o" \
+"CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.o"
 
 # External object files for target RTv1
 RTv1_EXTERNAL_OBJECTS =
@@ -483,9 +525,12 @@ RTv1: CMakeFiles/RTv1.dir/Sources/sdl.c.o
 RTv1: CMakeFiles/RTv1.dir/Sources/sdl_init.c.o
 RTv1: CMakeFiles/RTv1.dir/Sources/trace_ray.c.o
 RTv1: CMakeFiles/RTv1.dir/Sources/Conf_reader/check_object_by_type.c.o
+RTv1: CMakeFiles/RTv1.dir/Sources/ft_3.c.o
+RTv1: CMakeFiles/RTv1.dir/Sources/Shapes/cylinder.c.o
+RTv1: CMakeFiles/RTv1.dir/Sources/Shapes/cone.c.o
 RTv1: CMakeFiles/RTv1.dir/build.make
 RTv1: CMakeFiles/RTv1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Linking C executable RTv1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Linking C executable RTv1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RTv1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

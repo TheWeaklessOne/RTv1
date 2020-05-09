@@ -35,12 +35,12 @@ static void		fill_light(char **conf, const int *i, t_light *light,
 	if (tab_count(conf[*i]) != 1)
 		ft_crash("Error at [%d] line:\n%s\nThere have to be 1 tab depth before "
 					"light's keyword!\n", *i + 1, conf[*i]);
-	if (!strchr(str, ':'))
+	if (!ft_strchr(str, ':'))
 		ft_crash("Error at [%d] line: %s\nLight's keyword have to be followed"
 					"by ':' symbol!\n", *i + 1, conf);
-	if (!strncmp(str, "position:", 9) && uck(POSITION, uniq, *i, conf[*i]))
+	if (!ft_strncmp(str, "position:", 9) && uck(POSITION, uniq, *i, conf[*i]))
 		light->pos = create_pos(conf[*i], *i);
-	else if (!strncmp(str, "intensity:", 10) &&
+	else if (!ft_strncmp(str, "intensity:", 10) &&
 				uck(INTENSITY, uniq, *i, conf[*i]))
 		light->intensity = create_intensity(conf[*i], *i);
 	else
@@ -50,7 +50,7 @@ static void		fill_light(char **conf, const int *i, t_light *light,
 
 static int			check_light_type(const char *conf, const int i)
 {
-	const size_t	len = strlen(conf);
+	const size_t	len = ft_strlen(conf);
 
 	if (tab_count(conf) != 0)
 		ft_crash("Error at [%d] line: %s\nLight type field must have zero "
@@ -60,8 +60,6 @@ static int			check_light_type(const char *conf, const int i)
 				 "':' symbol!\n", i + 1, conf);
 	if (!ft_strcmp(conf, "point_light:"))
 		return (POINT);
-	if (!ft_strcmp(conf, "ambient_light:"))
-		return (AMBIENT);
 	if (!ft_strcmp(conf, "directional_light:"))
 		return (DIRECTIONAL);
 	ft_crash("Error at [%d] line: %s\nUnknown light type!\n", i + 1, conf);

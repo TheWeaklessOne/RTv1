@@ -1,22 +1,21 @@
 #include "rt.h"
 
 static t_vec3f		plane_normal(const t_vec3f point, const t_vec3f dir,
-									const t_object plane)
+									const t_object plane, t_rt rt)
 {
 	(void)point;
-	return (EPSILON < vec3f_dot(dir, plane.direction) ?
-			vec3f_scale(plane.direction, -1) :
-			plane.direction);
+	return (EPSILON < vec3f_dot(dir, plane.normal) ?
+			vec3f_scale(plane.normal, -1) :
+			plane.normal);
 }
 
 static double		plane_intersect(const t_vec3f orig, const t_vec3f dir,
 										const t_object plane)
 {
-	t_vec3f			sub;
-	const double	denom = vec3f_dot(plane.direction, dir);
+	const double	denom = vec3f_dot(plane.normal, dir);
 
 	if (SDL_fabs(denom) > EPSILON)
-		return (vec3f_dot(vec3f_sub(plane.center, orig), plane.direction) / denom);
+		return (vec3f_dot(vec3f_sub(plane.center, orig), plane.normal) / denom);
 	return (DBL_MAX);
 }
 
@@ -29,8 +28,8 @@ t_object			*plane_create(const t_object info)
 	ret->radius = info.radius;
 	ret->center = info.center;
 	ret->specular = info.specular;
-	ret->direction = info.direction;
-	ret->normal = &plane_normal;
+	ret->normal = info.normal;
+	ret->get_normal = &plane_normal;
 	ret->intersect = &plane_intersect;
 	return (ret);
 }

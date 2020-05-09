@@ -39,7 +39,7 @@ static int		fn_while(t_get_next_line *gnl)
 	{
 		if (gnl->line_count != 0)
 		{
-			memcpy(gnl->lp_prev, gnl->line, gnl->line_count);
+			ft_memcpy(gnl->lp_prev, gnl->line, gnl->line_count);
 			free(gnl->line);
 		}
 		memcpy(gnl->lp_prev + gnl->line_count, gnl->buffer, gnl->interval);
@@ -64,7 +64,7 @@ static int		fn_exit(t_get_next_line *gnl, const int fd, char **line,
 		lp[fd] = gnl->lp_cmp;
 		*((size_t *)gnl->lp_cmp) = gnl->tmp;
 		gnl->lp_cmp += sizeof(size_t);
-		memcpy(gnl->lp_cmp, &gnl->buffer[gnl->interval], gnl->tmp);
+		ft_memcpy(gnl->lp_cmp, &gnl->buffer[gnl->interval], gnl->tmp);
 	}
 	else if (lp[fd] != 0)
 	{
@@ -87,13 +87,13 @@ int				get_nl(const int fd, char **line)
 	if (lp[fd] != 0)
 	{
 		gnl.count = *((size_t *)lp[fd]);
-		memcpy(gnl.buffer, lp[fd] + sizeof(size_t), gnl.count);
+		ft_memcpy(gnl.buffer, lp[fd] + sizeof(size_t), gnl.count);
 	}
 	else
 		gnl.count = read(fd, gnl.buffer, BUFF_SIZE);
 	while (gnl.count > 0)
 	{
-		gnl.lp_cmp = memchr(gnl.buffer, '\n', gnl.count);
+		gnl.lp_cmp = ft_memchr(gnl.buffer, '\n', gnl.count);
 		if (fn_while(&gnl) == 0 || gnl.lp_cmp != 0)
 			break ;
 		gnl.count = read(fd, gnl.buffer, BUFF_SIZE);
