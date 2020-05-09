@@ -29,9 +29,9 @@ int						str_is_empty(const char *str)
 {
 	register size_t		i;
 
-	i = 0;
 	if (!str)
 		return (1);
+	i = 0;
 	while (str[i])
 	{
 		if (!((str[i] >= 9 && str[i] <= 13) || str[i] == ' '))
@@ -41,32 +41,14 @@ int						str_is_empty(const char *str)
 	return (1);
 }
 
-char					*ft_strjoin(char const *s1, char const *s2, int to_free)
+char					*ft_strchr(const char *s, int c)
 {
-	char				*str;
-	size_t				i;
-	size_t				k;
-
-	if (!s1 || !s2)
+	while (*s != '\0' && *s != (char)c)
+		s++;
+	if (*s != (char)c)
 		return (NULL);
-	if (!(str = (char*)malloc(strlen((char*)s1) + strlen((char*)s2) + 1)))
-		return (NULL);
-	i = 0;
-	k = 0;
-	while (s1[i])
-		str[k++] = s1[i++];
-	i = 0;
-	while (s2[i])
-		str[k++] = s2[i++];
-	str[k] = '\0';
-	(to_free == 1) ? free((void*)s1) : 0;
-	(to_free == 2) ? free((void*)s2) : 0;
-	if (to_free == 3)
-	{
-		free((void*)s1);
-		free((void*)s2);
-	}
-	return (str);
+	else
+		return ((char*)s);
 }
 
 void					ft_crash(const char *msg, ...)

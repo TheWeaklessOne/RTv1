@@ -4,6 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/check_file.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Conf_reader/check_file.c.o"
+  "/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/check_uniq.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Conf_reader/check_uniq.c.o"
+  "/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/conf.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Conf_reader/conf.c.o"
+  "/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/conf_help.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Conf_reader/conf_help.c.o"
+  "/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/conf_reload.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Conf_reader/conf_reload.c.o"
+  "/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/create.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Conf_reader/create.c.o"
+  "/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/create_2.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Conf_reader/create_2.c.o"
+  "/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/create_light.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Conf_reader/create_light.c.o"
+  "/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/create_object.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Conf_reader/create_object.c.o"
+  "/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/ft_strsplit.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Conf_reader/ft_strsplit.c.o"
+  "/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/get_nl.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Conf_reader/get_nl.c.o"
+  "/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/str.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Conf_reader/str.c.o"
   "/home/wstygg/CLionProjects/RTv1/Sources/Shapes/plane.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Shapes/plane.c.o"
   "/home/wstygg/CLionProjects/RTv1/Sources/Shapes/sphere.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Shapes/sphere.c.o"
   "/home/wstygg/CLionProjects/RTv1/Sources/Vec3f/vec3f_1.c" "/home/wstygg/CLionProjects/RTv1/cmake-build-debug/CMakeFiles/RTv1.dir/Sources/Vec3f/vec3f_1.c.o"

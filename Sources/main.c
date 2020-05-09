@@ -50,13 +50,13 @@ static void			raytrace(const t_rt rt, const t_sdl sdl)
 	while (++h < HEIGHT_H && (w = -WIDTH_H - 1))
 		while (++w < WIDTH_H)
 		{
-			direction = vec3f_rot(canvas_to_viewport(w, h), rt.rotation);
+			direction = vec3f_norm(vec3f_rot(canvas_to_viewport(w, h), rt.rotation));
 			colour = trace_ray((t_data){rt.camera, direction, rt.z_min, rt.z_max}, rt);
 			pixel_put(w, h, colour, sdl.screen.pixels);
 		}
 }
 
-int					main()
+int					main(int argc, char *argv[])
 {
 	t_sdl			sdl;
 	t_rt			rt;

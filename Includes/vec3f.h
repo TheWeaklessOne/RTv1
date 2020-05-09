@@ -13,8 +13,6 @@
 #ifndef RTV1_VEC3F_H
 # define RTV1_VEC3F_H
 
-# include <math.h>
-
 typedef struct	s_vec3f
 {
 	double		x;

@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Includes/conf.h">
+			<Option target="RTv1"/>
+		</Unit>
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Includes/list.h">
 			<Option target="RTv1"/>
 		</Unit>
@@ -89,10 +92,43 @@
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Includes/shapes.h">
 			<Option target="RTv1"/>
 		</Unit>
-		<Unit filename="/home/wstygg/CLionProjects/RTv1/Includes/structures.h">
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Includes/vec3f.h">
 			<Option target="RTv1"/>
 		</Unit>
-		<Unit filename="/home/wstygg/CLionProjects/RTv1/Includes/vec3f.h">
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/check_file.c">
+			<Option target="RTv1"/>
+		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/check_uniq.c">
+			<Option target="RTv1"/>
+		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/conf.c">
+			<Option target="RTv1"/>
+		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/conf_help.c">
+			<Option target="RTv1"/>
+		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/conf_reload.c">
+			<Option target="RTv1"/>
+		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/create.c">
+			<Option target="RTv1"/>
+		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/create_2.c">
+			<Option target="RTv1"/>
+		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/create_light.c">
+			<Option target="RTv1"/>
+		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/create_object.c">
+			<Option target="RTv1"/>
+		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/ft_strsplit.c">
+			<Option target="RTv1"/>
+		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/get_nl.c">
+			<Option target="RTv1"/>
+		</Unit>
+		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Conf_reader/str.c">
 			<Option target="RTv1"/>
 		</Unit>
 		<Unit filename="/home/wstygg/CLionProjects/RTv1/Sources/Shapes/plane.c">

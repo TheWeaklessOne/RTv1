@@ -123,6 +123,330 @@ RTv1/fast:
 	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/build
 .PHONY : RTv1/fast
 
+Sources/Conf_reader/check_file.o: Sources/Conf_reader/check_file.c.o
+
+.PHONY : Sources/Conf_reader/check_file.o
+
+# target to build an object file
+Sources/Conf_reader/check_file.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/check_file.c.o
+.PHONY : Sources/Conf_reader/check_file.c.o
+
+Sources/Conf_reader/check_file.i: Sources/Conf_reader/check_file.c.i
+
+.PHONY : Sources/Conf_reader/check_file.i
+
+# target to preprocess a source file
+Sources/Conf_reader/check_file.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/check_file.c.i
+.PHONY : Sources/Conf_reader/check_file.c.i
+
+Sources/Conf_reader/check_file.s: Sources/Conf_reader/check_file.c.s
+
+.PHONY : Sources/Conf_reader/check_file.s
+
+# target to generate assembly for a file
+Sources/Conf_reader/check_file.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/check_file.c.s
+.PHONY : Sources/Conf_reader/check_file.c.s
+
+Sources/Conf_reader/check_uniq.o: Sources/Conf_reader/check_uniq.c.o
+
+.PHONY : Sources/Conf_reader/check_uniq.o
+
+# target to build an object file
+Sources/Conf_reader/check_uniq.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/check_uniq.c.o
+.PHONY : Sources/Conf_reader/check_uniq.c.o
+
+Sources/Conf_reader/check_uniq.i: Sources/Conf_reader/check_uniq.c.i
+
+.PHONY : Sources/Conf_reader/check_uniq.i
+
+# target to preprocess a source file
+Sources/Conf_reader/check_uniq.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/check_uniq.c.i
+.PHONY : Sources/Conf_reader/check_uniq.c.i
+
+Sources/Conf_reader/check_uniq.s: Sources/Conf_reader/check_uniq.c.s
+
+.PHONY : Sources/Conf_reader/check_uniq.s
+
+# target to generate assembly for a file
+Sources/Conf_reader/check_uniq.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/check_uniq.c.s
+.PHONY : Sources/Conf_reader/check_uniq.c.s
+
+Sources/Conf_reader/conf.o: Sources/Conf_reader/conf.c.o
+
+.PHONY : Sources/Conf_reader/conf.o
+
+# target to build an object file
+Sources/Conf_reader/conf.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/conf.c.o
+.PHONY : Sources/Conf_reader/conf.c.o
+
+Sources/Conf_reader/conf.i: Sources/Conf_reader/conf.c.i
+
+.PHONY : Sources/Conf_reader/conf.i
+
+# target to preprocess a source file
+Sources/Conf_reader/conf.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/conf.c.i
+.PHONY : Sources/Conf_reader/conf.c.i
+
+Sources/Conf_reader/conf.s: Sources/Conf_reader/conf.c.s
+
+.PHONY : Sources/Conf_reader/conf.s
+
+# target to generate assembly for a file
+Sources/Conf_reader/conf.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/conf.c.s
+.PHONY : Sources/Conf_reader/conf.c.s
+
+Sources/Conf_reader/conf_help.o: Sources/Conf_reader/conf_help.c.o
+
+.PHONY : Sources/Conf_reader/conf_help.o
+
+# target to build an object file
+Sources/Conf_reader/conf_help.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/conf_help.c.o
+.PHONY : Sources/Conf_reader/conf_help.c.o
+
+Sources/Conf_reader/conf_help.i: Sources/Conf_reader/conf_help.c.i
+
+.PHONY : Sources/Conf_reader/conf_help.i
+
+# target to preprocess a source file
+Sources/Conf_reader/conf_help.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/conf_help.c.i
+.PHONY : Sources/Conf_reader/conf_help.c.i
+
+Sources/Conf_reader/conf_help.s: Sources/Conf_reader/conf_help.c.s
+
+.PHONY : Sources/Conf_reader/conf_help.s
+
+# target to generate assembly for a file
+Sources/Conf_reader/conf_help.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/conf_help.c.s
+.PHONY : Sources/Conf_reader/conf_help.c.s
+
+Sources/Conf_reader/conf_reload.o: Sources/Conf_reader/conf_reload.c.o
+
+.PHONY : Sources/Conf_reader/conf_reload.o
+
+# target to build an object file
+Sources/Conf_reader/conf_reload.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/conf_reload.c.o
+.PHONY : Sources/Conf_reader/conf_reload.c.o
+
+Sources/Conf_reader/conf_reload.i: Sources/Conf_reader/conf_reload.c.i
+
+.PHONY : Sources/Conf_reader/conf_reload.i
+
+# target to preprocess a source file
+Sources/Conf_reader/conf_reload.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/conf_reload.c.i
+.PHONY : Sources/Conf_reader/conf_reload.c.i
+
+Sources/Conf_reader/conf_reload.s: Sources/Conf_reader/conf_reload.c.s
+
+.PHONY : Sources/Conf_reader/conf_reload.s
+
+# target to generate assembly for a file
+Sources/Conf_reader/conf_reload.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/conf_reload.c.s
+.PHONY : Sources/Conf_reader/conf_reload.c.s
+
+Sources/Conf_reader/create.o: Sources/Conf_reader/create.c.o
+
+.PHONY : Sources/Conf_reader/create.o
+
+# target to build an object file
+Sources/Conf_reader/create.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/create.c.o
+.PHONY : Sources/Conf_reader/create.c.o
+
+Sources/Conf_reader/create.i: Sources/Conf_reader/create.c.i
+
+.PHONY : Sources/Conf_reader/create.i
+
+# target to preprocess a source file
+Sources/Conf_reader/create.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/create.c.i
+.PHONY : Sources/Conf_reader/create.c.i
+
+Sources/Conf_reader/create.s: Sources/Conf_reader/create.c.s
+
+.PHONY : Sources/Conf_reader/create.s
+
+# target to generate assembly for a file
+Sources/Conf_reader/create.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/create.c.s
+.PHONY : Sources/Conf_reader/create.c.s
+
+Sources/Conf_reader/create_2.o: Sources/Conf_reader/create_2.c.o
+
+.PHONY : Sources/Conf_reader/create_2.o
+
+# target to build an object file
+Sources/Conf_reader/create_2.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/create_2.c.o
+.PHONY : Sources/Conf_reader/create_2.c.o
+
+Sources/Conf_reader/create_2.i: Sources/Conf_reader/create_2.c.i
+
+.PHONY : Sources/Conf_reader/create_2.i
+
+# target to preprocess a source file
+Sources/Conf_reader/create_2.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/create_2.c.i
+.PHONY : Sources/Conf_reader/create_2.c.i
+
+Sources/Conf_reader/create_2.s: Sources/Conf_reader/create_2.c.s
+
+.PHONY : Sources/Conf_reader/create_2.s
+
+# target to generate assembly for a file
+Sources/Conf_reader/create_2.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/create_2.c.s
+.PHONY : Sources/Conf_reader/create_2.c.s
+
+Sources/Conf_reader/create_light.o: Sources/Conf_reader/create_light.c.o
+
+.PHONY : Sources/Conf_reader/create_light.o
+
+# target to build an object file
+Sources/Conf_reader/create_light.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/create_light.c.o
+.PHONY : Sources/Conf_reader/create_light.c.o
+
+Sources/Conf_reader/create_light.i: Sources/Conf_reader/create_light.c.i
+
+.PHONY : Sources/Conf_reader/create_light.i
+
+# target to preprocess a source file
+Sources/Conf_reader/create_light.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/create_light.c.i
+.PHONY : Sources/Conf_reader/create_light.c.i
+
+Sources/Conf_reader/create_light.s: Sources/Conf_reader/create_light.c.s
+
+.PHONY : Sources/Conf_reader/create_light.s
+
+# target to generate assembly for a file
+Sources/Conf_reader/create_light.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/create_light.c.s
+.PHONY : Sources/Conf_reader/create_light.c.s
+
+Sources/Conf_reader/create_object.o: Sources/Conf_reader/create_object.c.o
+
+.PHONY : Sources/Conf_reader/create_object.o
+
+# target to build an object file
+Sources/Conf_reader/create_object.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/create_object.c.o
+.PHONY : Sources/Conf_reader/create_object.c.o
+
+Sources/Conf_reader/create_object.i: Sources/Conf_reader/create_object.c.i
+
+.PHONY : Sources/Conf_reader/create_object.i
+
+# target to preprocess a source file
+Sources/Conf_reader/create_object.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/create_object.c.i
+.PHONY : Sources/Conf_reader/create_object.c.i
+
+Sources/Conf_reader/create_object.s: Sources/Conf_reader/create_object.c.s
+
+.PHONY : Sources/Conf_reader/create_object.s
+
+# target to generate assembly for a file
+Sources/Conf_reader/create_object.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/create_object.c.s
+.PHONY : Sources/Conf_reader/create_object.c.s
+
+Sources/Conf_reader/ft_strsplit.o: Sources/Conf_reader/ft_strsplit.c.o
+
+.PHONY : Sources/Conf_reader/ft_strsplit.o
+
+# target to build an object file
+Sources/Conf_reader/ft_strsplit.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/ft_strsplit.c.o
+.PHONY : Sources/Conf_reader/ft_strsplit.c.o
+
+Sources/Conf_reader/ft_strsplit.i: Sources/Conf_reader/ft_strsplit.c.i
+
+.PHONY : Sources/Conf_reader/ft_strsplit.i
+
+# target to preprocess a source file
+Sources/Conf_reader/ft_strsplit.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/ft_strsplit.c.i
+.PHONY : Sources/Conf_reader/ft_strsplit.c.i
+
+Sources/Conf_reader/ft_strsplit.s: Sources/Conf_reader/ft_strsplit.c.s
+
+.PHONY : Sources/Conf_reader/ft_strsplit.s
+
+# target to generate assembly for a file
+Sources/Conf_reader/ft_strsplit.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/ft_strsplit.c.s
+.PHONY : Sources/Conf_reader/ft_strsplit.c.s
+
+Sources/Conf_reader/get_nl.o: Sources/Conf_reader/get_nl.c.o
+
+.PHONY : Sources/Conf_reader/get_nl.o
+
+# target to build an object file
+Sources/Conf_reader/get_nl.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/get_nl.c.o
+.PHONY : Sources/Conf_reader/get_nl.c.o
+
+Sources/Conf_reader/get_nl.i: Sources/Conf_reader/get_nl.c.i
+
+.PHONY : Sources/Conf_reader/get_nl.i
+
+# target to preprocess a source file
+Sources/Conf_reader/get_nl.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/get_nl.c.i
+.PHONY : Sources/Conf_reader/get_nl.c.i
+
+Sources/Conf_reader/get_nl.s: Sources/Conf_reader/get_nl.c.s
+
+.PHONY : Sources/Conf_reader/get_nl.s
+
+# target to generate assembly for a file
+Sources/Conf_reader/get_nl.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/get_nl.c.s
+.PHONY : Sources/Conf_reader/get_nl.c.s
+
+Sources/Conf_reader/str.o: Sources/Conf_reader/str.c.o
+
+.PHONY : Sources/Conf_reader/str.o
+
+# target to build an object file
+Sources/Conf_reader/str.c.o:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/str.c.o
+.PHONY : Sources/Conf_reader/str.c.o
+
+Sources/Conf_reader/str.i: Sources/Conf_reader/str.c.i
+
+.PHONY : Sources/Conf_reader/str.i
+
+# target to preprocess a source file
+Sources/Conf_reader/str.c.i:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/str.c.i
+.PHONY : Sources/Conf_reader/str.c.i
+
+Sources/Conf_reader/str.s: Sources/Conf_reader/str.c.s
+
+.PHONY : Sources/Conf_reader/str.s
+
+# target to generate assembly for a file
+Sources/Conf_reader/str.c.s:
+	$(MAKE) -f CMakeFiles/RTv1.dir/build.make CMakeFiles/RTv1.dir/Sources/Conf_reader/str.c.s
+.PHONY : Sources/Conf_reader/str.c.s
+
 Sources/Shapes/plane.o: Sources/Shapes/plane.c.o
 
 .PHONY : Sources/Shapes/plane.o
@@ -537,6 +861,42 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... RTv1"
+	@echo "... Sources/Conf_reader/check_file.o"
+	@echo "... Sources/Conf_reader/check_file.i"
+	@echo "... Sources/Conf_reader/check_file.s"
+	@echo "... Sources/Conf_reader/check_uniq.o"
+	@echo "... Sources/Conf_reader/check_uniq.i"
+	@echo "... Sources/Conf_reader/check_uniq.s"
+	@echo "... Sources/Conf_reader/conf.o"
+	@echo "... Sources/Conf_reader/conf.i"
+	@echo "... Sources/Conf_reader/conf.s"
+	@echo "... Sources/Conf_reader/conf_help.o"
+	@echo "... Sources/Conf_reader/conf_help.i"
+	@echo "... Sources/Conf_reader/conf_help.s"
+	@echo "... Sources/Conf_reader/conf_reload.o"
+	@echo "... Sources/Conf_reader/conf_reload.i"
+	@echo "... Sources/Conf_reader/conf_reload.s"
+	@echo "... Sources/Conf_reader/create.o"
+	@echo "... Sources/Conf_reader/create.i"
+	@echo "... Sources/Conf_reader/create.s"
+	@echo "... Sources/Conf_reader/create_2.o"
+	@echo "... Sources/Conf_reader/create_2.i"
+	@echo "... Sources/Conf_reader/create_2.s"
+	@echo "... Sources/Conf_reader/create_light.o"
+	@echo "... Sources/Conf_reader/create_light.i"
+	@echo "... Sources/Conf_reader/create_light.s"
+	@echo "... Sources/Conf_reader/create_object.o"
+	@echo "... Sources/Conf_reader/create_object.i"
+	@echo "... Sources/Conf_reader/create_object.s"
+	@echo "... Sources/Conf_reader/ft_strsplit.o"
+	@echo "... Sources/Conf_reader/ft_strsplit.i"
+	@echo "... Sources/Conf_reader/ft_strsplit.s"
+	@echo "... Sources/Conf_reader/get_nl.o"
+	@echo "... Sources/Conf_reader/get_nl.i"
+	@echo "... Sources/Conf_reader/get_nl.s"
+	@echo "... Sources/Conf_reader/str.o"
+	@echo "... Sources/Conf_reader/str.i"
+	@echo "... Sources/Conf_reader/str.s"
 	@echo "... Sources/Shapes/plane.o"
 	@echo "... Sources/Shapes/plane.i"
 	@echo "... Sources/Shapes/plane.s"
