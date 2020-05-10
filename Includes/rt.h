@@ -6,7 +6,7 @@
 /*   By: wstygg <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/14 12:36:19 by wstygg            #+#    #+#             */
-/*   Updated: 2020/03/14 12:36:20 by wstygg           ###   ########.fr       */
+/*   Updated: 2020/05/10 15:03:48 by wstygg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,8 @@ typedef struct			s_data
 }						t_data;
 
 void					sdl_init(t_sdl *sdl);
-void					manage_event(SDL_Event e, t_sdl *sdl, char *path, t_rt *rt);
+void					manage_event(SDL_Event e, t_sdl *sdl, char *path,
+							t_rt *rt);
 void					manage_keys(t_rt *rt, t_sdl *sdl);
 void					sdl_quit(t_sdl *sdl);
 
@@ -129,7 +130,9 @@ size_t					ft_strlen(const char *str);
 int						is_double(const char *str);
 
 void					conf_help(void);
-void					conf_read(const char *path, t_list **lights_p, t_list **objects_p);
-void					conf_reload(const char *path, t_list **lights_p, t_list **objects_p);
+void					conf_read(const char *path, t_list **lights_p,
+									t_list **objects_p, t_rt *rt);
+void					conf_reload(const char *path, t_list **lights_p,
+									t_list **objects_p, t_rt *rt);
 
 #endif

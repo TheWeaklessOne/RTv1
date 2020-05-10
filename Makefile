@@ -46,6 +46,7 @@ SRC_BASE	=	ft.c				\
 			Conf_reader/create.c		\
 			Conf_reader/create_2.c		\
 			Conf_reader/create_light.c	\
+			Conf_reader/create_camera.c	\
 			Conf_reader/ft_strsplit.c	\
 			Conf_reader/get_nl.c		\
 			Conf_reader/str.c		\

@@ -6,7 +6,7 @@
 /*   By: wstygg <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/16 21:41:36 by wstygg            #+#    #+#             */
-/*   Updated: 2020/03/16 21:41:37 by wstygg           ###   ########.fr       */
+/*   Updated: 2020/05/10 15:46:17 by wstygg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,8 @@ typedef struct	s_vec3f
 	double		z;
 }				t_vec3f;
 
-
 double			vec3f_dtr(double nb);
 double			vec3f_length(t_vec3f vec);
-double			vec3f_length2(t_vec3f vec);
 double			vec3f_dot(t_vec3f a, t_vec3f b);
 
 int				vec3f_equal(t_vec3f v1, t_vec3f v2);

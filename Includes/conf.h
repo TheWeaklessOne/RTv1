@@ -6,7 +6,7 @@
 /*   By: wstygg <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/07 16:30:10 by wstygg            #+#    #+#             */
-/*   Updated: 2020/04/21 16:31:37 by wstygg           ###   ########.fr       */
+/*   Updated: 2020/05/10 15:23:55 by wstygg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ enum					e_params
 	INTENSITY,
 	NORMAL,
 	SPECULAR,
+	ROTATION,
 	PARAMS_N
 };
 
@@ -60,19 +61,19 @@ typedef struct		s_get_next_line
 
 t_light				*create_light(char **conf, int *i);
 t_object			*create_object(char **conf, int *i);
-
+void				create_camera(char **conf, int *i, t_rt *rt);
 
 t_vec3f				create_pos(char *conf, int i);
 t_vec3f				create_color(char *conf, int i);
 t_vec3f				create_normal(char *conf, int i);
 double				create_radius(char *conf, int i);
 double				create_specular(char *conf, int i);
+t_vec3f				create_rotation(char *conf, int i);
 double				create_intensity(char *conf, int i);
-
 
 int					check_file(const char *file, unsigned check);
 int					uck(int p, int uniq[PARAMS_N],
-								  int i, char *str);
+							int i, char *str);
 int					tab_count(const char *str);
 char				*skip_emptiness(char *str);
 char				**add_to_text(char **text, char *add);

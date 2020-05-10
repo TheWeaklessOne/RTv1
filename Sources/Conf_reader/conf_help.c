@@ -27,5 +27,6 @@ void		conf_help(void)
 			"lighting intensity, have to be defined for every lighting."
 			" Lighting intensity can't be more than 1.0.\n\t"
 			"position - lighting position, have to be defined for point_light"
-			" and directional_light.\n");
+			" and directional_light. For directional_light means lighting"
+			" direction.\n");
 }

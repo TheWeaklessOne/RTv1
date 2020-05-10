@@ -23,7 +23,7 @@ double		vec3f_length(const t_vec3f vec)
 	return (SDL_sqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z));
 }
 
-t_vec3f 	vec3f_scale(t_vec3f vec, const double scale)
+t_vec3f		vec3f_scale(t_vec3f vec, const double scale)
 {
 	vec.x *= scale;
 	vec.y *= scale;

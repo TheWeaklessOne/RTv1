@@ -6,7 +6,7 @@
 /*   By: wstygg <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/14 12:36:06 by wstygg            #+#    #+#             */
-/*   Updated: 2020/03/14 12:36:08 by wstygg           ###   ########.fr       */
+/*   Updated: 2020/05/10 16:05:21 by wstygg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,16 @@ static void			raytrace(const t_rt rt, const t_sdl sdl)
 	register int	w;
 	register int	h;
 	t_vec3f			direction;
-	t_vec3f 		colour;
+	t_vec3f			colour;
 
-	h = -HEIGHT_H -1;
+	h = -HEIGHT_H - 1;
 	while (++h < HEIGHT_H && (w = -WIDTH_H - 1))
 		while (++w < WIDTH_H)
 		{
-			direction = vec3f_norm(vec3f_rot(canvas_to_viewport(w, h), rt.rotation));
-			colour = trace_ray((t_data){rt.camera, direction, rt.z_min, rt.z_max}, rt);
+			direction = vec3f_norm(vec3f_rot(
+					canvas_to_viewport(w, h), rt.rotation));
+			colour = trace_ray((t_data){rt.camera, direction,
+								rt.z_min, rt.z_max}, rt);
 			pixel_put(w, h, colour, sdl.screen.pixels);
 		}
 }
@@ -63,7 +65,6 @@ int					main(int argc, char *argv[])
 	SDL_Event		e;
 
 	rt_init(argc, argv, &rt);
-	conf_reload(argv[1], &rt.lights, &rt.objects);
 	sdl_init(&sdl);
 	while (sdl.running)
 	{

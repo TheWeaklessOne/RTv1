@@ -39,7 +39,7 @@ static double	sphere_intersect(const t_vec3f orig, const t_vec3f dir,
 	t2 = (-k[1] - SDL_sqrt(discriminant)) / (2 * k[0]);
 	if (t1 > EPSILON && t2 > EPSILON)
 		return (t1 <= t2 ? t1 : t2);
-	if (t1 > EPSILON ||  t2 > EPSILON)
+	if (t1 > EPSILON || t2 > EPSILON)
 		return (t1 <= t2 ? t2 : t1);
 	return (DBL_MAX);
 }

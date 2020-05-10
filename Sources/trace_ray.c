@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   trace_ray.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wstygg <wstygg@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/10 16:06:30 by wstygg            #+#    #+#             */
+/*   Updated: 2020/05/10 16:07:57 by wstygg           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "rt.h"
 
 static double		calc_shine(const t_vec3f normal, const t_vec3f vec_l,
@@ -7,8 +19,10 @@ static double		calc_shine(const t_vec3f normal, const t_vec3f vec_l,
 
 	n_dot_l = vec3f_dot(normal, vec_l);
 	if (n_dot_l > 0)
+	{
 		return (intensity * n_dot_l / (vec3f_length(normal) *
 				vec3f_length(vec_l)));
+	}
 	return (0);
 }
 
@@ -76,7 +90,6 @@ static double		compute_light(const t_tvec tvec, const double specular,
 	return (intensity);
 }
 
-
 t_vec3f				trace_ray(const t_data data, t_rt rt)
 {
 	t_object		*object;
@@ -88,7 +101,9 @@ t_vec3f				trace_ray(const t_data data, t_rt rt)
 		return (BACKGROUND_C);
 	rt.closest_t = closest_t;
 	tvec.point = vec3f_add(rt.camera, vec3f_scale(data.dir, closest_t));
-	tvec.normal = vec3f_norm(object->get_normal(tvec.point, data.dir, *object, rt));
+	tvec.normal = vec3f_norm(object->get_normal(
+			tvec.point, data.dir, *object, rt));
 	tvec.view = vec3f_scale(data.dir, -1);
-	return (vec3f_scale(object->color, compute_light(tvec, object->specular, rt)));
+	return (vec3f_scale(object->color, compute_light(
+			tvec, object->specular, rt)));
 }

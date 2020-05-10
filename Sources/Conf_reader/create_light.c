@@ -6,30 +6,30 @@
 /*   By: wstygg <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/07 12:40:09 by wstygg            #+#    #+#             */
-/*   Updated: 2020/04/21 17:24:58 by wstygg           ###   ########.fr       */
+/*   Updated: 2020/05/10 15:55:40 by wstygg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "conf.h"
 
-static t_light	*check_light_by_type(t_light *light, const int line)
+static t_light		*check_light_by_type(t_light *light, const int line)
 {
 	if (light->intensity == UNDEFINED)
 		ft_crash("Light at [%d] line error: you did not"
-				 " defined light intensity!\n", line);
+					" defined light intensity!\n", line);
 	if (light->type != AMBIENT)
 	{
 		if (vec3f_equal(light->pos, UNDEFINED_V))
 			ft_crash("Light at [%d] line error: you did not"
-					 " defined light position!\n", line);
+					" defined light position!\n", line);
 	}
 	return (light);
 }
 
-static void		fill_light(char **conf, const int *i, t_light *light,
-							 int uniq[PARAMS_N])
+static void			fill_light(char **conf, const int *i, t_light *light,
+							int uniq[PARAMS_N])
 {
-	char		*str;
+	char			*str;
 
 	str = skip_emptiness(conf[*i]);
 	if (tab_count(conf[*i]) != 1)
@@ -37,7 +37,7 @@ static void		fill_light(char **conf, const int *i, t_light *light,
 					"light's keyword!\n", *i + 1, conf[*i]);
 	if (!ft_strchr(str, ':'))
 		ft_crash("Error at [%d] line: %s\nLight's keyword have to be followed"
-					"by ':' symbol!\n", *i + 1, conf);
+					"by ':' symbol!\n", *i + 1, conf[*i]);
 	if (!ft_strncmp(str, "position:", 9) && uck(POSITION, uniq, *i, conf[*i]))
 		light->pos = create_pos(conf[*i], *i);
 	else if (!ft_strncmp(str, "intensity:", 10) &&
@@ -45,7 +45,7 @@ static void		fill_light(char **conf, const int *i, t_light *light,
 		light->intensity = create_intensity(conf[*i], *i);
 	else
 		ft_crash("Error at [%d] line: %s\nUnknown light's keyword!\n",
-				 *i + 1, conf[*i]);
+					*i + 1, conf[*i]);
 }
 
 static int			check_light_type(const char *conf, const int i)
@@ -54,10 +54,10 @@ static int			check_light_type(const char *conf, const int i)
 
 	if (tab_count(conf) != 0)
 		ft_crash("Error at [%d] line: %s\nLight type field must have zero "
-				 "tab depth!\n", i + 1, conf);
+				"tab depth!\n", i + 1, conf);
 	if (conf[len - 1] != ':')
 		ft_crash("Error at [%d] line: %s\nLight type field must ends with "
-				 "':' symbol!\n", i + 1, conf);
+				"':' symbol!\n", i + 1, conf);
 	if (!ft_strcmp(conf, "point_light:"))
 		return (POINT);
 	if (!ft_strcmp(conf, "directional_light:"))

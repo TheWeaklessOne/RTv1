@@ -33,8 +33,10 @@ typedef struct			s_object
 	double				radius;
 	t_vec3f				center;
 	double				specular;
-	t_vec3f				(*get_normal)(t_vec3f point, t_vec3f dir, struct s_object obj, t_rt rt);
-	double				(*intersect)(t_vec3f orig, t_vec3f dir, struct s_object obj);
+	t_vec3f				(*get_normal)(t_vec3f point, t_vec3f dir,
+							struct s_object obj, t_rt rt);
+	double				(*intersect)(t_vec3f orig, t_vec3f dir,
+							struct s_object obj);
 }						t_object;
 
 t_object				*cone_create(t_object info);

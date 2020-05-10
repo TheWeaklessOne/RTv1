@@ -1,16 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cylinder.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wstygg <wstygg@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/10 16:00:29 by wstygg            #+#    #+#             */
+/*   Updated: 2020/05/10 16:01:22 by wstygg           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "rt.h"
 
 static t_vec3f		cylinder_normal(const t_vec3f point, const t_vec3f dir,
-								   const t_object cylinder, t_rt rt)
+									const t_object cylinder, t_rt rt)
 {
 	return (vec3f_sub(vec3f_sub(point, cylinder.center),
 			vec3f_scale(cylinder.normal, vec3f_dot(dir, cylinder.normal)
 			* rt.closest_t + vec3f_dot(rt.camera, cylinder.normal))));
 }
 
-
 static double		cylinder_intersect(const t_vec3f orig, const t_vec3f dir,
-									 const t_object cylinder)
+										const t_object cylinder)
 {
 	double		t1;
 	double		t2;
@@ -20,8 +31,10 @@ static double		cylinder_intersect(const t_vec3f orig, const t_vec3f dir,
 
 	oc = vec3f_sub(orig, cylinder.center);
 	k[0] = vec3f_dot(dir, dir) - SDL_pow(vec3f_dot(dir, cylinder.normal), 2);
-	k[1] = 2 * (vec3f_dot(oc, dir) - vec3f_dot(oc, cylinder.normal) * vec3f_dot(dir, cylinder.normal));
-	k[2] = vec3f_dot(oc, oc) - SDL_pow(vec3f_dot(oc, cylinder.normal), 2.0) - cylinder.radius * cylinder.radius;
+	k[1] = 2 * (vec3f_dot(oc, dir) - vec3f_dot(oc, cylinder.normal) *
+				vec3f_dot(dir, cylinder.normal));
+	k[2] = vec3f_dot(oc, oc) - SDL_pow(vec3f_dot(oc, cylinder.normal), 2.0) -
+			cylinder.radius * cylinder.radius;
 	discriminant = k[1] * k[1] - 4 * k[0] * k[2];
 	if (discriminant < 0)
 		return (DBL_MAX);
@@ -29,7 +42,7 @@ static double		cylinder_intersect(const t_vec3f orig, const t_vec3f dir,
 	t2 = (-k[1] - SDL_sqrt(discriminant)) / (2 * k[0]);
 	if (t1 > EPSILON && t2 > EPSILON)
 		return (t1 <= t2 ? t1 : t2);
-	if (t1 > EPSILON ||  t2 > EPSILON)
+	if (t1 > EPSILON || t2 > EPSILON)
 		return (t1 <= t2 ? t2 : t1);
 	return (DBL_MAX);
 }

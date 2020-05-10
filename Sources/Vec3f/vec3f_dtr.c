@@ -13,7 +13,7 @@
 #include "vec3f.h"
 #include "math.h"
 
-int				vec3f_equal(const t_vec3f v1, const t_vec3f v2)
+int			vec3f_equal(const t_vec3f v1, const t_vec3f v2)
 {
 	return (v1.x == v2.x && v1.y == v2.y && v1.z == v2.z);
 }
@@ -21,9 +21,4 @@ int				vec3f_equal(const t_vec3f v1, const t_vec3f v2)
 double		vec3f_dtr(double nb)
 {
 	return (nb * (M_PI / 180));
-}
-
-double		vec3f_length2(const t_vec3f vec)
-{
-	return (vec.x * vec.x + vec.y * vec.y + vec.z * vec.z);
 }

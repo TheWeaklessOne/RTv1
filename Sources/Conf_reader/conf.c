@@ -6,7 +6,7 @@
 /*   By: wstygg <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/07 15:09:40 by wstygg            #+#    #+#             */
-/*   Updated: 2020/04/21 16:36:22 by wstygg           ###   ########.fr       */
+/*   Updated: 2020/05/10 15:30:43 by wstygg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static char				**read_from_conf(const int fd)
 }
 
 static void				get_info(const int fd, t_list **lights_p,
-									t_list **objects_p)
+									t_list **objects_p, t_rt *rt)
 {
 	char				**conf;
 	int					i;
@@ -61,7 +61,9 @@ static void				get_info(const int fd, t_list **lights_p,
 	{
 		if (str_is_empty(conf[i]))
 			continue ;
-		if (ft_strstr(conf[i], "light"))
+		if (!ft_strcmp(conf[i], "camera:"))
+			create_camera(conf, &i, rt);
+		else if (ft_strstr(conf[i], "light"))
 			*lights_p = list_add_back(*lights_p, create_light(conf, &i));
 		else
 			*objects_p = list_add_back(*objects_p, create_object(conf, &i));
@@ -72,12 +74,12 @@ static void				get_info(const int fd, t_list **lights_p,
 }
 
 void					conf_read(const char *path, t_list **lights_p,
-									t_list **objects_p)
+									t_list **objects_p, t_rt *rt)
 {
 	int					conf_fd;
 
 	conf_fd = open_conf(path);
-	get_info(conf_fd, lights_p, objects_p);
+	get_info(conf_fd, lights_p, objects_p, rt);
 	if (!*objects_p)
 		ft_crash("No objects in %s!\n", path);
 }

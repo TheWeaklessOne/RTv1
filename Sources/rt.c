@@ -28,5 +28,5 @@ void			rt_init(const int argc, char **argv, t_rt *rt)
 	rt->z_max = DEFAULT_Z_MAX;
 	rt->camera = VEC3F_NULL;
 	rt->rotation = VEC3F_NULL;
-	conf_read(argv[1], &rt->lights, &rt->objects);
+	conf_read(argv[1], &rt->lights, &rt->objects, rt);
 }

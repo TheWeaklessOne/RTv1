@@ -21,7 +21,7 @@ void			manage_event(SDL_Event e, t_sdl *sdl, char *path, t_rt *rt)
 		if (e.key.keysym.sym == SDLK_ESCAPE)
 			sdl->running = 0;
 		else if (e.key.keysym.sym == SDLK_r)
-			conf_reload(path, &rt->lights, &rt->objects);
+			conf_reload(path, &rt->lights, &rt->objects, rt);
 		if (!sdl->keys[e.key.keysym.scancode])
 			sdl->keys[e.key.keysym.scancode] = 1;
 	}
@@ -43,7 +43,7 @@ void			manage_keys(t_rt *rt, t_sdl *sdl)
 		rt->camera.x -= 0.25;
 	if (sdl->keys[SDL_SCANCODE_D])
 		rt->camera.x += 0.25;
-	if ( sdl->keys[SDL_SCANCODE_Q])
+	if (sdl->keys[SDL_SCANCODE_Q])
 		rt->camera.y += 0.25;
 	if (sdl->keys[SDL_SCANCODE_E])
 		rt->camera.y -= 0.25;

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sdl_init.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wstygg <wstygg@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/10 16:06:04 by wstygg            #+#    #+#             */
+/*   Updated: 2020/05/10 16:06:06 by wstygg           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "rt.h"
 
 static void			keys_init(int keys[SDL_NUM_SCANCODES])
@@ -28,7 +40,8 @@ void				sdl_init(t_sdl *sdl)
 	if (!(sdl->win = SDL_CreateWindow("RTv1", SDL_WINDOWPOS_CENTERED,
 		SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, SDL_WINDOW_SHOWN)))
 		return (ft_crash(SDL_GetError()));
-	if (!(sdl->ren = SDL_CreateRenderer(sdl->win, -1, SDL_RENDERER_ACCELERATED)))
+	if (!(sdl->ren = SDL_CreateRenderer(sdl->win, -1,
+			SDL_RENDERER_ACCELERATED)))
 		return (ft_crash(SDL_GetError()));
 	if (!(IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG))
 		return (ft_crash(SDL_GetError()));

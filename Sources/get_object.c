@@ -1,6 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_object.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wstygg <wstygg@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/10 16:04:03 by wstygg            #+#    #+#             */
+/*   Updated: 2020/05/10 16:04:05 by wstygg           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "rt.h"
 
-t_object			*get_object(const t_data data, double *closest_p, const t_rt rt)
+t_object			*get_object(const t_data data, double *closest_p,
+								const t_rt rt)
 {
 	t_object		*ret;
 	t_object		*object;

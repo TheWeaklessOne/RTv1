@@ -6,12 +6,11 @@
 /*   By: wstygg <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/09 16:11:02 by wstygg            #+#    #+#             */
-/*   Updated: 2020/04/09 17:20:08 by wstygg           ###   ########.fr       */
+/*   Updated: 2020/05/10 15:26:06 by wstygg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "conf.h"
-
 
 static void		list_delete(t_list **list_p)
 {
@@ -32,9 +31,9 @@ static void		list_delete(t_list **list_p)
 }
 
 void			conf_reload(const char *path, t_list **lights_p,
-								t_list **objects_p)
+								t_list **objects_p, t_rt *rt)
 {
 	list_delete(lights_p);
 	list_delete(objects_p);
-	conf_read(path, lights_p, objects_p);
+	conf_read(path, lights_p, objects_p, rt);
 }
