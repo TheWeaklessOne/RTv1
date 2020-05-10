@@ -87,4 +87,7 @@ Open the second scene ⇣
 </table>
 
 ## Screenshots
-![red_sphere_in_room](https://i.imgur.com/46xlwvC.png)
+![just_red_sphere](https://i.imgur.com/TKZ9Qn8.png)
+![bunch_of_spheres](https://i.imgur.com/ldrQAKl.png)
+![cones_and_spheres](https://i.imgur.com/B1XZLoa.png)
+![jail](https://i.imgur.com/FbDPhR6.png)
