@@ -24,7 +24,7 @@ Open the fractol menu ⇣
 ```bash
 ./fractol menu
 ```
-![fractol screeneshot](https://i.imgur.com/Tvia8MZ.png)
+![red_sphere_in_room](https://i.imgur.com/46xlwvC.png)
 ## Keyboard shortcuts
 
 <table width="100%">
