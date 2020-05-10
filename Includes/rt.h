@@ -36,8 +36,8 @@
 # include "list.h"
 # include "shapes.h"
 
-# define WIDTH			512
-# define HEIGHT			512
+# define WIDTH			1000
+# define HEIGHT			1000
 # define WIDTH_H		(WIDTH / 2)
 # define HEIGHT_H		(HEIGHT / 2)
 # define WIDTH_HEIGHT	(WIDTH * HEIGHT)
