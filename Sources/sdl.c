@@ -59,6 +59,5 @@ void			sdl_quit(t_sdl *sdl)
 	SDL_DestroyWindow(sdl->win);
 	sdl->win = NULL;
 	sdl->ren = NULL;
-	IMG_Quit();
 	SDL_Quit();
 }

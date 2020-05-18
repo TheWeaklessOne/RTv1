@@ -25,13 +25,8 @@
 # include <sys/stat.h>
 # include <sys/types.h>
 
-# if defined(unix) || defined(__unix__) || defined(__unix)
-#  include <SDL2/SDL.h>
-#  include <SDL2/SDL_image.h>
-# else
-#  include <SDL.h>
-#  include <SDL_image.h>
-# endif
+# include <SDL2/SDL.h>
+# include <SDL2/SDL_image.h>
 
 # include "list.h"
 # include "shapes.h"

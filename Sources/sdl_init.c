@@ -43,8 +43,6 @@ void				sdl_init(t_sdl *sdl)
 	if (!(sdl->ren = SDL_CreateRenderer(sdl->win, -1,
 			SDL_RENDERER_ACCELERATED)))
 		return (ft_crash(SDL_GetError()));
-	if (!(IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG))
-		return (ft_crash(SDL_GetError()));
 	keys_init(sdl->keys);
 	sdl->running = 1;
 }
